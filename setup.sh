@@ -22,4 +22,4 @@ if [ -z "$MOVE_DIR" ]; then
 fi
 
 # Move all dot files
-echo "cp ./.* $MOVE_DIR"
+cp ./.* $MOVE_DIR
