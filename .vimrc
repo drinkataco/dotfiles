@@ -9,6 +9,8 @@ endif
 call plug#begin('~/.vim/bundle')
 
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
 
@@ -22,3 +24,6 @@ set tabstop=2 shiftwidth=2 expandtab
 set paste " fix pasting auto indentation
 set list " show special chars -
 set listchars=tab:\|- " for tab
+
+" key maps
+nmap <F6> :NERDTreeToggle<CR>
