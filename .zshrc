@@ -18,7 +18,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 
 # ALIAS
-alias g = 'git'
+alias g='git'
 
 # I always forget which sublime command I use
 alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
