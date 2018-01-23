@@ -48,4 +48,18 @@
     r = reset
 
     s = status
+    
+    # git flow
+    f = flow
+    ff = flow feature
+    ffs = flow feature start
+    fff = flow feature finish
+    fhs = flow hotfix start
+    fhf = flow hotfix finish
+    frs = flow release start
+    frf = flow release finish
 
+    # destruction
+    xcl = clean -df
+    xres = reset --hard
+    xreso = reset --hard origin
