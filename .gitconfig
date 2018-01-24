@@ -44,7 +44,7 @@
     mt = merge -X theirs
 
     p = push
-    po = po = "!git push -u origin \"$(git branch-name)\""
+    po = "!git push -u origin \"$(git branch-name)\""
 
     r = reset
 
