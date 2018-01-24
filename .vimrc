@@ -36,4 +36,3 @@ autocmd Filetype php setlocal ts=4 sw=4 sts=0 expandtab
 
 " key maps
 nmap <F1> :NERDTreeToggle<CR>
-~
