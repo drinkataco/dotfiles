@@ -21,7 +21,8 @@
 
     b = branch
     ba = branch -a
-
+    branch-name = "!git rev-parse --abbrev-ref HEAD"
+    
     c = commit
     cm = commit -m
     cam = commit -am
@@ -43,7 +44,7 @@
     mt = merge -X theirs
 
     p = push
-    po = push -u origin $(git branch-name)
+    po = po = "!git push -u origin \"$(git branch-name)\""
 
     r = reset
 
