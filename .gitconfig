@@ -52,7 +52,7 @@
     s = status
     
     # git flow
-    f = flow
+    fi = flow init
     ff = flow feature
     ffs = flow feature start
     fff = flow feature finish
