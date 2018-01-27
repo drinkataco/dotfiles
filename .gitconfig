@@ -64,4 +64,4 @@
     # destruction
     xcl = clean -df
     xres = reset --hard
-    xreso = reset --hard origin
+    xreso = "!git reset --hard origin/\"$(git branch-name)\""
