@@ -5,13 +5,19 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Load plugins
 call plug#begin('~/.vim/bundle')
 
+" UI Plugins
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
+
+" Git Plugins
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
+
+" JS Plugins
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 call plug#end()
 
