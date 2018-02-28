@@ -10,17 +10,28 @@ ENABLE_CORRECTION='true'
 ZSH_THEME='agnoster'
 
 # Antigen OM-ZSH Plugins
-if [ ! -f ~/.antigen.zsh ]; then
-  sh -c "$(curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh --silent > ~/.antigen.zsh)"
+if [ ! -f $HOME/.antigen.zsh ]; then
+  sh -c "$(curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh --silent > $HOME/.antigen.zsh)"
 fi
 
-source ~/.antigen.zsh
+source $HOME/.antigen.zsh
 
 antigen use oh-my-zsh
 
-antigen bundle git
-antigen bundle command-not-found
-antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle <<EOBUNDLES
+   # Default Repo Bundles
+   autojump
+   composer
+   command-not-found
+   git
+   git-flow
+   httpie
+   last-working-dir 
+   python
+
+   # Extras
+   zsh-users/zsh-syntax-highlighting
+EOBUNDLES
 
 antigen theme agnoster
 
