@@ -9,3 +9,13 @@
 *.sublime-project
 *.sublime-workspace
 sftp-config.json
+
+#
+# Tooling
+#
+node_modules/
+
+#
+# MISC
+#
+*.swp
