@@ -5,14 +5,24 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/local/lib/node_modules:~/bin:$PATH
 export ZSH=/Users/aedd/.oh-my-zsh
 
 # OMZ Config
-ZSH_THEME="robbyrussell"
-DISABLE_AUTO_TITLE="true"
-ENABLE_CORRECTION="true"
+DISABLE_AUTO_TITLE='true'
+ENABLE_CORRECTION='true'
+ZSH_THEME='agnoster'
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(git)
+# Antigen OM-ZSH Plugins
+if [ ! -f ~/.antigen.zsh ]; then
+  sh -c "$(curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh --silent > ~/.antigen.zsh)"
+fi
 
-source $ZSH/oh-my-zsh.sh
+source ~/.antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle command-not-found
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen apply
 
 # EDITOR
 export EDITOR='vim'
