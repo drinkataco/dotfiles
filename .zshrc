@@ -34,7 +34,7 @@ ZSH_THEME='agnoster'
 
 # Adust prompt directory length for agnoster theme
 prompt_dir() {
-  prompt_segment blue black '%2~'
+  prompt_segment blue black '%1~'
 }
 
 # EDITOR
