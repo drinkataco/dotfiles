@@ -47,4 +47,3 @@ alias g='git'
 alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias subl='sublime'
 alias sbl='sublime'
-
