@@ -12,9 +12,9 @@
 
 [diff]
     tool = vimdiff
-
-[difftool]
-    prompt = false
+    
+[merge]
+    tool = vimdiff
 
 [alias]
     a = add
