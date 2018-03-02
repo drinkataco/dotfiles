@@ -23,19 +23,14 @@ antigen bundle last-working-dir
 antigen bundle python
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-antigen theme agnoster
+# Faves: agnoster, Soliah, dst, frisk, jispwoso
+antigen theme dst
 
 antigen apply
 
 # OMZ Config
 DISABLE_AUTO_TITLE='true'
 ENABLE_CORRECTION='true'
-ZSH_THEME='agnoster'
-
-# Adust prompt directory length for agnoster theme
-prompt_dir() {
-  prompt_segment blue black '%1~'
-}
 
 # EDITOR
 export EDITOR='vim'
