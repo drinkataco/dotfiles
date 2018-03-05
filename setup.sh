@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-# .zshrc requires Oh-my-zsh. Let's install it
+# .zshrc requires Oh-my-zsh. Let's install it. This will gracefully fail if already exists
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Move dotfiles
@@ -22,4 +22,4 @@ if [ -z "$MOVE_DIR" ]; then
 fi
 
 # Move all dot files
-cp ./.* $MOVE_DIR
+sh -c "cp ./.{git{ignore,config},{vim,zsh}rc} $MOVE_DIR"
