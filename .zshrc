@@ -19,9 +19,10 @@ antigen bundle command-not-found
 antigen bundle git
 antigen bundle git-flow
 antigen bundle httpie
-antigen bundle last-working-dir 
+# antigen bundle last-working-dir 
 antigen bundle python
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen vi-mode
 
 # Faves: agnoster, Soliah, dst, frisk, jispwoso
 antigen theme dst
