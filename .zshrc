@@ -38,6 +38,7 @@ export EDITOR='vim'
 
 # ALIAS
 alias g='git'
+alias hl="pygmentize -l"
 
 # I always forget which sublime command I use
 alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
