@@ -24,8 +24,8 @@ antigen bundle python
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen vi-mode
 
-# Faves: agnoster, Soliah, dst, frisk, jispwoso
-antigen theme dst
+# Faves: dst, agnoster, Soliah, dst, frisk, jispwoso
+antigen theme lukerandall
 
 antigen apply
 
