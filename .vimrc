@@ -10,7 +10,9 @@ call plug#begin('~/.vim/bundle')
 " UI Plugins
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'wincent/command-t'
+Plug 'wincent/command-t', {
+  \    'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
+  \  }
 
 " Git Plugins
 Plug 'Xuyuanp/nerdtree-git-plugin'
