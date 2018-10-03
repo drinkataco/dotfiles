@@ -22,6 +22,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
+" GO Plugins
+Plug 'fatih/vim-go'
+
 call plug#end()
 
 " misc
@@ -45,4 +48,4 @@ autocmd Filetype php setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype go setlocal noet ci pi sts=0 sw=4 ts=4
 
 " key maps
-nmap <F1> :NERDTreeToggle<CR>
+nmap <F5> :NERDTreeToggle<CR>
