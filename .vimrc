@@ -40,8 +40,9 @@ set tabstop=2 " show existing tab with 2 spaces width
 set shiftwidth=2 " when indenting with '>', use 2 spaces width
 set expandtab " On pressing tab, insert 2 spaces
 
-" Some files need 4 spaces
+" Some files types need different spacing requirements
 autocmd Filetype php setlocal ts=4 sw=4 sts=0 expandtab
+autocmd Filetype go setlocal noet ci pi sts=0 sw=4 ts=4
 
 " key maps
 nmap <F1> :NERDTreeToggle<CR>
