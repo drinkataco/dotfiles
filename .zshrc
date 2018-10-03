@@ -44,3 +44,5 @@ alias hl="pygmentize -l"
 alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias subl='sublime'
 alias sbl='sublime'
+
+export PATH=$PATH:/usr/local/go/bin
