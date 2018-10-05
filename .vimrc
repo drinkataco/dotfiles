@@ -13,6 +13,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'wincent/command-t', {
   \    'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
   \  }
+Plug 'christoomey/vim-tmux-manager' " work with tmux 
 
 " Git Plugins
 Plug 'Xuyuanp/nerdtree-git-plugin'
