@@ -14,12 +14,8 @@ source $HOME/.antigen.zsh
 antigen use oh-my-zsh
 
 antigen bundle autojump
-antigen bundle composer
 antigen bundle command-not-found
 antigen bundle git
-antigen bundle git-flow
-antigen bundle httpie
-# antigen bundle last-working-dir 
 antigen bundle python
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen vi-mode
