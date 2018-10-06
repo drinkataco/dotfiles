@@ -13,7 +13,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'wincent/command-t', {
   \    'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
   \  }
-Plug 'christoomey/vim-tmux-manager' " work with tmux 
+Plug 'chriskempson/base16-vim'
 
 " Git Plugins
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -26,15 +26,21 @@ Plug 'mxw/vim-jsx'
 " GO Plugins
 Plug 'fatih/vim-go'
 
+" Tools & Utilities
+Plug 'christoomey/vim-tmux-navigator' " work with tmux 
+
 call plug#end()
 
 " misc
-let mapleader = "\\"
+let mapleader = '\\'
 
 " pretties
 syntax on
+let &t_8f = '\<Esc>[38;2;%lu;%lu;%lum' " tmux colour fix
+let &t_8b = '\<Esc>[48;2;%lu;%lu;%lum' " ''
+colorscheme base16-default-dark
+set termguicolors
 set number
-set paste " fix pasting auto indentation
 set list " show special chars -
 set listchars=tab:\|- " for tab
 
