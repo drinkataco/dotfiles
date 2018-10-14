@@ -107,7 +107,7 @@ for i in "${!dotfiles[@]}"; do
 
   # and then replace the values
   for j in "${!replace[@]}"; do
-    var_name=${replace[$j]}i
+    var_name=${replace[$j]}
     # TODO: ask for value if not default_config
     sed -i -e "s/%%$var_name%%/${config[$var_name]}/g" "$DIR_CP_LOC/$i"
   done

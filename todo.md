@@ -10,9 +10,10 @@
 - All files, where available, should have auto overrides/extensions imported
 - Install dependencies (and map to file in config/deps?) tpm, vim-plug, antigen etc
 - ensure that vim,tpm etc plug loads plugins automagically
-- also that the shell
+- shell/gui specifics are seperated
 - Add scripts/install_osx.sh
 - Add scripts/install_linux.sh
+- - make sure requirements installed (git/zsh)
 - Auto call scripts/* if os found?
 - Add config/bins.{osx,ubuntu,centos} (or something) so that extended software is supported
 - INVESTIGATE: automatically support any dotfile by the file name in dot/files, instead of the FILE_* var we got going on
