@@ -1,11 +1,11 @@
 [user]
-    name = J J Walwyn
-    email = me@joshwalwyn.com
-    username = drinkataco
+    name = %%git.user.name%%
+    email = %%git.user.email%%
+    username = %%git.user.username%%
 
 [core]
     editor = vim
-    excludesfile = /Users/aedd/.gitignore
+    excludesfile = %%git.excludesfile=/Users/aedd/.gitignore%%
 
 [web]
     browser = google-chrome
