@@ -13,21 +13,26 @@ Plug 'scrooloose/nerdtree'
 Plug 'wincent/command-t', {
   \    'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
   \  }
+
+" Colour schemes
 Plug 'chriskempson/base16-vim'
 
-" Git Plugins
+" Git
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 
-" JS Plugins
+" JS
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
-" GO Plugins
+" GO
 Plug 'fatih/vim-go'
 
+" Markdown
+Plug 'suan/vim-instant-markdown'
+
 " Tools & Utilities
-Plug 'christoomey/vim-tmux-navigator' " work with tmux 
+Plug 'christoomey/vim-tmux-navigator' " work with tmux
 
 call plug#end()
 
@@ -36,9 +41,10 @@ let mapleader = '\\'
 
 " pretties
 syntax on
-let &t_8f = '\<Esc>[38;2;%lu;%lu;%lum' " tmux colour fix
-let &t_8b = '\<Esc>[48;2;%lu;%lu;%lum' " ''
-colorscheme base16-default-dark
+"let &t_8f = '\<Esc>[38;2;%lu;%lu;%lum' " tmux colour fix
+"let &t_8b = '\<Esc>[48;2;%lu;%lu;%lum' " ''
+let base16colorspace=256
+colorscheme base16-materia
 set termguicolors
 set number
 set list " show special chars -

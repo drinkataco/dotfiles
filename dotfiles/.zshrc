@@ -18,10 +18,10 @@ antigen bundle command-not-found
 antigen bundle git
 antigen bundle python
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen vi-mode
+antigen bundle vi-mode
 
 # Faves: dst, agnoster, Soliah, dst, frisk, jispwoso
-antigen theme lukerandall
+antigen theme %%zsh.omz.theme%%
 
 antigen apply
 
@@ -32,8 +32,18 @@ ENABLE_CORRECTION='true'
 # EDITOR
 export EDITOR='vim'
 
+# colours
+export TERM=xterm-256color
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
+
 # ALIAS
 alias g='git'
+alias d='docker'
 alias hl="pygmentize -l"
 
 # I always forget which sublime command I use
@@ -42,3 +52,7 @@ alias subl='sublime'
 alias sbl='sublime'
 
 export PATH=$PATH:/usr/local/go/bin
+
+if [ -f $HOME/.zshrc_custom ]; then
+    . $HOME/.zshrc_custom
+fi

@@ -1,29 +1,28 @@
 #!/usr/bin/env bash
-
-# ___   ___  _____  ____  _   _     ____  __
-#| | \ / / \  | |  | |_  | | | |   | |_  ( (`
-#|_|_/ \_\_/  |_|  |_|   |_| |_|__ |_|__ _)_)
-#
-
-# flags -h (headless)
-# -d <> copy location
-# -u <username> user name
-# --parameters git.email=
+echo
+echo "  _____   ______  ______ ______ __  __      ______  ______    "
+echo " /\  __-./\  __ \/\__  _/\  ___/\ \/\ \    /\  ___\/\  ___\   "
+echo " \ \ \/\ \ \ \/\ \/_/\ \\\\ \  __\ \ \ \ \___\ \  __\\\\ \___  \  "
+echo "  \ \____-\ \_____\ \ \_\\\\ \_\  \ \_\ \_____\ \_____\/\_____\ "
+echo "   \/____/ \/_____/  \/_/ \/_/   \/_/\/_____/\/_____/\/_____/ "
+echo
+echo "Personal collection of dotfiles"
+echo "Supported and used with OS X, Ubuntu, and CentOS"
+echo
 
 # Define Constants
 readonly OS_LINUX='linux'
 readonly OS_OSX='osx'
 
-#DIR_CP_LOC='~'
-DIR_CP_LOC='./ded'
-readonly DIR_DOTFILES='./files'
+DIR_CP_LOC=$HOME
+readonly DIR_DOTFILES='./dotfiles'
 
 readonly FILE_gitconfig='.gitconfig'
 readonly FILE_gitignore='.gitignore'
 readonly FILE_tmux='.tmux.conf'
 readonly FILE_vimrc='.vimrc'
 readonly FILE_zshrc='.zshrc'
-readonly FILE_config='variables'
+readonly FILE_config='./config/variables'
 
 # Determine Operating System
 os=''
@@ -91,8 +90,8 @@ for i in "${!dotfiles[@]}"; do
     continue
   fi
   ask_something "Do you want to use the default config variables for file $i"
-  default_config=$response  
- 
+  default_config=$response
+
   # get all replaceables
   declare -a replace
 
@@ -101,7 +100,7 @@ for i in "${!dotfiles[@]}"; do
       name=$(echo "${BASH_REMATCH[0]}" | sed 's/%//g')
       replace=($name "${replace[@]}")
     fi
-  done < "$DIR_DOTFILES/$i" 
+  done < "$DIR_DOTFILES/$i"
 
   # now copy this file over
   cp "$DIR_DOTFILES/$i" "$DIR_CP_LOC/$i"
@@ -115,14 +114,3 @@ for i in "${!dotfiles[@]}"; do
 
   echo "Copied $i to $DIR_CP_LOC"
 done;
-
-
-echo ${dotfiles}
-
-
-
-# step 3: replace variables '%%git.email%%'
-
-# step 4:  copy files to dir (ask for dir)
-
-# step 5: install dependencies (vimplug, oh-my-zsh, tpm, antigen)
