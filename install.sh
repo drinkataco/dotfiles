@@ -126,7 +126,6 @@ for i in "${!dotfiles[@]}"; do
 
   # now copy this file over
   cp "$DIR_DOTFILES/$dotfile" "$DIR_CP_LOC/$dotfile"
-  # echo "cp \"$DIR_DOTFILES/$dotfile\" \"$DIR_CP_LOC/$dotfile\""
 
   # if no variables to replace, skip, otherwise set them
   if [ ${#replace[@]} != 0 ]; then
@@ -141,7 +140,7 @@ for i in "${!dotfiles[@]}"; do
     # and then replace the values
     for j in "${!replace[@]}"; do
       var_name=${replace[$j]}
-      sed -i -e "s/%%$var_name%%/${config[$var_name]}/g" "$DIR_CP_LOC/$dotfile"
+      sed -i "" -e "s/%%$var_name%%/${config[$var_name]}/g" "$DIR_CP_LOC/$dotfile"
     done
 
     unset 'replace'
