@@ -16,12 +16,6 @@ readonly OS_OSX='osx'
 
 DIR_CP_LOC=$HOME
 readonly DIR_DOTFILES='./dotfiles'
-
-readonly FILE_gitconfig='.gitconfig'
-readonly FILE_gitignore='.gitignore'
-readonly FILE_tmux='.tmux.conf'
-readonly FILE_vimrc='.vimrc'
-readonly FILE_zshrc='.zshrc'
 readonly FILE_config='./config/variables'
 
 # Determine Operating System
@@ -62,17 +56,22 @@ read DIR_CP_LOC_OR
 [[ ! -z "$DIR_CP_LOC_OR" ]] && DIR_CP_LOC=$DIR_CP_LOC_OR
 
 # Determine what dotfiles we're going to copy over
-declare -A dotfiles=(
-  [$FILE_gitconfig]=1
-  [$FILE_gitignore]=1
-  [$FILE_tmux]=1
-  [$FILE_vimrc]=1
-  [$FILE_zshrc]=1
-)
+declare -a dotfiles;
 
+# get all dotfiles
+while read line; do
+  if [[ $line != '.' && $line != '..' ]]; then
+    dotfiles=($line "${dotfiles[@]}")
+  fi
+done < <(ls -a1 $DIR_DOTFILES)
+
+# unset the ones we don't want
 for i in "${!dotfiles[@]}"; do
-  ask_something "Do you want to copy the file $i"
-  dotfiles[$i]=$response
+  dotfile=${dotfiles[$i]}
+  ask_something "Do you want to copy the file $dotfile"
+  if [[ $response = 0 ]]; then
+    unset "dotfiles[$i]"
+  fi
 done
 
 # load default config
@@ -86,11 +85,7 @@ done < $FILE_config
 
 # We're going to loop over the same array with the updated values, and copy them over
 for i in "${!dotfiles[@]}"; do
-  if [ ${dotfiles[$i]} = 0 ]; then
-    continue
-  fi
-  ask_something "Do you want to use the default config variables for file $i"
-  default_config=$response
+  dotfile=${dotfiles[$i]}
 
   # get all replaceables
   declare -a replace
@@ -100,17 +95,24 @@ for i in "${!dotfiles[@]}"; do
       name=$(echo "${BASH_REMATCH[0]}" | sed 's/%//g')
       replace=($name "${replace[@]}")
     fi
-  done < "$DIR_DOTFILES/$i"
+  done < "$DIR_DOTFILES/$dotfile"
+
+  # if no variables to replace, skip, otherwise set them
+  if [ ${#replace[@]} -eq 0 ]; then
+    continue
+  fi
+
+  ask_something "Do you want to use the default config variables for file $dotfile"
+  default_config=$response
 
   # now copy this file over
-  cp "$DIR_DOTFILES/$i" "$DIR_CP_LOC/$i"
+  cp "$DIR_DOTFILES/$dotfile" "$DIR_CP_LOC/$dotfile"
 
   # and then replace the values
   for j in "${!replace[@]}"; do
     var_name=${replace[$j]}
-    # TODO: ask for value if not default_config
-    sed -i -e "s/%%$var_name%%/${config[$var_name]}/g" "$DIR_CP_LOC/$i"
+    sed -i -e "s/%%$var_name%%/${config[$var_name]}/g" "$DIR_CP_LOC/$dotfile"
   done
 
-  echo "Copied $i to $DIR_CP_LOC"
-done;
+  unset 'replace'
+done
