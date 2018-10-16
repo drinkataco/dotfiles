@@ -55,6 +55,11 @@ printf "Dotfiles directory [$DIR_CP_LOC]: "
 read DIR_CP_LOC_OR
 [[ ! -z "$DIR_CP_LOC_OR" ]] && DIR_CP_LOC=$DIR_CP_LOC_OR
 
+# create dotfile dir if not exist
+if [[ ! -d $DIR_CP_LOC ]]; then
+  mkdir -p $DIR_CP_LOC
+fi
+
 # Determine what dotfiles we're going to copy over
 declare -a dotfiles;
 
