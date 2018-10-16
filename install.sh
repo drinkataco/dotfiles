@@ -36,6 +36,14 @@ if (($BASH_VERSINFO < 4)); then
   exit
 fi
 
+# Get arguments
+while getopts d:y opts; do
+   case ${opts} in
+      d) P_DIR=${OPTARG} ;; # copy directory
+      y) P_AUTO=1 ;; # auto run flag
+   esac
+done
+
 # helper functions
 # ask a question, get a boolean (1/0) value
 ask_something() {
@@ -51,9 +59,17 @@ ask_something() {
 }
 
 # Fetch directory to copy files over to
-printf "Dotfiles directory [$DIR_CP_LOC]: "
-read DIR_CP_LOC_OR
-[[ ! -z "$DIR_CP_LOC_OR" ]] && DIR_CP_LOC=$DIR_CP_LOC_OR
+# Ask if not auto install or not fed as oparameter
+if [[ -z $P_AUTO && -z $P_DIR ]]; then
+  printf "Dotfiles directory [$DIR_CP_LOC]: "
+  read DIR_CP_LOC_OR
+  [[ ! -z "$DIR_CP_LOC_OR" ]] && DIR_CP_LOC=$DIR_CP_LOC_OR
+# use parameter value if set
+elif [[ ! -z $P_DIR ]]; then
+  DIR_CP_LOC=$P_DIR
+fi
+
+echo "Copying files to $DIR_CP_LOC directory"
 
 # create dotfile dir if not exist
 if [[ ! -d $DIR_CP_LOC ]]; then
@@ -73,9 +89,15 @@ done < <(ls -a1 $DIR_DOTFILES)
 # unset the ones we don't want
 for i in "${!dotfiles[@]}"; do
   dotfile=${dotfiles[$i]}
-  ask_something "Do you want to copy the file $dotfile"
-  if [[ $response = 0 ]]; then
-    unset "dotfiles[$i]"
+
+  if [[ -z $P_AUTO ]]; then
+    ask_something "Do you want to copy the file $dotfile"
+
+    if [[ $response = 0 ]]; then
+      unset "dotfiles[$i]"
+    fi
+  else
+    echo "Copying file $dotfile"
   fi
 done
 
@@ -102,22 +124,29 @@ for i in "${!dotfiles[@]}"; do
     fi
   done < "$DIR_DOTFILES/$dotfile"
 
-  # if no variables to replace, skip, otherwise set them
-  if [ ${#replace[@]} -eq 0 ]; then
-    continue
-  fi
-
-  ask_something "Do you want to use the default config variables for file $dotfile"
-  default_config=$response
-
   # now copy this file over
   cp "$DIR_DOTFILES/$dotfile" "$DIR_CP_LOC/$dotfile"
+  # echo "cp \"$DIR_DOTFILES/$dotfile\" \"$DIR_CP_LOC/$dotfile\""
 
-  # and then replace the values
-  for j in "${!replace[@]}"; do
-    var_name=${replace[$j]}
-    sed -i -e "s/%%$var_name%%/${config[$var_name]}/g" "$DIR_CP_LOC/$dotfile"
-  done
+  # if no variables to replace, skip, otherwise set them
+  if [ ${#replace[@]} != 0 ]; then
+    if [[ -z $P_AUTO ]]; then
+      ask_something "Do you want to use the default config variables for file $dotfile"
 
-  unset 'replace'
+      default_config=$response
+    else
+      default_config=1
+    fi
+
+    # and then replace the values
+    for j in "${!replace[@]}"; do
+      var_name=${replace[$j]}
+      sed -i -e "s/%%$var_name%%/${config[$var_name]}/g" "$DIR_CP_LOC/$dotfile"
+    done
+
+    unset 'replace'
+  fi
 done
+
+echo
+echo "Copied dotfiles to $DIR_CP_LOC!"
