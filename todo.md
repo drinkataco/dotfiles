@@ -1,9 +1,6 @@
 # todo
 
-- ask for variables if default not used
-- support --variables name=value,name2=value for variables
 - support --files .tmux.conf,.zshrc to pick what files to process
-- support --directory $HOME
 - All files, where available, should have auto overrides/extensions imported
 - Install dependencies (and map to file in config/deps?) tpm, vim-plug, antigen etc
 - ensure that vim,tpm etc plug loads plugins automagically

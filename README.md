@@ -15,7 +15,9 @@ Certain dotfiles have variables nested within them which are likely differ betwe
 ### Usage
 
 - `-y` flag to auto run with 'yes', unless other flag specifically overrides that value
-- `-d directory` flag and value to specify directory to copy dotfiles to
+- `-d directory` option to specify directory to copy dotfiles to
+- `-v param1=value,param2=value` key value pairs for config/variable overrides
+
 
 ### Warning
 At the moment, no checks are done for dependencies on any system.

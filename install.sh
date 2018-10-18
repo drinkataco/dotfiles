@@ -18,9 +18,9 @@ DIR_CP_LOC=$HOME
 readonly DIR_DOTFILES='./dotfiles'
 readonly FILE_config='./config/variables'
 
-# Determine Operating System
-os=''
+declare -A P_PARAMETERS # variable overries
 
+# Determine Operating System
 case `uname` in
   Linux*)  os=$OS_LINUX;;
   Darwin*) os=$OS_OSX;;
@@ -37,12 +37,26 @@ if (($BASH_VERSINFO < 4)); then
 fi
 
 # Get arguments
-while getopts d:y opts; do
-   case ${opts} in
-      d) P_DIR=${OPTARG} ;; # copy directory
-      y) P_AUTO=1 ;; # auto run flag
-   esac
+while getopts "d:v:y" opts; do
+  case "${opts}" in
+    # auto run flag
+    y) P_AUTO=1 ;; # auto run flag
+
+    # copy directory
+    d) P_DIR=${OPTARG} ;;
+
+    # Get parameters/values for files
+    v)
+      # Split into group, then key/value pair
+      IFS=',' read -r -a PARAMS <<< ${OPTARG}
+      for i in "${!PARAMS[@]}"; do
+        PARAM=${PARAMS[$i]}
+        P_PARAMETERS["$(cut -d'=' -f1 <<< $PARAM)"]="$(cut -d'=' -f2 <<< $PARAM)"
+      done
+      ;;
+  esac
 done
+shift $((OPTIND-1))
 
 # helper functions
 # ask a question, get a boolean (1/0) value
@@ -104,7 +118,7 @@ done
 # load default config
 declare -A config
 
-while read -r line; do
+while read line; do
   key="$(cut -d'=' -f1 <<< $line)"
   value="$(cut -d'=' -f2 <<< $line)"
   config[$key]=$value
@@ -117,7 +131,7 @@ for i in "${!dotfiles[@]}"; do
   # get all replaceables
   declare -a replace
 
-  while read -r line; do
+  while read line; do
     if [[ $line =~ (%%([[:alnum:]]\.?)+%%) ]]; then
       name=$(echo "${BASH_REMATCH[0]}" | sed 's/%//g')
       replace=($name "${replace[@]}")
@@ -129,18 +143,35 @@ for i in "${!dotfiles[@]}"; do
 
   # if no variables to replace, skip, otherwise set them
   if [ ${#replace[@]} != 0 ]; then
-    if [[ -z $P_AUTO ]]; then
-      ask_something "Do you want to use the default config variables for file $dotfile"
+    # grab_value=0
 
-      default_config=$response
-    else
-      default_config=1
+    # ask user for values if none set as argument
+    if [[ -z $P_AUTO &&  ${#P_PARAMETERS[@]} = 0 ]]; then
+      ask_something "Do you want to use the default config variables for file $dotfile"
+      [[ $response = 0 ]] && grab_value=1 || grab_value=0
     fi
 
-    # and then replace the values
-    for j in "${!replace[@]}"; do
-      var_name=${replace[$j]}
-      sed -i "" -e "s/%%$var_name%%/${config[$var_name]}/g" "$DIR_CP_LOC/$dotfile"
+    # and then replace the values to be replaced
+    for k in "${!replace[@]}"; do
+      var_name=${replace[$k]}
+
+      # Use defined parameter if it has been set
+      if [[ -n "${P_PARAMETERS[$var_name]}" ]]; then
+        value=${P_PARAMETERS[$var_name]}
+
+      # ask for config if user has opted not to use defaults
+      elif [[ $grab_value = 1 ]]; then
+        printf "Value for variable '$var_name': "
+        read value
+
+      # otherwise just use the default valuye
+      else
+        value=${config[$var_name]}
+      fi
+
+      value="${value/"/"/"\/"}" # Escape forward slash
+
+      sed -i "" -e "s/%%$var_name%%/${value}/g" "$DIR_CP_LOC/$dotfile"
     done
 
     unset 'replace'
