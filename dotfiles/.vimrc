@@ -7,12 +7,16 @@ endif
 
 call plug#begin('~/.vim/bundle')
 
-" UI Plugins
-Plug 'scrooloose/nerdcommenter'
+" Tools & Utilities
+Plug 'scrooloose/nerdcommenter' " comment out 
 Plug 'scrooloose/nerdtree'
 Plug 'wincent/command-t', {
   \    'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
-  \  }
+  \  } " fuzzy file searching
+Plug 'christoomey/vim-tmux-navigator' " work with tmux
+Plug 'jiangmiao/auto-pairs' " match brackets
+Plug 'Valloric/YouCompleteMe' " keyword completion
+Plug 'w0rp/ale' " Linter
 
 " Colour schemes
 Plug 'chriskempson/base16-vim'
@@ -30,9 +34,6 @@ Plug 'fatih/vim-go'
 
 " Markdown
 Plug 'suan/vim-instant-markdown'
-
-" Tools & Utilities
-Plug 'christoomey/vim-tmux-navigator' " work with tmux
 
 call plug#end()
 
