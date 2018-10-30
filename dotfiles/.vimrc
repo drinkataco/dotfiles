@@ -17,6 +17,7 @@ Plug 'christoomey/vim-tmux-navigator' " work with tmux
 Plug 'jiangmiao/auto-pairs' " match brackets
 Plug 'Valloric/YouCompleteMe' " keyword completion
 Plug 'w0rp/ale' " Linter
+Plug 'editorconfig/editorconfig-vim' " Editor alignment
 
 " Colour schemes
 Plug 'chriskempson/base16-vim'
