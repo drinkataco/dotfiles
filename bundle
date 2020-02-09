@@ -1,0 +1,77 @@
+#!/usr/bin/env bash
+
+#!/usr/bin/env bash
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)" # current script directory
+SCRIPTS_DIR="${BASE_DIR}/scripts" # where configuration assets lie
+
+declare -xr BASE_DIR
+declare -xr SCRIPTS_DIR
+
+
+#########################################
+# Overwrite files with environment variable substitions where set
+# These specifc environment variables must be in the format N_*
+# Globals:
+#   None
+# Arguments:
+#   1 - source of files to build
+#   2 - Optional. If supplied, before script is ran, the source files will be copied from this
+#       location, instead of overwriting the files directly
+# Returns:
+#   None
+#######################################
+function env_and_move() {
+  local source=$1
+  local from=$2
+
+  # Copy files to source if 'from' supplied
+  if [[ -n $from ]]; then
+    mkdir -p "${source}"
+    cp -r "${from}" "${source}"
+  fi
+
+  # Apply environment substitutions
+  while read -r file; do
+    echo "Applying environment variables to file ${file}"
+
+    # Only substitue variables beginning with $N_*
+    # shellcheck disable=SC2016
+    sub_rule=$(printf '${%s} ' "${!DF_*}")
+    new_file=$(envsubst "${sub_rule}" < "${file}")
+
+    echo "${new_file}" > "$file"
+  done < <(find "${source}/" -type f)
+}
+
+#
+function copy_dot_files() {
+  source "${BASE_DIR}/.env.template"
+
+  env_and_move "${BASE_DIR}/dotfiles/.gitconfig" "${BASE_DIR}/test"
+}
+
+#########################################
+# Main method to run script and find the bash script it must run
+# Globals:
+#   BASE_DIR
+#   SCRIPTS_DIR
+# Arguments:
+#   command - operating system to bundle for
+#   ...args - consult readme
+#######################################
+function main() {
+  declare -r type="${1}"
+
+  case "${type}" in
+    'macos')
+
+    ;;
+    *)
+      echo "Command '${type}' not found" >&2
+    ;;
+  esac
+}
+
+if [[ "$*" != *'--source-only'* ]]; then
+  main "$@"
+fi

@@ -1,11 +1,11 @@
 [user]
-  name = $DF_GIT_USER_NAME
-  email = $DF_GIT_USER_EMAIL
-  username = $DF_GIT_USER_USERNAME
+  name = %%git.user.name%%
+  email = %%git.user.email%%
+  username = %%git.user.username%%
 
 [core]
   editor = vim
-  excludesfile = $DF_GIT_USER_EXCLUDES_FILE
+  excludesfile = %%git.excludesfile%%
 
 [web]
   browser = google-chrome
