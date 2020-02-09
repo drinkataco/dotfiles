@@ -66,6 +66,8 @@ main() {
       ;;
       --update*)
         # TODO: update methods. update.sh?
+        echo 'Updating not currently supported'
+        exit 1
       ;;
     esac
   done

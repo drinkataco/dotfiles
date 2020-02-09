@@ -1,38 +1,47 @@
 cask_args appdir: '/Applications'
 
+tap "homebrew/bundle"
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/core'
+tap "homebrew/services"
 
 # Tools
+brew "ansible"
+brew "awscli"
 brew 'bash'
 brew 'composer'
 brew 'coreutils', link: true
 brew 'docker'
 brew 'docker-machine'
+brew "ffmpeg"
 brew 'flac'
 brew 'git'
 brew 'git-flow'
 brew 'gettext', link: true
 brew 'go'
+brew "highlight"
 brew 'htop'
-brew 'httpie'
 brew 'iperf'
 brew 'ipython'
 brew 'kops'
 brew 'lynx'
 brew 'macvim'
 brew 'mkvtoolnix', args: ['with-qt']
+brew "nmap"
 brew 'node'
 brew 'nodeenv'
 brew 'openvpn'
 brew 'php7'
+brew "shellcheck"
 brew 'terraform'
 brew 'tmux'
+brew "tree"
 brew 'watch'
 brew 'yarn'
 brew 'zsh'
 brew 'zsh-completions'
+brew "zsh-syntax-highlighting"
 
 # Applications
 cask 'firefox'
@@ -49,10 +58,10 @@ cask 'little-snitch'
 cask 'malwarebytes'
 cask 'mediaelch'
 cask 'minikube'
-cask 'ngrok'
 cask 'nordvpn'
 cask 'paragon-extfs'
 cask 'postman'
+cask 'sequel-pro'
 cask 'slack'
 cask 'spectacle'
 cask 'spotify'
@@ -62,6 +71,8 @@ cask 'transmit'
 cask 'virtualbox'
 cask 'vlc'
 cask 'whatsapp'
+cask 'wine-stable'
 
 # Fonts
 cask 'font-inconsolata-g-for-powerline'
+cask "font-source-code-pro"
