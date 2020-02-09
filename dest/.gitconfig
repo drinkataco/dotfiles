@@ -1,11 +1,11 @@
 [user]
-  name = %%git.user.name%%
-  email = %%git.user.email%%
-  username = %%git.user.username%%
+  name = Josh Walwyn
+  email = 
+  username = drinkataco
 
 [core]
   editor = vim
-  excludesfile = %%git.excludesfile%%
+  excludesfile = /Users/aedd/.gitignore
 
 [web]
   browser = google-chrome
@@ -72,4 +72,3 @@
   xcl = clean -df
   xres = reset --hard
   xreso = "!git reset --hard origin/\"$(git branch-name)\""
-

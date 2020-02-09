@@ -1,45 +1,34 @@
-#!/usr/bin/env bash
-
-#!/usr/bin/env bash
-BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)" # current script directory
-SCRIPTS_DIR="${BASE_DIR}/scripts" # where configuration assets lie
-
-declare -xr BASE_DIR
-declare -xr SCRIPTS_DIR
-
+#!/bin/sh
+BASE_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
+SCRIPTS_DIR="${BASE_DIR}/scripts"
+readonly BASE_DIR
+readonly SCRIPTS_DIR
 
 #########################################
-# Overwrite files with environment variable substitions where set
-# These specifc environment variables must be in the format N_*
+# Bootstraps system to run scripts
 # Globals:
 #   None
 # Arguments:
-#   1 - source of files to build
+#   1 - system type
 # Returns:
 #   None
 #######################################
-function env_and_move() {
-  local source=$1
-  local dest=$2
+bootstrap() {
+  system=$1
+  boostrap_script="${BASE_DIR}/system/${system}/bootstrap.sh"
 
-  # Apply environment substitutions
-  while read -r file; do
-    echo "Applying environment variables to file ${file}"
-    local destination_file="$dest/${file##*/}"
+  if [ -f "${boostrap_script}" ]; then
+    # shellcheck disable=SC1090
+    . "${boostrap_script}"
+  fi
 
-    # Only substitue variables beginning with $N_*
-    # shellcheck disable=SC2016
-    sub_rule=$(printf '${%s} ' ${!DF_*})
-    new_file=$(envsubst "${sub_rule}" < "${file}")
-    echo "${new_file}" > "$destination_file"
-  done < <(find "${source}" -type f)
-}
+  # TODO: Mac boostrap:
+  # 1. xcode
+  # 2. brew
+  # 3. zsh, omz
+  # 4.
 
-#
-function copy_dot_files() {
-  source "${BASE_DIR}/.env.template"
-
-  env_and_move "${BASE_DIR}/dotfiles" "${BASE_DIR}/test"
+  # TODO: bootstrapping should list a blacklist of dependencies to now not install
 }
 
 #########################################
@@ -48,22 +37,45 @@ function copy_dot_files() {
 #   BASE_DIR
 #   SCRIPTS_DIR
 # Arguments:
-#   command - operating system to bundle for
 #   ...args - consult readme
 #######################################
-function main() {
-  declare -r type="${1}"
+main() {
+  # Get system type
+  readonly machine=$(uname -s)
 
-  case "${type}" in
-    'macos')
-      copy_dot_files
+  case "${machine}" in
+    Darwin*)
+      type=macos
+    ;;
+    Linux*)
+      type=linux
+      # TODO: check distro
     ;;
     *)
-      echo "Command '${type}' not found" >&2
+      echo "Unknown System: ${machine}"
+      exit 1
     ;;
   esac
+
+  # Check parameters for operations
+  for i in "$@" ; do
+    case "${machine}" in
+      --bootstrap*)
+        bootstrap=1
+        shift
+      ;;
+      --update*)
+        # TODO: update methods. update.sh?
+      ;;
+    esac
+  done
+
+  if [ -z $bootstrap ]; then
+    bootstrap "${type}"
+  fi
+
+  # we'll assume that boostrapping installed Bash 5> on the system, so we can bash all the other scripts
+  bash "${SCRIPTS_DIR}/dotfiles.sh" "${@}"
 }
 
-if [[ "$*" != *'--source-only'* ]]; then
-  main "$@"
-fi
+main "${@}"

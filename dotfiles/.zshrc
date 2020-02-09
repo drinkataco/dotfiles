@@ -1,29 +1,28 @@
-# PATH
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/lib/node_modules:~/bin:$PATH
+#!/bin/zsh
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/aedd/.oh-my-zsh
 
 # Antigen OM-ZSH Plugins
-if [ ! -f $HOME/.antigen.zsh ]; then
-  sh -c "$(curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh --silent > $HOME/.antigen.zsh)"
-fi
+# if [ ! -f $HOME/.antigen.zsh ]; then
+#   sh -c "$(curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh --silent > $HOME/.antigen.zsh)"
+# fi
 
-source $HOME/.antigen.zsh
+# source $HOME/.antigen.zsh
 
-antigen use oh-my-zsh
+# antigen use oh-my-zsh
 
-antigen bundle autojump
-antigen bundle command-not-found
-antigen bundle git
-antigen bundle python
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle vi-mode
+# antigen bundle autojump
+# antigen bundle command-not-found
+# antigen bundle git
+# antigen bundle python
+# antigen bundle zsh-users/zsh-syntax-highlighting
+# antigen bundle vi-mode
 
 # Faves: dst, agnoster, Soliah, dst, frisk, jispwoso
-antigen theme %%zsh.omz.theme%%
+# antigen theme %%zsh.omz.theme%%
 
-antigen apply
+# antigen apply
 
 # OMZ Config
 DISABLE_AUTO_TITLE='true'
@@ -51,6 +50,8 @@ alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias subl='sublime'
 alias sbl='sublime'
 
+# PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/lib/node_modules:~/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
 
 if [ -f $HOME/.zshrc_custom ]; then
