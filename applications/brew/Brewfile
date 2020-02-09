@@ -7,12 +7,13 @@ tap 'homebrew/core'
 # Tools
 brew 'bash'
 brew 'composer'
-brew 'coreutils'
+brew 'coreutils', link: true
 brew 'docker'
 brew 'docker-machine'
 brew 'flac'
 brew 'git'
 brew 'git-flow'
+brew 'gettext', link: true
 brew 'go'
 brew 'htop'
 brew 'httpie'
