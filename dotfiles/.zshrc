@@ -53,6 +53,7 @@ alias sbl='sublime'
 export PATH="$HOME/bin:$PATH"
 
 # NPM / nodejs / nvm
+# TODO: NVM
 export PATH="/usr/local/bin:/usr/local/lib/node_modules:$PATH"
 
 # golang
@@ -66,9 +67,12 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# python
+# TODO: Python
+
 #
 # Override file
 #
 if [ -f $HOME/.zshrc_custom ]; then
-    . $HOME/.zshrc_custom
+  . $HOME/.zshrc_custom
 fi
