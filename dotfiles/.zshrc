@@ -3,30 +3,23 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/aedd/.oh-my-zsh
 
-# Antigen OM-ZSH Plugins
-# if [ ! -f $HOME/.antigen.zsh ]; then
-#   sh -c "$(curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh --silent > $HOME/.antigen.zsh)"
-# fi
-
-# source $HOME/.antigen.zsh
-
-# antigen use oh-my-zsh
-
-# antigen bundle autojump
-# antigen bundle command-not-found
-# antigen bundle git
-# antigen bundle python
-# antigen bundle zsh-users/zsh-syntax-highlighting
-# antigen bundle vi-mode
-
-# Faves: dst, agnoster, Soliah, dst, frisk, jispwoso
-# antigen theme %%zsh.omz.theme%%
-
-# antigen apply
-
-# OMZ Config
+#
+# OMZ Config and Plugins
+#
 DISABLE_AUTO_TITLE='true'
 ENABLE_CORRECTION='true'
+ZSH_THEME='lukerandall'
+
+plugins=(
+  colored-man-pages
+  dotenv
+  git
+  osx
+  vi-mode
+  kubectl
+)
+
+source $ZSH/oh-my-zsh.sh
 
 # EDITOR
 export EDITOR='vim'
@@ -40,20 +33,42 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
+#
 # ALIAS
+#
 alias g='git'
 alias d='docker'
-alias hl="pygmentize -l"
+alias t='tmux'
+alias tat='t a -t'
+alias tks= 't kill-session -t'
 
 # I always forget which sublime command I use
 alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias subl='sublime'
 alias sbl='sublime'
 
-# PATH
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/lib/node_modules:~/bin:$PATH
-export PATH=$PATH:/usr/local/go/bin
+#
+# ENVIRONMENT
+#
+export PATH="$HOME/bin:$PATH"
 
+# NPM / nodejs / nvm
+export PATH="/usr/local/bin:/usr/local/lib/node_modules:$PATH"
+
+# golang
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+
+# Android
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+#
+# Override file
+#
 if [ -f $HOME/.zshrc_custom ]; then
     . $HOME/.zshrc_custom
 fi
