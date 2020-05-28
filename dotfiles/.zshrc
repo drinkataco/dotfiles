@@ -70,6 +70,9 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # python
 # TODO: Python
 
+# GNU Utils
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
 #
 # Override file
 #
