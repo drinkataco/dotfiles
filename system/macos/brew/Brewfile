@@ -1,49 +1,71 @@
 cask_args appdir: '/Applications'
 
-tap "homebrew/bundle"
+tap 'adoptopenjdk/openjdk'
+tap 'homebrew/bundle'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/core'
-tap "homebrew/services"
+tap 'homebrew/services'
 
 # Tools
-brew "ansible"
-brew "awscli"
+brew 'ansible'
+brew 'awscli'
 brew 'bash'
-brew 'composer'
+brew 'circleci'
+brew 'cmake'
+brew 'cmatrix'
 brew 'coreutils', link: true
 brew 'docker'
 brew 'docker-machine'
-brew "ffmpeg"
+brew 'ffmpeg'
 brew 'flac'
-brew 'git'
-brew 'git-flow'
+brew 'openssl@1.1'
 brew 'gettext', link: true
+brew 'git'
 brew 'go'
-brew "highlight"
+brew 'glide'
+brew 'gnu-getopt'
+brew 'gnu-indent'
+brew 'gnu-sed'
+brew 'gnu-tar'
+brew 'gnupg'
+brew 'grep'
+brew 'highlight'
 brew 'htop'
+brew 'httpie'
 brew 'iperf'
 brew 'ipython'
+brew 'jq'
 brew 'kops'
 brew 'lynx'
 brew 'macvim'
+brew 'minikube', link: false
 brew 'mkvtoolnix', args: ['with-qt']
-brew "nmap"
+brew 'nmap'
 brew 'node'
 brew 'nodeenv'
-brew 'openvpn'
+brew 'openvpn', restart_service: true
 brew 'php7'
-brew "shellcheck"
+brew 'rbenv'
+brew 'readline'
+brew 'ruby'
+brew 'ruby-install'
+brew 'shellcheck'
 brew 'terraform'
 brew 'tmux'
-brew "tree"
+brew 'tree'
+brew 'vegeta'
+brew 'vim'
 brew 'watch'
+brew 'watchman'
 brew 'yarn'
 brew 'zsh'
 brew 'zsh-completions'
-brew "zsh-syntax-highlighting"
+brew 'zsh-syntax-highlighting'
 
 # Applications
+cask 'adoptopenjdk8'
+cask 'coconutbattery'
 cask 'firefox'
 cask 'filebot'
 cask 'flux'
@@ -60,7 +82,6 @@ cask 'mediaelch'
 cask 'minikube'
 cask 'nordvpn'
 cask 'paragon-extfs'
-cask 'postman'
 cask 'sequel-pro'
 cask 'slack'
 cask 'spectacle'
@@ -75,4 +96,4 @@ cask 'wine-stable'
 
 # Fonts
 cask 'font-inconsolata-g-for-powerline'
-cask "font-source-code-pro"
+cask 'font-source-code-pro'
