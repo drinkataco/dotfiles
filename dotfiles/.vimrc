@@ -8,16 +8,23 @@ endif
 call plug#begin('~/.vim/bundle')
 
 " Tools & Utilities
-Plug 'scrooloose/nerdcommenter' " comment out 
+" TODO: Sort plugins
+Plug 'scrooloose/nerdcommenter' " comment out
 Plug 'scrooloose/nerdtree'
-Plug 'wincent/command-t', {
-  \    'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
-  \  } " fuzzy file searching
+" Plug 'wincent/command-t', {
+"  \    'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
+"  \  } " fuzzy file searching
 Plug 'christoomey/vim-tmux-navigator' " work with tmux
 Plug 'jiangmiao/auto-pairs' " match brackets
-Plug 'Valloric/YouCompleteMe' " keyword completion
-Plug 'w0rp/ale' " Linter
+"Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe', {
+  "\    'do': './install.py --all'
+  "\  } " keyword completion
+"Plug 'w0rp/ale' " Linter
+"Plug 'wesQ3/vim-windowswap'
 Plug 'editorconfig/editorconfig-vim' " Editor alignment
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Colour schemes
 Plug 'chriskempson/base16-vim'
@@ -43,14 +50,13 @@ let mapleader = '\\'
 
 " pretties
 syntax on
-"let &t_8f = '\<Esc>[38;2;%lu;%lu;%lum' " tmux colour fix
-"let &t_8b = '\<Esc>[48;2;%lu;%lu;%lum' " ''
 let base16colorspace=256
 colorscheme base16-materia
 set termguicolors
 set number
 set list " show special chars -
 set listchars=tab:\|- " for tab
+let g:airline_powerline_fonts=1
 
 " Spacing like
 filetype plugin indent on
@@ -64,3 +70,4 @@ autocmd Filetype go setlocal noet ci pi sts=0 sw=4 ts=4
 
 " key maps
 nmap <F5> :NERDTreeToggle<CR>
+set backspace=indent,eol,start " allow backspace
