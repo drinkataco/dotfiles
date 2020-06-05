@@ -45,6 +45,7 @@ alias tks= 't kill-session -t'
 
 # I always forget which sublime command I use
 alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias smerge='/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge'
 alias subl='sublime'
 alias sbl='sublime'
 
