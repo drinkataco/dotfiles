@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/aedd/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 #
 # OMZ Config and Plugins
@@ -54,8 +54,10 @@ alias sbl='sublime'
 export PATH="$HOME/bin:$PATH"
 
 # NPM / nodejs / nvm
-# TODO: NVM
 export PATH="/usr/local/bin:/usr/local/lib/node_modules:$PATH"
+export NVM_DIR="$HOME/.nvm"
+    [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
+    [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
 
 # golang
 export PATH=$PATH:/usr/local/go/bin

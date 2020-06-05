@@ -46,6 +46,7 @@ brew 'mkvtoolnix', args: ['with-qt']
 brew 'nmap'
 brew 'node'
 brew 'nodeenv'
+brew 'nvm'
 brew 'openssl@1.1'
 brew 'openvpn', restart_service: true
 brew 'php7'
