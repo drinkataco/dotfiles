@@ -38,6 +38,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 #
 alias g='git'
 alias d='docker'
+alias k='kubectl'
 alias t='tmux'
 alias tat='t a -t'
 alias tks= 't kill-session -t'
@@ -69,6 +70,9 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # python
 # TODO: Python
+
+# kubernetes
+complete -F __start_kubectl k
 
 # GNU Utils
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
