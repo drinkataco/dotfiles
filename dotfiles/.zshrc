@@ -49,7 +49,7 @@ alias subl='sublime'
 alias sbl='sublime'
 
 #
-# ENVIRONMENT
+# ENVIRONMENT paths and autocompletes
 #
 export PATH="$HOME/bin:$PATH"
 
@@ -72,7 +72,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # TODO: Python
 
 # kubernetes
-complete -F __start_kubectl k
+[[ $commands[kubectl] || $commands[k] ]] && source <(kubectl completion zsh)
 
 # GNU Utils
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
