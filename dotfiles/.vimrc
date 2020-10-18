@@ -8,7 +8,6 @@ endif
 call plug#begin('~/.vim/bundle')
 
 " Tools & Utilities
-" TODO: Sort plugins
 Plug 'scrooloose/nerdcommenter' " comment out
 Plug 'scrooloose/nerdtree'
 " Plug 'wincent/command-t', {
@@ -57,6 +56,8 @@ set number
 set list " show special chars -
 set listchars=tab:\|- " for tab
 let g:airline_powerline_fonts=1
+set wildignore+=*.swp,*.DS_Store " hide files
+let NERDTreeRespectWildIgnore=1 " hide files in NERDtree
 
 " Spacing like
 filetype plugin indent on
