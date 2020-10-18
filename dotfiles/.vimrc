@@ -32,9 +32,15 @@ Plug 'chriskempson/base16-vim'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 
-" JS
+" JS / TS
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'Quramy/vim-js-pretty-template'
+
+" GraphQL
+Plug 'jparise/vim-graphql'
 
 " GO
 Plug 'fatih/vim-go'
@@ -58,9 +64,12 @@ set listchars=tab:\|- " for tab
 let g:airline_powerline_fonts=1
 set wildignore+=*.swp,*.DS_Store " hide files
 
-" NERDTREE
-let g;NERDTreeRespectWildIgnore=1 " hide files with wildignore
+" nerdtree
+let g:NERDTreeRespectWildIgnore=1 " hide files with wildignore
 let g:NERDTreeShowHidden=1 " show hidden files by default
+
+" vim-js-pretty-template. Set Syntax for JS/TS templates
+call jspretmpl#register_tag('gql', 'graphql')
 
 " Spacing like
 filetype plugin indent on
