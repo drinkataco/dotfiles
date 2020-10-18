@@ -53,6 +53,7 @@ brew 'openvpn', restart_service: true
 brew 'php@7.4'
 brew 'rbenv'
 brew 'readline'
+brew 'reattach-to-user-namespace'
 brew 'ruby'
 brew 'ruby-install'
 brew 'shellcheck'
