@@ -57,7 +57,10 @@ set list " show special chars -
 set listchars=tab:\|- " for tab
 let g:airline_powerline_fonts=1
 set wildignore+=*.swp,*.DS_Store " hide files
-let NERDTreeRespectWildIgnore=1 " hide files in NERDtree
+
+" NERDTREE
+let g;NERDTreeRespectWildIgnore=1 " hide files with wildignore
+let g:NERDTreeShowHidden=1 " show hidden files by default
 
 " Spacing like
 filetype plugin indent on
