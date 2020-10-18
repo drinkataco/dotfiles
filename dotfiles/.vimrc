@@ -39,6 +39,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'Quramy/vim-js-pretty-template'
+Plug 'Quramy/tsuquyomi'
 
 " GraphQL
 Plug 'jparise/vim-graphql'
@@ -67,6 +68,7 @@ set wildignore+=*.swp,*.DS_Store " hide files
 
 " Spacing like
 filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
 set tabstop=2 " show existing tab with 2 spaces width
 set shiftwidth=2 " when indenting with '>', use 2 spaces width
 set expandtab " On pressing tab, insert 2 spaces
@@ -91,4 +93,4 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 
 " TSX JS
 "   it seemed that tsx were being set as ts files so highlighting was incorrect
-autocmd BufNewFile,BufRead *.tsx :set filetype=typescript.tsx
+autocmd BufNewFile,BufRead *.tsx :set filetype=typescript syntax=typescript.tsx
