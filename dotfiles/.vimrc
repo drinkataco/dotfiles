@@ -8,13 +8,15 @@ endif
 call plug#begin('~/.vim/bundle')
 
 " Tools & Utilities
-Plug 'scrooloose/nerdcommenter' " comment out
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdcommenter' " comment out
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'airblade/vim-gitgutter'
 " Plug 'wincent/command-t', {
 "  \    'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
 "  \  } " fuzzy file searching
 Plug 'christoomey/vim-tmux-navigator' " work with tmux
-Plug 'jiangmiao/auto-pairs' " match brackets
+" Plug 'jiangmiao/auto-pairs' " match brackets
 "Plug 'Valloric/YouCompleteMe'
 "Plug 'Valloric/YouCompleteMe', {
   "\    'do': './install.py --all'
@@ -24,34 +26,33 @@ Plug 'jiangmiao/auto-pairs' " match brackets
 Plug 'editorconfig/editorconfig-vim' " Editor alignment
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']
+\ }
 
 " Colour schemes
 Plug 'chriskempson/base16-vim'
 
-" Git
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'airblade/vim-gitgutter'
-
 " JS / TS
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'Quramy/vim-js-pretty-template'
 
 " GraphQL
 Plug 'jparise/vim-graphql'
 
 " GO
-Plug 'fatih/vim-go'
+" Plug 'fatih/vim-go'
 
 " Markdown
-Plug 'suan/vim-instant-markdown'
+" Plug 'suan/vim-instant-markdown'
 
 call plug#end()
 
 " misc
-let mapleader = '\\'
+let mapleader = '\'
 
 " pretties
 syntax on
@@ -63,13 +64,6 @@ set list " show special chars -
 set listchars=tab:\|- " for tab
 let g:airline_powerline_fonts=1
 set wildignore+=*.swp,*.DS_Store " hide files
-
-" nerdtree
-let g:NERDTreeRespectWildIgnore=1 " hide files with wildignore
-let g:NERDTreeShowHidden=1 " show hidden files by default
-
-" vim-js-pretty-template. Set Syntax for JS/TS templates
-call jspretmpl#register_tag('gql', 'graphql')
 
 " Spacing like
 filetype plugin indent on
@@ -84,3 +78,17 @@ autocmd Filetype go setlocal noet ci pi sts=0 sw=4 ts=4
 " key maps
 nmap <F5> :NERDTreeToggle<CR>
 set backspace=indent,eol,start " allow backspace
+
+"
+" PLUGIN Settings
+"
+" nerdtree
+let g:NERDTreeRespectWildIgnore=1 " hide files with wildignore
+let g:NERDTreeShowHidden=1 " show hidden files by default
+
+" prettier
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
+" TSX JS
+"   it seemed that tsx were being set as ts files so highlighting was incorrect
+autocmd BufNewFile,BufRead *.tsx :set filetype=typescript.tsx
