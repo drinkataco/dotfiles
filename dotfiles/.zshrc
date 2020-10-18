@@ -49,6 +49,10 @@ alias smerge='/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin/smerge
 alias subl='sublime'
 alias sbl='sublime'
 
+# goodies
+alias please='eval "sudo $(fc -ln -1)"'
+alias weather='curl wttr.in/birmingham'
+
 #
 # ENVIRONMENT paths and autocompletes
 #
