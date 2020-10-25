@@ -12,16 +12,12 @@ Plug 'preservim/nerdcommenter' " comment out
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
-" Plug 'wincent/command-t', {
-"  \    'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
-"  \  } " fuzzy file searching
+Plug 'junegunn/fzf' " fuzzy file searching
 Plug 'christoomey/vim-tmux-navigator' " work with tmux
-" Plug 'jiangmiao/auto-pairs' " match brackets
-"Plug 'Valloric/YouCompleteMe'
-"Plug 'Valloric/YouCompleteMe', {
+"Plug 'ycm-core/YouCompleteMe', {
   "\    'do': './install.py --all'
   "\  } " keyword completion
-"Plug 'w0rp/ale' " Linter
+Plug 'dense-analysis/ale' " Linter
 "Plug 'wesQ3/vim-windowswap'
 Plug 'editorconfig/editorconfig-vim' " Editor alignment
 Plug 'vim-airline/vim-airline'
@@ -44,16 +40,14 @@ Plug 'Quramy/tsuquyomi'
 " GraphQL
 Plug 'jparise/vim-graphql'
 
-" GO
-" Plug 'fatih/vim-go'
-
-" Markdown
-" Plug 'suan/vim-instant-markdown'
-
 call plug#end()
 
 " misc
 let mapleader = '\'
+
+" language support
+let $RUBYHOME=$HOME."/.rvm/rubies/ruby-2.7.2"
+set rubydll=$HOME/.rvm/rubies/ruby-2.7.2/lib/libruby.dylib
 
 " pretties
 syntax on
