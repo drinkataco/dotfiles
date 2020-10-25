@@ -73,7 +73,11 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # TODO: Python
 
 # fzf
+# info: https://medium.com/better-programming/boost-your-command-line-productivity-with-fuzzy-finder-985aa162ba5d
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias fzfp="fzf --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'"
+export FZF_DEFAULT_COMMAND='fd --type f --hidden'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # kubernetes
 [[ $commands[kubectl] || $commands[k] ]] && source <(kubectl completion zsh)
