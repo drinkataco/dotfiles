@@ -21,6 +21,7 @@ brew 'docker-machine'
 brew 'ffmpeg'
 brew 'flac'
 brew 'findutils'
+brew 'fzf'
 brew 'gawk'
 brew 'gettext', link: true
 brew 'git'

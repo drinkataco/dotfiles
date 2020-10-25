@@ -72,6 +72,9 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # python
 # TODO: Python
 
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # kubernetes
 [[ $commands[kubectl] || $commands[k] ]] && source <(kubectl completion zsh)
 
