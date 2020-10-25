@@ -79,6 +79,10 @@ nmap <leader>kb :NERDTreeToggle<CR> " open/close sidebar
 nmap <leader>t :FZF<CR> " search files
 " todo: linter
 
+nmap <leader>s :SSave<CR>
+nmap <leader>o :SLoad<CR>
+nmap <leader>x :SClose<CR>
+
 set backspace=indent,eol,start " allow backspace
 
 "
@@ -98,3 +102,17 @@ autocmd BufNewFile,BufRead *.tsx :set filetype=typescript syntax=typescript.tsx
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" startify
+" bring sessions to the top
+let g:startify_lists = [
+  \ { 'type': 'sessions',  'header': ['   Sessions']       },
+  \ { 'type': 'files',     'header': ['   MRU']            },
+  \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+  \ { 'type': 'commands',  'header': ['   Commands']       },
+\ ]
+" Allow it to work nicely with NERDTree
+" todo [......]
+" note: on saved sessions with NERDTree, when opening up there's a lot of errors around the loading
+"   of nerdtree
