@@ -14,17 +14,18 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf' " fuzzy file searching
 Plug 'christoomey/vim-tmux-navigator' " work with tmux
-"Plug 'ycm-core/YouCompleteMe', {
-  "\    'do': './install.py --all'
-  "\  } " keyword completion
+Plug 'ycm-core/YouCompleteMe', {
+\   'do': './install.py --all'
+\ } " keyword completion
 Plug 'dense-analysis/ale' " Linter
-"Plug 'wesQ3/vim-windowswap'
+Plug 'mhinz/vim-startify'
+Plug 'wesQ3/vim-windowswap'
 Plug 'editorconfig/editorconfig-vim' " Editor alignment
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']
+\   'do': 'yarn install',
+\   'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']
 \ }
 
 " Colour schemes
@@ -86,6 +87,7 @@ set backspace=indent,eol,start " allow backspace
 " nerdtree
 let g:NERDTreeRespectWildIgnore=1 " hide files with wildignore
 let g:NERDTreeShowHidden=1 " show hidden files by default
+autocmd BufWinEnter * NERDTreeMirror " mirror nerdtree amongst tabs
 
 " prettier
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
@@ -93,3 +95,6 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 " TSX JS
 "   it seemed that tsx were being set as ts files so highlighting was incorrect
 autocmd BufNewFile,BufRead *.tsx :set filetype=typescript syntax=typescript.tsx
+
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_insertion = 1
