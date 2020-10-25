@@ -72,7 +72,12 @@ autocmd Filetype php setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype go setlocal noet ci pi sts=0 sw=4 ts=4
 
 " key maps
+" note: i've tried to keep them similar to Sublime Text
 nmap <F5> :NERDTreeToggle<CR>
+nmap <leader>kb :NERDTreeToggle<CR> " open/close sidebar
+nmap <leader>t :FZF<CR> " search files
+" todo: linter
+
 set backspace=indent,eol,start " allow backspace
 
 "

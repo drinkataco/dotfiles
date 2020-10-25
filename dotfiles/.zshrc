@@ -56,7 +56,7 @@ alias weather='curl wttr.in/birmingham'
 #
 # ENVIRONMENT paths and autocompletes
 #
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:$PATH"
 
 # golang
 export PATH=$PATH:/usr/local/go/bin
