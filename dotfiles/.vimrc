@@ -12,7 +12,8 @@ Plug 'preservim/nerdcommenter' " comment out
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'airblade/vim-gitgutter'
-Plug 'junegunn/fzf' " fuzzy file searching
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator' " work with tmux
 Plug 'ycm-core/YouCompleteMe', {
 \   'do': './install.py --all'
@@ -79,7 +80,8 @@ autocmd Filetype go setlocal noet ci pi sts=0 sw=4 ts=4
 " note: i've tried to keep them similar to Sublime Text
 nmap <F5> :NERDTreeToggle<CR>
 nmap <leader>kb :NERDTreeToggle<CR> " open/close sidebar
-nmap <leader>t :FZF<CR> " search files
+nmap <leader>t :FZF<CR>
+nmap <leader>f :Ag
 " todo: linter
 
 " Save session (close nerdtree to stop opening buffer errors)
