@@ -45,6 +45,7 @@ call plug#end()
 
 " misc
 let mapleader = '\'
+set clipboard=unnamed
 
 " language support
 let $RUBYHOME=$HOME."/.rvm/rubies/ruby-2.7.2"
