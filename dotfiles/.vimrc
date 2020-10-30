@@ -73,14 +73,17 @@ set expandtab " On pressing tab, insert 2 spaces
 autocmd Filetype php setlocal ts=4 sw=4 sts=0 expandtab
 autocmd Filetype go setlocal noet ci pi sts=0 sw=4 ts=4
 
+"
 " key maps
+"
 " note: i've tried to keep them similar to Sublime Text
 nmap <F5> :NERDTreeToggle<CR>
 nmap <leader>kb :NERDTreeToggle<CR> " open/close sidebar
 nmap <leader>t :FZF<CR> " search files
 " todo: linter
 
-nmap <leader>s :SSave<CR>
+" Save session (close nerdtree to stop opening buffer errors)
+nmap <leader>s :tabdo NERDTreeClose <bar> :SSave<CR>
 nmap <leader>o :SLoad<CR>
 nmap <leader>x :SClose<CR>
 
