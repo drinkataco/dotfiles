@@ -28,6 +28,7 @@ Plug 'prettier/vim-prettier', {
 \   'do': 'yarn install',
 \   'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']
 \ }
+Plug 'tpope/vim-fugitive'
 
 " Colour schemes
 Plug 'chriskempson/base16-vim'
@@ -77,12 +78,25 @@ autocmd Filetype go setlocal noet ci pi sts=0 sw=4 ts=4
 "
 " key maps
 "
-" note: i've tried to keep them similar to Sublime Text
+" note: i've tried to keep them similar to Sublime Text where possible
 nmap <F5> :NERDTreeToggle<CR>
 nmap <leader>kb :NERDTreeToggle<CR> " open/close sidebar
+" Fuzzy searching
 nmap <leader>t :FZF<CR>
-nmap <leader>f :Ag
+nmap <leader>ft :Ag<CR>
+nmap <leader>fh :History:<CR>
+nmap <leader>fc :BCommits<CR>
 " todo: linter
+
+" git fugitive
+nmap <leader>gg :Git
+nmap <leader>gb :Git blame<CR>
+nmap <leader>gc :Git commit
+nmap <leader>gl :Git log<CR>
+nmap <leader>gs :Gdiffsplit<CR>
+nmap <leader>gw :Gwrite<CR>
+
+
 
 " Save session (close nerdtree to stop opening buffer errors)
 nmap <leader>s :tabdo NERDTreeClose <bar> :SSave<CR>
