@@ -1,9 +1,8 @@
 #!/bin/sh
 BASE_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
-SCRIPTS_DIR="${BASE_DIR}/scripts"
 DOTFILES_DIR="${BASE_DIR}/dotfiles"
 readonly BASE_DIR
-readonly SCRIPTS_DIR
+readonly DOTFILES_DIR
 
 #########################################
 # Symlinks dotfiles 
