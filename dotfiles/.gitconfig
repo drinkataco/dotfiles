@@ -28,7 +28,7 @@
 [core]
   autocrlf = input
   editor = vim
-  excludesfile = $DF_GIT_USER_EXCLUDES_FILE
+  excludesfile = '~/.gitignore'
 
 # [commit]
 #  gpgsign = true
@@ -56,8 +56,8 @@
   fetch = +refs/pr/*/head:refs/remotes/origin/pr/*
 
 [user]
-  name = $DF_GIT_USER_NAME
-  email = $DF_GIT_USER_EMAIL
+  name = 'J J Walwyn'
+  email = 'me@joshwalwyn.com'
 # signingKey = $DF_GIT_USER_SIGNING_KEY
 
 [url "git@github.com:"]
