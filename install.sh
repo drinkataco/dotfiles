@@ -15,7 +15,7 @@ readonly SCRIPTS_DIR
 #   None
 #######################################
 link_dotfiles() {
-  find "${DOTFILES_DIR}" | while read -r file; do
+  find "${DOTFILES_DIR}" -maxdepth 1 -mindepth 1 | while read -r file; do
     echo ln -s "$file" "$HOME"
   done
 }
