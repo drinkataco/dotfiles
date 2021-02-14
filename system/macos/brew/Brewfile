@@ -53,6 +53,7 @@ brew 'mono'
 brew 'nmap'
 brew 'node'
 brew 'nvm'
+brew 'openconnect'
 brew 'openssl@1.1'
 brew 'openvpn', restart_service: true
 brew 'php@7.4'
