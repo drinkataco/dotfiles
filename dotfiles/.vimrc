@@ -59,10 +59,12 @@ let base16colorspace=256
 colorscheme base16-materia
 set termguicolors
 set number
+set relativenumber
 set list
 set listchars=tab:\|-
 let g:airline_powerline_fonts=1
 set wildignore+=*.swp,*.DS_Store
+set incsearch
 
 " Spacing like
 filetype plugin indent on
