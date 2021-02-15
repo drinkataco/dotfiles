@@ -85,7 +85,8 @@ nmap <F5> :NERDTreeToggle<CR>
 nmap <leader>kb :NERDTreeToggle<CR> " open/close sidebar
 
 " Fuzzy searching
-nmap <leader>t :FZF<CR>
+nmap <leader>t :GitFiles<CR>
+nmap <leader>ff :FZF<CR>
 nmap <leader>ft :Ag<CR>
 nmap <leader>fh :History:<CR>
 nmap <leader>fc :BCommits<CR>
