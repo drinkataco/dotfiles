@@ -38,7 +38,7 @@ yes_no() {
 #######################################
 link_dotfiles() {
   find "${DOTFILES_DIR}" -maxdepth 1 -mindepth 1 | while read -r file; do
-    echo ln -v -s "$file" "$HOME"
+    ln -v -s "$file" "$HOME"
   done
 }
 
