@@ -29,7 +29,7 @@
 [core]
   autocrlf = input
   editor = vim
-  excludesfile = '~/.gitignore'
+  excludesfile = ~/.gitignore
 
 # [commit]
 #  gpgsign = true
