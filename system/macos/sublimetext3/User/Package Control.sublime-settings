@@ -1,1 +1,22 @@
-{}
+{
+  "bootstrapped": true,
+  "in_process_packages":
+  [
+  ],
+  "installed_packages":
+  [
+    "A File Icon",
+    "ESLint",
+    "GitGutter",
+    "IndentX",
+    "JsPrettier",
+    "Material Color Scheme",
+    "Material Theme",
+    "Package Control",
+    "ProjectManager",
+    "SideBarTools",
+    "Tmux Syntax Highlight",
+    "VimL"
+  ]
+}
+
