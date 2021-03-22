@@ -1,42 +1,42 @@
 {
-  "binary_file_patterns":
-  [
-    "*.dds",
-    "*.eot",
-    "*.gif",
-    "*.ico",
-    "*.jar",
-    "*.jpeg",
-    "*.jpg",
-    "*.pdf",
-    "*.png",
-    "*.swf",
-    "*.tga",
-    "*.ttf",
-    "*.zip"
-  ],
-  "bold_folder_labels": true,
-  "close_windows_when_empty": false,
-  "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
-  "detect_indentation": true,
-  "dictionary": "Packages/Language - English/en_GB.dic",
-  "fade_fold_buttons": false,
-  "font_face": "Inconsolata-g for Powerline",
-  "font_size": 16,
-  "highlight_line": true,
-  "highlight_modified_tabs": true,
-  "indent_to_bracket": true,
-  "index_exclude_patterns":
-  [
-    "*.sublime-project",
-    "*.log",
-    "node_modules/**"
-  ],
-  "scroll_past_end": true,
-  "tabs_padding_small": true,
-  "tabs_small": true,
-  "theme": "Material-Theme.sublime-theme",
-  "translate_tabs_to_spaces": true,
-  "trim_trailing_white_space_on_save": true,
-  "word_wrap": true
+	"binary_file_patterns":
+	[
+		"*.dds",
+		"*.eot",
+		"*.gif",
+		"*.ico",
+		"*.jar",
+		"*.jpeg",
+		"*.jpg",
+		"*.pdf",
+		"*.png",
+		"*.swf",
+		"*.tga",
+		"*.ttf",
+		"*.zip"
+	],
+	"bold_folder_labels": true,
+	"close_windows_when_empty": false,
+	"color_scheme": "Packages/Material Color Scheme/sublime/material-dark.tmTheme",
+	"detect_indentation": true,
+	"dictionary": "Packages/Language - English/en_GB.dic",
+	"fade_fold_buttons": false,
+	"font_face": "Inconsolata-g for Powerline",
+	"font_size": 16,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"indent_to_bracket": true,
+	"index_exclude_patterns":
+	[
+		"*.sublime-project",
+		"*.log",
+		"node_modules/**"
+	],
+	"scroll_past_end": true,
+	"tabs_padding_small": true,
+	"tabs_small": true,
+	"theme": "Material-Theme.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": true
 }
