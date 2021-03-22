@@ -30,6 +30,9 @@ Plug 'prettier/vim-prettier', {
 \ }
 Plug 'tpope/vim-fugitive'
 
+" syntax
+Plug 'nelsyeung/twig.vim'
+
 " Colour schemes
 Plug 'chriskempson/base16-vim'
 
