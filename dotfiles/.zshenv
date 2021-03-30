@@ -14,3 +14,7 @@ if [ -f "$HOME/.rvm/scripts/rvm" ]; then
 else
   echo 'RVM not installed. See https://get.rvm.io'
 fi
+
+# rust cargo env
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
+

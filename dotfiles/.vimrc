@@ -32,6 +32,7 @@ Plug 'tpope/vim-fugitive'
 
 " syntax
 Plug 'nelsyeung/twig.vim'
+Plug 'cespare/vim-toml'
 
 " Colour schemes
 Plug 'chriskempson/base16-vim'
