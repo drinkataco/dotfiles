@@ -124,6 +124,10 @@ vnoremap <c-s-k> :m '<-2<CR>gv=gv
 "
 " PLUGIN Settings
 "
+" ALE Linter
+let g:ale_fixers = {'javascript': ['eslint'], 'typescript': ['eslint'] }
+let g:ale_linters = {'javascript': ['eslint'], 'typescript': ['eslint'] }
+
 " nerdtree
 let g:NERDTreeRespectWildIgnore=1 " hide files with wildignore
 let g:NERDTreeShowHidden=1 " show hidden files by default
