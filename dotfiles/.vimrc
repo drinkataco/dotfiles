@@ -127,6 +127,10 @@ vnoremap <c-s-k> :m '<-2<CR>gv=gv
 " ALE Linter
 let g:ale_fixers = {'javascript': ['eslint'], 'typescript': ['eslint'] }
 let g:ale_linters = {'javascript': ['eslint'], 'typescript': ['eslint'] }
+let g:ale_pattern_options = {
+\  '.*node_modules.*$': {'ale_enabled': 0},
+\  '.*dist.*$': {'ale_enabled': 0}
+\}
 
 " nerdtree
 let g:NERDTreeRespectWildIgnore=1 " hide files with wildignore
