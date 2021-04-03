@@ -14,10 +14,13 @@ plugins=(
   colored-man-pages
   dotenv
   git
+  kubectl
+  nvm
   osx
   vi-mode
-  kubectl
 )
+
+NVM_AUTOLOAD='1'
 
 source $ZSH/oh-my-zsh.sh
 
