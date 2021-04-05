@@ -33,6 +33,9 @@ Plug 'ycm-core/YouCompleteMe', {
 
 " Linting and Debugging
 Plug 'dense-analysis/ale'
+Plug 'puremourning/vimspector', {
+\   'do': './install_gadget.py --all'
+\ }
 
 " syntax and language specific
 Plug 'cespare/vim-toml'
@@ -87,7 +90,6 @@ autocmd Filetype go setlocal noet ci pi sts=0 sw=4 ts=4
 " key maps
 "
 " note: i've tried to keep them similar to Sublime Text where possible
-nmap <F5> :NERDTreeToggle<CR>
 nmap <leader>kb :NERDTreeToggle<CR> " open/close sidebar
 
 " Fuzzy searching
@@ -133,6 +135,9 @@ let g:ale_pattern_options = {
 \  '.*node_modules.*$': {'ale_enabled': 0},
 \  '.*dist.*$': {'ale_enabled': 0}
 \}
+
+" Vimspector
+let g:vimspector_enable_mappings='HUMAN'
 
 " nerdtree
 let g:NERDTreeRespectWildIgnore=1 " hide files with wildignore
