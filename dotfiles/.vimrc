@@ -8,44 +8,45 @@ endif
 call plug#begin('~/.vim/bundle')
 
 " Tools & Utilities
-Plug 'preservim/nerdcommenter' " comment out
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'airblade/vim-gitgutter'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'christoomey/vim-tmux-navigator' " work with tmux
-Plug 'ycm-core/YouCompleteMe', {
-\   'do': './install.py --all'
-\ } " keyword completion
-Plug 'dense-analysis/ale' " Linter
 Plug 'mhinz/vim-startify'
 Plug 'wesQ3/vim-windowswap'
-Plug 'editorconfig/editorconfig-vim' " Editor alignment
+
+" Theming
+Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" Git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" Searching and Autcomplete
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'ycm-core/YouCompleteMe', {
+\   'do': './install.py --all'
+\ }
+
+" Linting and Debugging
+Plug 'dense-analysis/ale'
+
+" syntax and language specific
+Plug 'cespare/vim-toml'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'jparise/vim-graphql'
+Plug 'leafgarland/typescript-vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'nelsyeung/twig.vim'
 Plug 'prettier/vim-prettier', {
 \   'do': 'npm ci',
 \   'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']
 \ }
-Plug 'tpope/vim-fugitive'
-
-" syntax
-Plug 'nelsyeung/twig.vim'
-Plug 'cespare/vim-toml'
-
-" Colour schemes
-Plug 'chriskempson/base16-vim'
-
-" JS / TS
-"Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'maxmellon/vim-jsx-pretty'
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'Quramy/tsuquyomi'
-
-" GraphQL
-Plug 'jparise/vim-graphql'
 
 call plug#end()
 
