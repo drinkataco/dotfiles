@@ -147,7 +147,7 @@ let NERDSpaceDelims=1 " space after comments
 let NERDTreeMinimalUI=1
 
 " prettier
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html silent! PrettierAsync
+" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html silent! PrettierAsync
 
 " TSX JS
 "   it seemed that tsx were being set as ts files so highlighting was incorrect
