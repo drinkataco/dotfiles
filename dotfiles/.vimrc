@@ -41,6 +41,7 @@ Plug 'puremourning/vimspector', {
 Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jparise/vim-graphql'
+Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'nelsyeung/twig.vim'
