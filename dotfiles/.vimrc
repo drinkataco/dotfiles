@@ -143,9 +143,10 @@ let g:vimspector_enable_mappings='HUMAN'
 " nerdtree
 let g:NERDTreeRespectWildIgnore=1 " hide files with wildignore
 let g:NERDTreeShowHidden=1 " show hidden files by default
-autocmd BufWinEnter * NERDTreeMirror " mirror nerdtree amongst tabs
-let NERDSpaceDelims=1 " space after comments
+" autocmd BufWinEnter * NERDTreeMirror " mirror nerdtree amongst tabs
 let NERDTreeMinimalUI=1
+
+let NERDSpaceDelims=1 " space after comments
 
 " prettier
 " autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html silent! PrettierAsync
