@@ -18,9 +18,29 @@ plugins=(
   nvm
   osx
   vi-mode
+  zsh-completions
 )
 
-NVM_AUTOLOAD='1'
+#
+# A lil sorta plugin manager just to tell my devices i might wanna install these
+#
+function add_plugin {
+  local plugin_name="${1}"
+  local plugin_repo="${2}"
+  local plugin_dir="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom/plugins/}${plugin_name}"
+
+  if [[ ! -d "${plugin_dir}/" ]]; then
+    echo "\033[0;31mZSH Plugin ${plugin_name} not found. Install it with the following command and reload your shell\033[0m"
+    echo "  git clone ${plugin_repo} ${plugin_dir}"
+  fi
+}
+
+add_plugin 'zsh-completions' 'https://github.com/zsh-users/zsh-completions' 
+add_plugin 'fzf-tab-completion' 'https://github.com/lincheney/fzf-tab-completion.git'
+
+unfunction add_plugin # the scope is shortlived 
+
+autoload -U compinit && compinit # zsh-completions reload
 
 source $ZSH/oh-my-zsh.sh
 
@@ -78,6 +98,9 @@ export AWS_PAGER="less -F -X"
 # python
 # TODO: Python
 
+# JS
+NVM_AUTOLOAD='1'
+
 # fzf
 # info: https://medium.com/better-programming/boost-your-command-line-productivity-with-fuzzy-finder-985aa162ba5d
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh || $(brew --prefix)/opt/fzf/install
@@ -102,7 +125,8 @@ fi
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # Autocomplete
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
-compinit
-complete -C '/usr/local/bin/aws_completer' aws
+# improve: https://medium.com/@herryhan2435/using-aws-cli-with-fzf-on-ohmyzsh-ec995ee3784f
+# autoload bashcompinit && bashcompinit
+# autoload -Uz compinit && compinit
+# compinit
+# complete -C '/usr/local/bin/aws_completer' aws
