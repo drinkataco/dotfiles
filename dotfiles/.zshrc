@@ -11,8 +11,10 @@ ENABLE_CORRECTION='true'
 ZSH_THEME='lukerandall'
 
 plugins=(
+  aws
   colored-man-pages
   dotenv
+  fzf
   git
   kubectl
   nvm
@@ -40,9 +42,12 @@ add_plugin 'fzf-tab-completion' 'https://github.com/lincheney/fzf-tab-completion
 
 unfunction add_plugin # the scope is shortlived 
 
-autoload -U compinit && compinit # zsh-completions reload
-
 source $ZSH/oh-my-zsh.sh
+
+# AUTOCOMPLETIONS
+autoload -U compinit && compinit # zsh-completions reload
+source $HOME/.oh-my-zsh/custom/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
+#zstyle ':completion:*:*:aws' fzf-search-display true
 
 # EDITOR
 export EDITOR='vim'
