@@ -90,8 +90,9 @@ autocmd Filetype go setlocal noet ci pi sts=0 sw=4 ts=4
 "
 " key maps
 "
-" note: i've tried to keep them similar to Sublime Text where possible
-nmap <leader>kb :NERDTreeToggle<CR> " open/close sidebar
+" note: i've tried to keep them similarish to Sublime Text where possible
+nmap <leader>kb :NERDTreeToggle<CR> 
+nmap <leader>kf :NERDTreeFind<CR>
 
 " Fuzzy searching
 nmap <leader>t :GitFiles<CR>
