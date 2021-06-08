@@ -14,13 +14,13 @@ plugins=(
   aws
   colored-man-pages
   dotenv
-  fzf
   git
   kubectl
   nvm
   osx
   vi-mode
   zsh-completions
+  fzf-tab
 )
 
 #
@@ -38,7 +38,7 @@ function add_plugin {
 }
 
 add_plugin 'zsh-completions' 'https://github.com/zsh-users/zsh-completions' 
-add_plugin 'fzf-tab-completion' 'https://github.com/lincheney/fzf-tab-completion.git'
+add_plugin 'fzf-tab' 'https://github.com/Aloxaf/fzf-tab'
 
 unfunction add_plugin # the scope is shortlived 
 
@@ -46,8 +46,9 @@ source $ZSH/oh-my-zsh.sh
 
 # AUTOCOMPLETIONS
 autoload -U compinit && compinit # zsh-completions reload
-source $HOME/.oh-my-zsh/custom/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
-#zstyle ':completion:*:*:aws' fzf-search-display true
+zstyle ':completion:*:git-checkout:*' sort false
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'stat $realpath'
+# zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup # upgrade tmux to 3.2 
 
 # EDITOR
 export EDITOR='vim'
