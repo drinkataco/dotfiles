@@ -29,7 +29,7 @@ plugins=(
 function add_plugin {
   local plugin_name="${1}"
   local plugin_repo="${2}"
-  local plugin_dir="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom/plugins/}${plugin_name}"
+  local plugin_dir="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/${plugin_name}"
 
   if [[ ! -d "${plugin_dir}/" ]]; then
     echo "\033[0;31mZSH Plugin ${plugin_name} not found. Install it with the following command and reload your shell\033[0m"
