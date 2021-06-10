@@ -97,6 +97,7 @@ nmap <leader>kf :NERDTreeFind<CR>
 " Fuzzy searching
 nmap <leader>t :GitFiles<CR>
 nmap <leader>ff :FZF<CR>
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0) " File Contents Only
 nmap <leader>ft :Ag<CR>
 nmap <leader>fh :History:<CR>
 nmap <leader>fc :BCommits<CR>
