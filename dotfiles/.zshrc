@@ -48,6 +48,8 @@ source $ZSH/oh-my-zsh.sh
 autoload -U compinit && compinit # zsh-completions reload
 zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'stat $realpath'
+zstyle ':fzf-tab:complete:bat:*' fzf-preview '[ -f $realpath ] && cat $realpath || stat $realpath'
+zstyle ':fzf-tab:complete:cat:*' fzf-preview '[ -f $realpath ] && cat $realpath || stat $realpath'
 # zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup # upgrade tmux to 3.2 
 
 # EDITOR
