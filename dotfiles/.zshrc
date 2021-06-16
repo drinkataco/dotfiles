@@ -13,6 +13,7 @@ ZSH_THEME='lukerandall'
 plugins=(
   aws
   colored-man-pages
+  docker
   dotenv
   git
   kubectl
