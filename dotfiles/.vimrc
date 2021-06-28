@@ -139,6 +139,9 @@ let g:ale_pattern_options = {
 \  '.*dist.*$': {'ale_enabled': 0}
 \}
 
+" bash
+autocmd BufNewFile,BufRead *.sh :set filetype=bash syntax=bash
+
 " Vimspector
 let g:vimspector_enable_mappings='HUMAN'
 
