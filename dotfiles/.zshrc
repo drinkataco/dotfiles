@@ -74,6 +74,7 @@ alias k='kubectl'
 alias t='tmux'
 alias tat='t a -t'
 alias tks= 't kill-session -t'
+alias v='vim .'
 
 # I always forget which sublime command I use
 alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
