@@ -94,6 +94,10 @@ autocmd Filetype go setlocal noet ci pi sts=0 sw=4 ts=4
 nmap <leader>kb :NERDTreeToggle<CR> 
 nmap <leader>kf :NERDTreeFind<CR>
 
+" New empty buffers
+nmap <leader>nt :tabnew<CR>
+nmap <leader>ns :new<CR>
+
 " Fuzzy searching
 nmap <leader>t :GitFiles<CR>
 nmap <leader>ff :FZF<CR>
@@ -127,6 +131,9 @@ inoremap <c-s-j> <Esc>:m .+1<CR>==gi
 inoremap <c-s-k> <Esc>:m .-2<CR>==gi
 vnoremap <c-s-j> :m '>+1<CR>gv=gv
 vnoremap <c-s-k> :m '<-2<CR>gv=gv
+
+" misc
+nmap <leader>os :! subl %<CR><CR>
 
 "
 " PLUGIN Settings
