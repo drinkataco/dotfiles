@@ -51,7 +51,6 @@ brew 'mkvtoolnix', args: ['with-qt']
 brew 'mono'
 brew 'nmap'
 brew 'nnn'
-brew 'node'
 brew 'nvm'
 brew 'openconnect'
 brew 'openssl@1.1'
