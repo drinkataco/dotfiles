@@ -109,6 +109,9 @@ export AWS_PAGER="less -F -X"
 # TODO: Python
 
 # JS
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
 NVM_AUTOLOAD='1'
 
 # fzf
@@ -124,6 +127,9 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # GNU Utils
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
 #
 # Override file
 #
@@ -131,12 +137,5 @@ if [ -f $HOME/.zshrc_custom ]; then
   . $HOME/.zshrc_custom
 fi
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
-# Autocomplete
-# improve: https://medium.com/@herryhan2435/using-aws-cli-with-fzf-on-ohmyzsh-ec995ee3784f
-# autoload bashcompinit && bashcompinit
-# autoload -Uz compinit && compinit
-# compinit
-# complete -C '/usr/local/bin/aws_completer' aws
+
