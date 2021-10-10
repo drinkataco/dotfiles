@@ -44,13 +44,14 @@ Plug 'jparise/vim-graphql'
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'nelsyeung/twig.vim'
 Plug 'prettier/vim-prettier', {
 \   'do': 'npm ci',
 \   'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']
 \ }
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'Quramy/tsuquyomi'
+
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
@@ -139,12 +140,13 @@ nmap <leader>os :! subl %<CR><CR>
 " PLUGIN Settings
 "
 " ALE Linter
-let g:ale_fixers = {'javascript': ['eslint'], 'typescript': ['eslint'] }
-let g:ale_linters = {'javascript': ['eslint'], 'typescript': ['eslint'] }
+let g:ale_fixers = {'javascript': ['eslint'], 'typescript': ['eslint'], 'python': ['autopep8'] }
+let g:ale_linters = {'javascript': ['eslint'], 'typescript': ['eslint'], 'python': ['pycodestyle'] }
 let g:ale_pattern_options = {
 \  '.*node_modules.*$': {'ale_enabled': 0},
 \  '.*dist.*$': {'ale_enabled': 0}
 \}
+let g:ale_python_autopep8_options = '--aggressive --aggressive' " level 2 agressive
 
 " bash
 autocmd BufNewFile,BufRead *.sh :set filetype=bash syntax=bash
