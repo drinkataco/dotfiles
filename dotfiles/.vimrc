@@ -137,6 +137,17 @@ vnoremap <c-s-k> :m '<-2<CR>gv=gv
 nmap <leader>os :! subl %<CR><CR>
 
 "
+" Filetypes
+"
+augroup XML
+  autocmd!
+  autocmd FileType xml let g:xml_syntax_folding=1
+  autocmd FileType xml setlocal foldmethod=syntax
+  autocmd FileType xml :syntax on
+  autocmd FileType xml :%foldopen!
+augroup END
+
+"
 " PLUGIN Settings
 "
 " ALE Linter
