@@ -137,5 +137,3 @@ if [ -f $HOME/.zshrc_custom ]; then
   . $HOME/.zshrc_custom
 fi
 
-
-
