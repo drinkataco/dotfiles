@@ -13,6 +13,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree'
 Plug 'mhinz/vim-startify'
 Plug 'wesQ3/vim-windowswap'
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 
 " Theming
 Plug 'chriskempson/base16-vim'
@@ -42,7 +43,6 @@ Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'jparise/vim-graphql'
 Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'prettier/vim-prettier', {
 \   'do': 'npm ci',
@@ -102,7 +102,7 @@ nmap <leader>ns :new<CR>
 " Fuzzy searching
 nmap <leader>t :GitFiles<CR>
 nmap <leader>ff :FZF<CR>
-command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0) " File Contents Only
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0) " File Contents Only for Ag
 nmap <leader>ft :Ag<CR>
 nmap <leader>fh :History:<CR>
 nmap <leader>fc :BCommits<CR>
@@ -124,14 +124,6 @@ nmap <leader>o :SLoad<CR>
 nmap <leader>x :SClose<CR>
 
 set backspace=indent,eol,start " allow backspace
-
-" Move lines up/down
-nnoremap <c-s-j> :m .+1<CR>==
-nnoremap <c-s-k> :m .-2<CR>==
-inoremap <c-s-j> <Esc>:m .+1<CR>==gi
-inoremap <c-s-k> <Esc>:m .-2<CR>==gi
-vnoremap <c-s-j> :m '>+1<CR>gv=gv
-vnoremap <c-s-k> :m '<-2<CR>gv=gv
 
 " misc
 nmap <leader>os :! subl %<CR><CR>
@@ -170,7 +162,6 @@ let g:NERDTreeRespectWildIgnore=1 " hide files with wildignore
 let g:NERDTreeShowHidden=1 " show hidden files by default
 " autocmd BufWinEnter * NERDTreeMirror " mirror nerdtree amongst tabs
 let NERDTreeMinimalUI=1
-
 let NERDSpaceDelims=1 " space after comments
 
 " prettier
@@ -179,6 +170,9 @@ let NERDSpaceDelims=1 " space after comments
 " TSX JS
 "   it seemed that tsx were being set as ts files so highlighting was incorrect
 autocmd BufNewFile,BufRead *.tsx :set filetype=typescript syntax=typescript.tsx
+
+" Tsquomi
+let g:tsuquyomi_disable_quickfix=1
 
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_insertion = 1
