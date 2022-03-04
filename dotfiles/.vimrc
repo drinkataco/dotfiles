@@ -76,10 +76,11 @@ set listchars=tab:\|-
 let g:airline_powerline_fonts=1
 set wildignore+=*.swp,*.DS_Store
 set incsearch
+set hidden
 
 " Spacing like
 filetype plugin indent on
-set omnifunc=syntaxcomplete#Complete
+" set omnifunc=syntaxcomplete#Complete
 set tabstop=2
 set shiftwidth=2
 set expandtab

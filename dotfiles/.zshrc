@@ -3,22 +3,24 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+#
 # 
 # OMZ Config and Plugins
 #
 DISABLE_AUTO_TITLE='true'
 ENABLE_CORRECTION='true'
 ZSH_THEME='lukerandall'
+NVM_HOMEBREW="$(brew --prefix nvm)"
+NVM_AUTOLOAD=1
 
 plugins=(
   aws
   colored-man-pages
   docker
-  dotenv
   git
   kubectl
   nvm
-  osx
+  macos
   vi-mode
   zsh-completions
   fzf-tab
@@ -102,17 +104,11 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# JS
+source "$HOME/.nvm/nvm.sh"
+
 # AWS
 export AWS_PAGER="less -F -X"
-
-# python
-# TODO: Python
-
-# JS
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
-NVM_AUTOLOAD='1'
 
 # fzf
 # info: https://medium.com/better-programming/boost-your-command-line-productivity-with-fuzzy-finder-985aa162ba5d
