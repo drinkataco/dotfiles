@@ -18,4 +18,3 @@ call Include('plugins.vim')
 call Include('settings.vim')
 call Include('filetypes.vim')
 call Include('keymaps.vim')
-
