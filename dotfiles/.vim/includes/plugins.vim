@@ -1,6 +1,7 @@
-"
-" PLUGINS: plugins using vim-plug
-"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins:                                                    "
+"   Plugins using vim-plug for installation                   "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/bundle')
 
 " Tools & Utilities
@@ -17,8 +18,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Git
-" Plug 'airblade/vim-gitgutter'
-" Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Searching and Autocomplete
@@ -36,7 +36,7 @@ Plug 'junegunn/fzf.vim'
 
 " syntax and language specific
 " Plug 'cespare/vim-toml'
-" Plug 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim'
 " Plug 'jparise/vim-graphql'
 " Plug 'pangloss/vim-javascript'
 " Plug 'maxmellon/vim-jsx-pretty'
@@ -50,10 +50,11 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
-"
-" PLUGIN SETTINGS: Any settings we need to configure for the above settings
-"
-"
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin Settings:                                            "
+"   Any settings for the above plugins                        "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ALE Linter
 "
 " let g:ale_fixers = {'javascript': ['eslint'], 'typescript': ['eslint'] }
@@ -63,6 +64,14 @@ call plug#end()
       " \   '.*dist.*$': {'ale_enabled': 0}
       " \ }
 
+"
+" vim-airline
+" Powerline Bar
+"
+let g:airline#extensions#tabline#formatter='default'
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#left_sep = ' '
+
 " 
 " coc.nvim
 "
@@ -70,9 +79,9 @@ let g:coc_global_extensions = [
       \ 'coc-git',
       \ 'coc-json',
       \ 'coc-yaml'
-      \ ] 
-        
+      \ ]
 
+"
 " FZF
 "
 " When using Ag, only search through file contents and not names
