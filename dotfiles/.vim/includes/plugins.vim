@@ -19,7 +19,6 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Git
 Plug 'tpope/vim-fugitive'
-" Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Searching and Autocomplete
 Plug 'neoclide/coc.nvim', {
@@ -28,42 +27,37 @@ Plug 'neoclide/coc.nvim', {
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" Linting and Debugging
-" Plug 'dense-analysis/ale'
-" Plug 'puremourning/vimspector', {
-" \   'do': './install_gadget.py --all'
-" \ }
-
 " syntax and language specific
 " Plug 'cespare/vim-toml'
 Plug 'editorconfig/editorconfig-vim'
 " Plug 'jparise/vim-graphql'
-" Plug 'pangloss/vim-javascript'
+"
+" javascript/typescript:
+Plug 'pangloss/vim-javascript'
+Plug 'Quramy/vim-js-pretty-template'
+
+"
+"
+"
 " Plug 'maxmellon/vim-jsx-pretty'
 " Plug 'nelsyeung/twig.vim'
 " Plug 'prettier/vim-prettier', {
 " \   'do': 'npm ci',
 " \   'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html']
 " \ }
-" Plug 'Quramy/vim-js-pretty-template'
-" Plug 'Quramy/tsuquyomi'
 
 call plug#end()
 
+
+"
+" vim-indent-guides
+"
+"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Settings:                                            "
 "   Any settings for the above plugins                        "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ALE Linter
-"
-" let g:ale_fixers = {'javascript': ['eslint'], 'typescript': ['eslint'] }
-" let g:ale_linters = {'javascript': ['eslint'], 'typescript': ['eslint'] }
-" let g:ale_pattern_options = {
-      " \   '.*node_modules.*$': {'ale_enabled': 0},
-      " \   '.*dist.*$': {'ale_enabled': 0}
-      " \ }
-
 "
 " vim-airline
 " Powerline Bar
@@ -76,29 +70,19 @@ let g:airline#extensions#tabline#left_sep = ' '
 " coc.nvim
 "
 let g:coc_global_extensions = [
+      \ 'coc-eslint',
       \ 'coc-git',
       \ 'coc-json',
-      \ 'coc-yaml'
+      \ 'coc-tsserver',
+      \ 'coc-prettier',
+      \ 'coc-yaml',
       \ ]
+
+" Map Commands
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
 "
 " FZF
 "
 " When using Ag, only search through file contents and not names
 command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
-
-"
-" Nerdtree
-"
-let g:NERDTreeRespectWildIgnore=1 " hide files with wildignore
-let g:NERDTreeShowHidden=1 " show hidden files by default
-let NERDTreeMinimalUI=1
-let NERDSpaceDelims=1 " space after comments
-" autocmd BufWinEnter * NERDTreeMirror " mirror nerdtree amongst tabs
-
-" TSX JS
-"   it seemed that tsx were being set as ts files so highlighting was incorrect
-autocmd BufNewFile,BufRead *.tsx :set filetype=typescript syntax=typescript.tsx
-
-" Tsquomi
-let g:tsuquyomi_disable_quickfix=1
