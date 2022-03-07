@@ -33,8 +33,8 @@ nmap <leader>gd :Gvdiffsplit<CR>
 nmap <leader>x :CocList<CR>| " Project lists 
 nmap <leader>xc :CocCommand | " Enter coc command mode
 nmap <leader>xa :CocDiagnostics<CR>| " Show diagnostics
-nmap <leader>xn <Plug>(coc-diagnostic-next)| " Go to next diagnostic
-nmap <leader>xp <Plug>(coc-diagnostic-prev)| " Go to next diagnostic
+nmap x] <Plug>(coc-diagnostic-next)| " Go to next diagnostic
+nmap x[ <Plug>(coc-diagnostic-prev)| " Go to next diagnostic
 
 " Misc: Non namespaced
 nmap <leader>p :Prettier<CR>| " Run prettier on file using coc
