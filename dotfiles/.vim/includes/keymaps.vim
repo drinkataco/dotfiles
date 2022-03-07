@@ -35,6 +35,11 @@ nmap <leader>xc :CocCommand | " Enter coc command mode
 nmap <leader>xa :CocDiagnostics<CR>| " Show diagnostics
 nmap x] <Plug>(coc-diagnostic-next)| " Go to next diagnostic
 nmap x[ <Plug>(coc-diagnostic-prev)| " Go to next diagnostic
+" GoTo code navigation.
+nmap <silent> xd <Plug>(coc-definition)
+nmap <silent> xy <Plug>(coc-type-definition)
+nmap <silent> xi <Plug>(coc-implementation)
+nmap <silent> xr <Plug>(coc-references)
 
 " Misc: Non namespaced
 nmap <leader>p :Prettier<CR>| " Run prettier on file using coc
@@ -55,6 +60,10 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+" This allows <CR> to select completion
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+      \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " This allows <C-SPACE> to show completion menu
 inoremap <silent><expr> <c-@> coc#refresh()
