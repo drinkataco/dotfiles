@@ -3,11 +3,11 @@
 "   Used mainly to map plugin commands to shortcuts           "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " K: File Exploration
-"nmap <leader>kb " This will be netrw 
-nmap <leader>ko :! subl %<CR><CR>|  " Open FILE in sublime text
-nmap <leader>ks :Sexplore<R>| " Open netrw in horizontal split
+noremap <leader>kb :call NetrwSidebar()<CR>| " Rough and ready netrw sidebar
+nmap <leader>ko :! subl %<CR><CR>| " Open FILE in sublime text
+nmap <leader>ks :Sexplore<CR>| " Open netrw in horizontal split
 nmap <leader>kt :Texplore<CR>| " Open netrw in new tab
-nmap <leader>kv :Vexplore<CR>|  " Open netrw in vertical split
+nmap <leader>kv :Vexplore<CR>| " Open netrw in vertical split
 
 " B: Buffers
 nmap <leader>bt :tabnew<CR>
@@ -33,13 +33,13 @@ nmap <leader>gd :Gvdiffsplit<CR>
 nmap <leader>x :CocList<CR>| " Project lists 
 nmap <leader>xc :CocCommand | " Enter coc command mode
 nmap <leader>xa :CocDiagnostics<CR>| " Show diagnostics
-nmap x] <Plug>(coc-diagnostic-next)| " Go to next diagnostic
-nmap x[ <Plug>(coc-diagnostic-prev)| " Go to next diagnostic
+map x] <Plug>(coc-diagnostic-next)| " Go to next diagnostic
+map x[ <Plug>(coc-diagnostic-prev)| " Go to previous diagnostic
 " GoTo code navigation.
-nmap <silent> xd <Plug>(coc-definition)
-nmap <silent> xy <Plug>(coc-type-definition)
-nmap <silent> xi <Plug>(coc-implementation)
-nmap <silent> xr <Plug>(coc-references)
+map <silent> xd <Plug>(coc-definition)
+map <silent> xy <Plug>(coc-type-definition)
+map <silent> xi <Plug>(coc-implementation)
+map <silent> xr <Plug>(coc-references)
 
 " Misc: Non namespaced
 nmap <leader>p :Prettier<CR>| " Run prettier on file using coc
