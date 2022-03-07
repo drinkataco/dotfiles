@@ -41,6 +41,36 @@ augroup END
 set showmatch
 set mat=2
 
+" netrw File Browsing
+let g:netrw_liststyle=3
+let g:netrw_banner=0
+
+" Use wildignore files to ignore in netrw
+let s:escape = 'substitute(escape(v:val, ".$~"), "*", ".*", "g")'
+let g:netrw_list_hide =
+      \ join(map(split(&wildignore, ','), '"^".' . s:escape . '. "/\\=$"'), ',')
+
+" Rough Function to simulate a sort of sidebar for netrw
+let g:NetrwIsOpen=0
+function! NetrwSidebar()
+  if g:NetrwIsOpen
+    let i = bufnr("$")
+    while (i >= 1)
+      if (getbufvar(i, "&filetype") == "netrw")
+        silent exe "bwipeout " . i 
+      endif
+      let i-=1
+    endwhile
+    let g:NetrwIsOpen=0
+  else
+    let g:netrw_winsize = 20 " Make sidebar sized
+    let g:NetrwIsOpen=1
+    silent Vexplore
+    let g:netrw_winsize = 50 " Make 50% again
+  endif
+endfunction
+
+" Add your own mapping. For example:
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Themes:                                                     "
