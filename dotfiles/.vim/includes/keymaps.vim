@@ -15,7 +15,7 @@ nmap <leader>bs :new<CR>
 nmap <leader>bv :vnew<CR>
 
 " C: Commenting
-" This is reserved for a commenter
+" This is reserved keyspace for nerdcommenter
 
 " F: Searching
 nmap <leader>fc :BCommits<CR>
@@ -33,13 +33,13 @@ nmap <leader>gd :Gvdiffsplit<CR>
 nmap <leader>x :CocList<CR>| " Project lists 
 nmap <leader>xc :CocCommand | " Enter coc command mode
 nmap <leader>xa :CocDiagnostics<CR>| " Show diagnostics
-map x] <Plug>(coc-diagnostic-next)| " Go to next diagnostic
-map x[ <Plug>(coc-diagnostic-prev)| " Go to previous diagnostic
+map <leader>x] <Plug>(coc-diagnostic-next)| " Go to next diagnostic
+map <leader>x[ <Plug>(coc-diagnostic-prev)| " Go to previous diagnostic
 " GoTo code navigation.
-map <silent> xd <Plug>(coc-definition)
-map <silent> xy <Plug>(coc-type-definition)
-map <silent> xi <Plug>(coc-implementation)
-map <silent> xr <Plug>(coc-references)
+map <leader>xd <Plug>(coc-definition)
+map <leader>xy <Plug>(coc-type-definition)
+map <leader>xi <Plug>(coc-implementation)
+map <leader>xr <Plug>(coc-references)
 
 " Misc: Non namespaced
 nmap <leader>p :Prettier<CR>| " Run prettier on file using coc
