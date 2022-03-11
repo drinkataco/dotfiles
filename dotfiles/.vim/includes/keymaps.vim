@@ -5,6 +5,7 @@
 " K: File Exploration
 noremap <leader>kb :call NetrwSidebar()<CR>| " Rough and ready netrw sidebar
 nmap <leader>ko :! subl %<CR><CR>| " Open FILE in sublime text
+nmap <leader>ke :Explore<CR>| " Open netrw in current buffer
 nmap <leader>ks :Sexplore<CR>| " Open netrw in horizontal split
 nmap <leader>kt :Texplore<CR>| " Open netrw in new tab
 nmap <leader>kv :Vexplore<CR>| " Open netrw in vertical split
@@ -18,16 +19,23 @@ nmap <leader>bv :vnew<CR>
 " This is reserved keyspace for nerdcommenter
 
 " F: Searching
-nmap <leader>fc :BCommits<CR>
-nmap <leader>fi :Ag<CR>
-nmap <leader>ff :FZF<CR>
-nmap <leader>fg :GitFiles<CR>
-nmap <leader>fg? :GitFiles?<CR>
-nmap <leader>fh :History:<CR>
+" This function allows us to fall back to FZF if not a git repo
+function! SearchFiles()
+   let s =  execute("GitFiles") 
+   if strtrans(s)=="^@Not in git repo"
+    execute "FZF"
+   endif
+endfunction
+nmap <leader>ff :call SearchFiles()<CR>| " Only search through git file names (don't search .gitignore for example)
+nmap <leader>fa :FZF<CR>| " Search through all file names
+nmap <leader>fb :BLines<CR>| " Search through current buffer lines
+nmap <leader>fi :Ag<CR>| " Search through file contents
+nmap <leader>fc :Commands<CR>| " Search through available commands
 
 " G: Git and version control
 nmap <leader>g :Git
 nmap <leader>gd :Gvdiffsplit<CR>
+nmap <leader>gc :BCommits<CR>| " FZF to search buffer commits
 
 " X: COC.VIM settings
 nmap <leader>x :CocList<CR>| " Project lists 
