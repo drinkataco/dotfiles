@@ -37,6 +37,9 @@ nmap <leader>g :Git
 nmap <leader>gd :Gvdiffsplit<CR>
 nmap <leader>gc :BCommits<CR>| " FZF to search buffer commits
 
+" W: Windows
+" This is used by vim-windowswap
+
 " X: COC.VIM settings
 nmap <leader>x :CocList<CR>| " Project lists 
 nmap <leader>xc :CocCommand | " Enter coc command mode

@@ -10,9 +10,7 @@ Plug 'neoclide/coc.nvim', {
       \ } " The greatest language server
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive' " Ultimate Git Plugin
-" Plug '
-" Plug 'christoomey/vim-tmux-navigator'
-" Plug 'mhinz/vim-startify'
+Plug 'christoomey/vim-tmux-navigator'
 " Plug 'wesQ3/vim-windowswap'
 
 " Theming
@@ -28,7 +26,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 " Plug 'mg979/vim-visual-multi' " Multi Cursors TODO: ME
-" Plug 'cespare/vim-toml'
 "
 " javascript/typescript:
 Plug 'pangloss/vim-javascript'
@@ -36,9 +33,9 @@ Plug 'Quramy/vim-js-pretty-template'
 
 " misc syntax
 Plug 'jparise/vim-graphql'
-"
-" Plug 'maxmellon/vim-jsx-pretty'
-" Plug 'nelsyeung/twig.vim'
+Plug 'nelsyeung/twig.vim'
+Plug 'cespare/vim-toml', { 'branch': 'main' }
+Plug 'pedrohdz/vim-yaml-folds'
 
 call plug#end()
 
