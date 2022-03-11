@@ -9,6 +9,10 @@ filetype indent on
 set autoread
 au FocusGained,BufEnter * checktime
 
+" Disable Swap File. I don't care if I have the same file open multiple
+" instances with autoread!
+set noswapfile
+
 " Shortcut <leader> key
 let mapleader='\'
 
