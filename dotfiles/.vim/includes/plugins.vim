@@ -29,12 +29,13 @@ Plug 'preservim/nerdcommenter'
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 " Plug 'mg979/vim-visual-multi' " Multi Cursors TODO: ME
 " Plug 'cespare/vim-toml'
-" Plug 'jparise/vim-graphql'
 "
 " javascript/typescript:
 Plug 'pangloss/vim-javascript'
 Plug 'Quramy/vim-js-pretty-template'
 
+" misc syntax
+Plug 'jparise/vim-graphql'
 "
 " Plug 'maxmellon/vim-jsx-pretty'
 " Plug 'nelsyeung/twig.vim'
@@ -83,8 +84,13 @@ let g:doge_javascript_settings = {
 "
 " FZF
 "
-" When using Ag, only search through file contents and not names
-command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
+" Adjust Ag command to only search file contents (not names), and to include hidden files
+command! -bang -nargs=* Ag
+      \ call fzf#vim#ag(<q-args>,
+      \   '--hidden',
+      \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}),
+      \   <bang>0
+      \ )
 
 "
 " NERDCommenter
