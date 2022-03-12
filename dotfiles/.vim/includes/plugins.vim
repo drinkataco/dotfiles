@@ -12,6 +12,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive' " Ultimate Git Plugin
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'wesQ3/vim-windowswap'
+Plug 'maxbrunsfeld/vim-yankstack'
 
 " Theming
 Plug 'chriskempson/base16-vim'
