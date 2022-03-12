@@ -11,7 +11,7 @@ Plug 'neoclide/coc.nvim', {
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive' " Ultimate Git Plugin
 Plug 'christoomey/vim-tmux-navigator'
-" Plug 'wesQ3/vim-windowswap'
+Plug 'wesQ3/vim-windowswap'
 
 " Theming
 Plug 'chriskempson/base16-vim'
@@ -55,6 +55,7 @@ let g:airline#extensions#tabline#left_sep = ' '
 " coc.nvim
 "
 let g:coc_global_extensions = [
+      \ 'coc-diagnostic',
       \ 'coc-eslint',
       \ 'coc-git',
       \ 'coc-json',

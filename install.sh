@@ -1,4 +1,8 @@
 #!/bin/sh
+#
+# Script to bootstrap dotfiles and configuration.
+# I made it extra hard for myself by enforcing POSIX Compliancy
+#
 BASE_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
 DOTFILES_DIR="${BASE_DIR}/dotfiles"
 SCRIPTS_DIR="${BASE_DIR}/scripts"
@@ -18,8 +22,8 @@ readonly SCRIPTS_DIR
 #     function can be used inline if statments
 #######################################
 yes_no() {
-  value=$1 
-  [ -z $value ] && value=$2 # Set as default if unset
+  value=$1
+  [ -z "$value" ] && value=$2 # Set as default if unset
 
   case "$value" in
     n*|N*) return 1 ;;
@@ -28,42 +32,70 @@ yes_no() {
 }
 
 #########################################
-# Symlinks dotfiles 
+# Symlinks dotfiles recrusively whilst preserving underling file structures
+# This function is a result of trying to keep POSIX compatability
 # Globals:
-#  DOTFILES_DIR
-# Arguments:
 #   None
+# Arguments:
+#   1 - Directory to search for files from
+#   2 - Destination 
 # Returns:
 #   None
 #######################################
-link_dotfiles() {
-  find "${DOTFILES_DIR}" -maxdepth 1 -mindepth 1 | while read -r file; do
-    ln -v -s "$file" "$HOME"
+# a=1
+smart_symlink() {
+  # ignore . and .. markers
+  GLOBIGNORE="$1/.:$1/.."
+
+  # We're going to go through each file/dir now and try to symlink
+  for file in "${1}"/*; do
+    # Globbing gives us annoying patterns. Skip if we get a glob pattern
+    if [ "$(basename "$file")" = '*' ]; then
+      continue
+    elif [ -d "$file" ]; then
+      # This file is actuall a directory.
+      # Let's make sure it exists in the destination and recursively apply subfields
+      sub_dir=$(echo "$file" | sed "s~$1~~g")
+      next_dest="${2}${sub_dir}"
+
+      if [ ! -d "$next_dest" ]; then
+        mkdir "$next_dest"
+      fi
+
+      smart_symlink "$file" "$next_dest"
+    else
+      ln -v -s "$file" "$2"
+    fi
   done
 }
 
 #########################################
 # Main method to run script and find the bash script it must run
 # Globals:
-#   BASE_DIR
+#   DOTFILES_DIR
 #   SCRIPTS_DIR
 # Arguments:
-#   NONE
+#   None
 #######################################
 main() {
   # Check parameters for operations
-  read -p 'Do you want to symlink all dotfiles? [Y/n] ' symlink_dotfiles
+  printf 'Do you want to symlink all dotfiles? [Y/n] '
+  read -r symlink_dotfiles
   if yes_no "$symlink_dotfiles" 'Y'; then
-    link_dotfiles
+    smart_symlink "$DOTFILES_DIR" "$HOME"
   fi
 
-  read -p 'Do you want to boostrap your machine? [y/N] ' bootstrap_machine
-
+  printf 'Do you want to boostrap your machine? [y/N] '
+  read -r bootstrap_machine
   if ! yes_no "$bootstrap_machine" 'N'; then
+    echo 'Machine Boostrapping Skipped'
     exit 0
   fi
 
-  case $(uname -s) in
+  # Machine boostrapping
+  machine=$(uname -s)
+
+  case "$machine" in
     Darwin*)
       "${SCRIPTS_DIR}/macos.sh"
     ;;
