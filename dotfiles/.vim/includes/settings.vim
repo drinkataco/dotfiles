@@ -74,7 +74,6 @@ function! NetrwSidebar()
   endif
 endfunction
 
-" Add your own mapping. For example:
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Themes:                                                     "
@@ -104,5 +103,4 @@ set listchars=tab:\|·,trail:~,extends:>,precedes:<,
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Misc:                                                       "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use system clipboard TODO: use better clipboard
 set clipboard=unnamed

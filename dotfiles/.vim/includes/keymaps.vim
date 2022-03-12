@@ -37,6 +37,10 @@ nmap <leader>g :Git
 nmap <leader>gd :Gvdiffsplit<CR>
 nmap <leader>gc :BCommits<CR>| " FZF to search buffer commits
 
+" P: Vim Yank Stack
+nmap p <Plug>yankstack_substitute_older_paste
+nmap P <Plug>yankstack_substitute_newer_paste
+
 " W: Windows
 " This is used by vim-windowswap
 
