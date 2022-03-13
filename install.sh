@@ -19,7 +19,8 @@ readonly SCRIPTS_DIR
 #   2 - The default value if the user didn't set one
 # Returns:
 #   0 for yes, 1 for no. Inverted values so that the
-#     function can be used inline if statments
+#     function can be used inline if statments - as the
+#     return value is treated as an exit code
 #######################################
 yes_no() {
   value=$1
