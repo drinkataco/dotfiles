@@ -100,8 +100,8 @@ let g:NERDCompactSexyComs = 1
 "
 " Vim Visual Multi
 "
+let g:VM_theme = 'iceblue'
 " <C-Down> and <C-Up> don't work for some reason. I gave up and just remapped
-let g:VM_theme             = 'iceblue'
 let g:VM_maps = {}
 let g:VM_maps["Add Cursor Down"] = '<C-S-j>'
 let g:VM_maps["Add Cursor Up"] = '<C-S-k>'
