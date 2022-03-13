@@ -26,8 +26,8 @@ Plug 'junegunn/fzf.vim'
 " text manipulation
 Plug 'preservim/nerdcommenter'
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
-" Plug 'mg979/vim-visual-multi' " Multi Cursors TODO: ME
-"
+Plug 'mg979/vim-visual-multi' 
+
 " javascript/typescript:
 Plug 'pangloss/vim-javascript'
 Plug 'Quramy/vim-js-pretty-template'
@@ -96,3 +96,11 @@ command! -bang -nargs=* Ag
 "
 let g:NERDSpaceDelims = 1
 let g:NERDCompactSexyComs = 1
+
+"
+" Vim Visual Multi
+"
+" <C-Down> and <C-Up> don't work for some reason. I gave up and just remapped
+let g:VM_maps = {}
+let g:VM_maps["Add Cursor Down"] = '<C-S-j>'
+let g:VM_maps["Add Cursor Up"] = '<C-S-k>'
