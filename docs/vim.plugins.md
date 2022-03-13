@@ -148,7 +148,6 @@ Use fzf to search through files, commits, filenames
 #### Commands
 
 | `:Files [PATH]`   | Files (runs `$FZF_DEFAULT_COMMAND` if defined)               |
-| ----------------- | ------------------------------------------------------------ |
 | `:GFiles [OPTS]`  | Git files (`git ls-files`)                                   |
 | `:GFiles?`        | Git files (`git status`)                                     |
 | `:Buffers`        | Open buffers                                                 |
@@ -259,7 +258,7 @@ Multi cursor support. The [tutorial](https://github.com/mg979/vim-visual-multi/b
 
 ### Vim Windowswap
 
-**Source: **https://github.com/wesQ3/vim-windowswap
+**Source:** https://github.com/wesQ3/vim-windowswap
 
 **Keyspace:** `<leader>w`
 
@@ -277,7 +276,7 @@ Swap vim windows around
 
 **Source:** https://github.com/maxbrunsfeld/vim-yankstack
 
-**Keyspace:** `p`, `P`
+**Keyspace:** `C-p`, `C-P`
 
 **Description:**
 
@@ -287,8 +286,6 @@ Cycle through clipboard (register) stack
 
 In normal mode/visual mode
 
-* `p` - Go previous register
-* `P` - Go forward register
-
-
+* `<C-p>` - Go previous register
+* `<C-P>` - Go forward register
 

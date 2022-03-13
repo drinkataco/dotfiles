@@ -114,13 +114,6 @@ Objects can be modified by 3 keys – the first being the operator (such as **c*
 - Then hit `Esc`, wait 1 second and the inserted text will appear on every line.
 
 
-
-### Copying and Pasting
-
-TODO:
-
-
-
 ### Searching and Replacing
 
 #### Searching
