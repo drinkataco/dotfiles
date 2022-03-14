@@ -8,6 +8,7 @@ call plug#begin('~/.vim/bundle')
 Plug 'neoclide/coc.nvim', {
       \   'branch': 'release'
       \ } " The greatest language server
+Plug 'puremourning/vimspector'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive' " Ultimate Git Plugin
 Plug 'christoomey/vim-tmux-navigator'
@@ -50,12 +51,12 @@ call plug#end()
 "
 let g:airline#extensions#tabline#formatter='default'
 let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_sep=' '
 
 "
 " coc.nvim
 "
-let g:coc_global_extensions = [
+let g:coc_global_extensions=[
       \ 'coc-diagnostic',
       \ 'coc-eslint',
       \ 'coc-git',
@@ -75,7 +76,7 @@ command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 nmap <leader>d :DogeGenenrate<CR>
 imap /**<Tab> <Esc> :DogeGenerate<CR>
 
-let g:doge_javascript_settings = {
+let g:doge_javascript_settings={
       \  'destructuring_props': 1,
       \  'omit_redundant_param_types': 1,
       \ }
@@ -94,14 +95,24 @@ command! -bang -nargs=* Ag
 "
 " NERDCommenter
 "
-let g:NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
+let g:NERDSpaceDelims=1
+let g:NERDCompactSexyComs=1
 
 "
 " Vim Visual Multi
 "
-let g:VM_theme = 'iceblue'
+let g:VM_theme='iceblue'
 " <C-Down> and <C-Up> don't work for some reason. I gave up and just remapped
-let g:VM_maps = {}
-let g:VM_maps["Add Cursor Down"] = '<C-S-j>'
-let g:VM_maps["Add Cursor Up"] = '<C-S-k>'
+let g:VM_maps={}
+let g:VM_maps["Add Cursor Down"]='<C-S-j>'
+let g:VM_maps["Add Cursor Up"]='<C-S-k>'
+
+"
+" Vim Spector
+"
+let g:vimspector_install_gadgets=[
+      \  'vscode-bash-debug',
+      \  'vscode-firefox-debug',
+      \  'vscode-node-debug2',
+      \ ]
+let g:vimspector_enable_mappings='HUMAN'
