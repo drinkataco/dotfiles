@@ -34,12 +34,25 @@ nmap <leader>fc :Commands<CR>| " Search through available commands
 
 " G: Git and version control
 nmap <leader>g :Git
+nmap <leader>gb :Git blame<CR>
 nmap <leader>gd :Gvdiffsplit<CR>
 nmap <leader>gc :BCommits<CR>| " FZF to search buffer commits
 
 " P: Vim Yank Stack
 nmap <C-p> <Plug>yankstack_substitute_older_paste
 nmap <C-P> <Plug>yankstack_substitute_newer_paste
+
+" V: Vimspector
+nnoremap <leader>vd :call vimspector#Launch()<CR>
+nnoremap <leader>ve :call vimspector#Reset()<CR>
+nnoremap <leader>vc :call vimspector#Continue()<CR>
+nnoremap <leader>vt :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <leader>vT :call vimspector#ClearBreakpoints()<CR>
+
+nmap <leader>vk <Plug>VimspectorRestart
+nmap <leader>vh <Plug>VimspectorStepOut
+nmap <leader>vl <Plug>VimspectorStepInto
+nmap <leader>vj <Plug>VimspectorStepOver
 
 " W: Windows
 " This is used by vim-windowswap

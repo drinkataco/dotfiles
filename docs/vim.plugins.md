@@ -67,7 +67,7 @@ The ultimate IDE plugin for Vim. No longer do you need several that conflict, ha
 
 ### Vim Doge (Document Generator)
 
-**Source: **https://github.com/kkoomen/vim-doge
+**Source:** https://github.com/kkoomen/vim-doge
 
 **Keyspace:** `d`
 

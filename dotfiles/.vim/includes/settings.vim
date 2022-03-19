@@ -19,6 +19,7 @@ let mapleader='\'
 " Use unamed register for clipboard
 set clipboard=unnamed
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface:                                             "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -100,3 +101,8 @@ set number
 " Show whitespace characters
 set list
 set listchars=tab:\|·,trail:~,extends:>,precedes:<,
+
+" Extend tab by default
+set tabstop=2
+set shiftwidth=2
+set expandtab
