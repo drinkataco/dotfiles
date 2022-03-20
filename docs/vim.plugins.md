@@ -28,9 +28,11 @@ netrw. Nobody needs nerd tree!
 
 **Source:** https://github.com/neoclide/coc.nvim
 
+* https://github.com/neoclide/coc-diagnostic
 * https://github.com/neoclide/coc-eslint
 * https://github.com/neoclide/coc-git
 * https://github.com/neoclide/coc-json
+* https://github.com/neoclide/coc-snippets
 * https://github.com/neoclide/coc-tsserver
 * https://github.com/neoclide/coc-prettier
 * https://github.com/neoclide/coc-yaml
@@ -62,6 +64,15 @@ The ultimate IDE plugin for Vim. No longer do you need several that conflict, ha
 * `<leader>xd` - go to symbol definition
 * `<leader>xy` - got to type definition
 * `<leader>xi` - go to implementation
+
+**Snippets**
+
+* `<C-j>` - Next placeholder in snippet
+* `<C-k>` - Previous placeholder in snippet
+* Use `:CocList snippets` to open snippets list used by current buffer.
+* Use `:CocCommand snippets.openSnippetFiles` to choose and open a snippet file that used by current document.
+* Use `:CocCommand snippets.editSnippets` to edit user's ultisnips snippets of current document filetype.
+* Use `:CocCommand snippets.openOutput` to open output channel of snippets.
 
 
 
@@ -195,6 +206,31 @@ It is worth looking at the core documentation for more advanced usage, but liste
 * `<leader>ci` - Invert Comments
 * `<leader>cu` - Uncomment Line
 * `<leader>ca` - Switches to alternate delimiters. For example, from `//` to `/* .. */` for javascript
+
+
+
+### Vim Spector
+
+**Source:** https://github.com/puremourning/vimspector
+
+**Keyspace:** `<leader>v`
+
+**Description:**
+
+Vim Graphicl Debugger
+
+#### Keymaps
+
+* `<leader>vd` - Launch **d**ebugger
+* `<leader>ve` - Reset, **e**xit debugger
+* `<leader>vc` - **c**ontinue execution (start)
+* `<leader>vt` - **t**oggle breakpoint
+* `<leader>vT` - reset all breakpoints
+* `<leader>vw` - Watch a variable
+* `<leader>vr` - **r**estart debugger
+* `<leader>vk` - Step out, **k** as in up a context
+* `<leader>vj` - Step into, **j** as in down a context
+* `<leader>vl` - Step over, **l** as in next
 
 
 
