@@ -48,11 +48,11 @@ nnoremap <leader>ve :call vimspector#Reset()<CR>
 nnoremap <leader>vc :call vimspector#Continue()<CR>
 nnoremap <leader>vt :call vimspector#ToggleBreakpoint()<CR>
 nnoremap <leader>vT :call vimspector#ClearBreakpoints()<CR>
-
-nmap <leader>vk <Plug>VimspectorRestart
-nmap <leader>vh <Plug>VimspectorStepOut
-nmap <leader>vl <Plug>VimspectorStepInto
-nmap <leader>vj <Plug>VimspectorStepOver
+nnoremap <leader>vw :VimspectorWatch
+nnoremap <leader>vr <Plug>VimspectorRestart
+nnoremap <leader>vk <Plug>VimspectorStepOut
+nnoremap <leader>vj <Plug>VimspectorStepInto
+nnoremap <leader>vl <Plug>VimspectorStepOver
 
 " W: Windows
 " This is used by vim-windowswap

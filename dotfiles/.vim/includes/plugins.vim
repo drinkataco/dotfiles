@@ -14,6 +14,7 @@ Plug 'tpope/vim-fugitive' " Ultimate Git Plugin
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'wesQ3/vim-windowswap'
 Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'honza/vim-snippets' " Snippets Library
 
 " Theming
 Plug 'chriskempson/base16-vim'
@@ -111,6 +112,8 @@ let g:VM_maps["Add Cursor Up"]='<C-S-k>'
 " Vim Spector
 "
 let g:vimspector_install_gadgets=[
+      \  'debugger-for-chrome',
+      \  'CodeLLDB',
       \  'vscode-bash-debug',
       \  'vscode-firefox-debug',
       \  'vscode-node-debug2',

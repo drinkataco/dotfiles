@@ -4,5 +4,6 @@
   },
   "diagnostic-languageserver.formatFiletypes": {
     "sh": "shfmt"
-  }
+  },
+  "git.signPriority": 5
 }
