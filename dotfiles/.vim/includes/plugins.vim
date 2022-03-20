@@ -119,3 +119,10 @@ let g:vimspector_install_gadgets=[
       \  'vscode-node-debug2',
       \ ]
 let g:vimspector_enable_mappings='HUMAN'
+let g:vimspector_sign_priority = {
+      \    'vimspectorBP': 30,
+      \    'vimspectorBPCond': 20,
+      \    'vimspectorBPLog': 20,
+      \    'vimspectorBPDisabled': 1,
+      \    'vimspectorPC':         999,
+      \ }
