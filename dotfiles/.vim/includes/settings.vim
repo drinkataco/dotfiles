@@ -48,6 +48,9 @@ augroup END
 set showmatch
 set mat=2
 
+" Folding should be very liberal. Appear only when I say
+set foldlevelstart=99
+
 " netrw File Browsing
 let g:netrw_liststyle=3
 let g:netrw_banner=0
