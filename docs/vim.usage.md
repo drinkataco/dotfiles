@@ -54,9 +54,10 @@ The main usage of vim is EDITING files. This section details ways to navigate ar
 - `<C-I>` Go to next jump
 - `gf` - Go to file in cursor
 
-#### Bookmarks
+#### Markers / Bookmarks
 
-Todo
+* `mx` - Set mark, where **x* * can be any character
+* ``x` - Go to mark, where **x* * can be any character
 
 
 

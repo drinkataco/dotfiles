@@ -31,6 +31,7 @@ nmap <leader>fa :FZF<CR>| " Search through all file names
 nmap <leader>fb :BLines<CR>| " Search through current buffer lines
 nmap <leader>fi :Ag<CR>| " Search through file contents
 nmap <leader>fc :Commands<CR>| " Search through available commands
+nmap <leader>fm :Marks<CR>| " Search through marks (bookmarks)
 
 " G: Git and version control
 nmap <leader>g :Git
