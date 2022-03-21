@@ -154,6 +154,7 @@ Use fzf to search through files, commits, filenames
 * `<leader>fi` -  search through files contents (dot)
 * `<leader>fl` - search through buffer lines
 * `<leader>fc` - search through  commands
+* `<leader>fm` - Search through marks (bookmarks)
 * `<leader>gc` - search through buffer commits
 
 #### Commands
