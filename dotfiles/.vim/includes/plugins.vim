@@ -14,7 +14,9 @@ Plug 'tpope/vim-fugitive' " Ultimate Git Plugin
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'wesQ3/vim-windowswap'
 Plug 'maxbrunsfeld/vim-yankstack'
-Plug 'honza/vim-snippets' " Snippets Library
+
+" Snippets
+Plug 'honza/vim-snippets' " Lots of language defaults
 
 " Theming
 Plug 'chriskempson/base16-vim'
@@ -24,6 +26,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Searching and Autocomplete
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'antoinemadec/coc-fzf'
 
 " text manipulation
 Plug 'preservim/nerdcommenter'

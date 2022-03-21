@@ -59,7 +59,7 @@ nnoremap <leader>vl <Plug>VimspectorStepOver
 " This is used by vim-windowswap
 
 " X: COC.VIM settings
-nmap <leader>x :CocList<CR>| " Project lists 
+nmap <leader>x :CocFzfList<CR>| " Project lists 
 nmap <leader>xc :CocCommand | " Enter coc command mode
 nmap <leader>xa :CocDiagnostics<CR>| " Show diagnostics
 map <leader>x] <Plug>(coc-diagnostic-next)| " Go to next diagnostic
