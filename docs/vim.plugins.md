@@ -91,7 +91,6 @@ Generate documentation based on expressions - such as DocBlocks
 **General**
 
 * `\d` - generate documentation for method/function
-* on insert mode BEFORE function, `/**<TAB>` - generate doc like most IDEs
 
 
 
