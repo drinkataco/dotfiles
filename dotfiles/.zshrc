@@ -119,6 +119,31 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # kubernetes
 [[ $commands[kubectl] || $commands[k] ]] && source <(kubectl completion zsh)
+kctx() {
+  (
+    cd ~/.kube/ || exit 1
+    config_files=$(ls *.config)
+    lines=$(echo "$config_files" | wc -l)
+    KUBE=$(echo "$config_files" | fzf --height="${lines}" --reverse)
+    if [[ -n "$KUBE" ]]; then
+      ln -sf "$KUBE" config
+      echo -e '\033[0;32mKubectl Config Changed\033[0m';
+      kubectl get nodes
+    fi
+  )
+}
+
+# tmux
+tmux_start() {
+  tmux_sessions=$(tmux ls)
+  if [[ -n "${tmux_sessions}" ]]; then
+    lines=$(echo "$tmux_sessions" | wc -l)
+    tmux_session=$(echo "$tmux_sessions" | fzf --height="${lines}" --reverse);
+    tmux attach -t "${tmux_session:-default}"
+  else
+    tmux new -s ${tmux_session:-default}
+  fi
+}
 
 # GNU Utils
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
