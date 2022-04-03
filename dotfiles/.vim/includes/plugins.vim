@@ -77,7 +77,6 @@ command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 "
 " Vim Doge
 "
-nmap <leader>d :DogeGenenrate<CR>
 imap /**<Tab> <Esc> :DogeGenerate<CR>
 
 let g:doge_javascript_settings={
@@ -126,6 +125,6 @@ let g:vimspector_sign_priority = {
       \    'vimspectorBP': 30,
       \    'vimspectorBPCond': 20,
       \    'vimspectorBPLog': 20,
-      \    'vimspectorBPDisabled': 1,
+      \    'vimspectorBPDisabled': 15,
       \    'vimspectorPC':         999,
       \ }
