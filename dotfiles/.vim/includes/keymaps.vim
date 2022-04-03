@@ -71,7 +71,9 @@ map <leader>xi <Plug>(coc-implementation)
 map <leader>xr <Plug>(coc-references)
 
 " Misc: Non namespaced
+nmap <leader>d :DogeGenerate<CR>
 nmap <leader>p :Prettier<CR>| " Run prettier on file using coc
+nmap <C-y> :Yanks<CR>| " Show yanks from yank stack (simialr to :reg)
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -97,3 +99,6 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 " This allows <C-SPACE> to show completion menu
 inoremap <silent><expr> <c-@> coc#refresh()
 
+" Yank Stack go back/forward 'clipboard'
+inoremap <C-p> <Plug>yankstack_substitute_older_paste
+inoremap <C-P> <Plug>yankstack_substitute_newer_paste
