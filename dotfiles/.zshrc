@@ -139,6 +139,7 @@ tmux_start() {
   if [[ -n "${tmux_sessions}" ]]; then
     lines=$(echo "$tmux_sessions" | wc -l)
     tmux_session=$(echo "$tmux_sessions" | fzf --height="${lines}" --reverse)
+    [[ -z "${tmux_session}" ]] && return
     tmux_session="${tmux_session%%:*}"
     tmux attach -t "${tmux_session:-default}"
   else
