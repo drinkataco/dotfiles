@@ -52,7 +52,6 @@ set mat=2
 set foldlevelstart=99
 
 " netrw File Browsing
-let g:netrw_liststyle=3
 let g:netrw_banner=0
 
 " Use wildignore files to ignore in netrw
