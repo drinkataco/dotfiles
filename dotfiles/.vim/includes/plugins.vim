@@ -15,6 +15,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'wesQ3/vim-windowswap'
 Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'Yggdroot/indentLine'
 
 " Snippets
 Plug 'honza/vim-snippets' " Lots of language defaults
