@@ -37,6 +37,11 @@ set ignorecase
 set smartcase
 set incsearch
 
+" Indenting
+set autoindent
+set smartindent
+filetype plugin indent on
+
 " Highlight when searching but not when found
 augroup vimrc-incsearch-highlight
   autocmd!
