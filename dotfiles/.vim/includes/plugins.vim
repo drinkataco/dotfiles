@@ -75,11 +75,12 @@ let g:coc_global_extensions=[
 " Create Prettier command
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
+" indentLine
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
 "
 " Vim Doge
 "
-imap /**<Tab> <Esc> :DogeGenerate<CR>
-
 let g:doge_javascript_settings={
       \  'destructuring_props': 1,
       \  'omit_redundant_param_types': 1,

@@ -264,14 +264,14 @@ Multi cursor support. The [tutorial](https://github.com/mg979/vim-visual-multi/b
 
 #### Keymaps
 
-* `<C-S-j` - Set a cursor and go down. Precede with a number to determine lines if needed
+* `<C-S-j>` - Set a cursor and go down. Precede with a number to determine lines if needed
 * `<C-S-k>` - Set a cursor and go down. Precede with a number to determine lines if needed
 * `<C-n>` - Select words under a cursor. Press again to select matches.
   * Use `<vmleader>c` to cycle smartcasing.
   * Use `q` to skip the current match and go to the next. `Q` to skip current and go back.
   * Use `n` and `N` to go to next/previous match
   * Use `R` to enter replace mode
-* `<S-Right>` and `<S-Left` - start a selection and capture characters left or right
+* `<S-Right>` and `<S-Left>` - start a selection and capture characters left or right
 * `<vmleader>c` - go to cursor mode from visual mode
 
 **Using Cursors and Selections**
