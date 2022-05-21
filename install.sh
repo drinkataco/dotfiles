@@ -5,10 +5,8 @@
 #
 BASE_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
 DOTFILES_DIR="${BASE_DIR}/dotfiles"
-SCRIPTS_DIR="${BASE_DIR}/scripts"
 readonly BASE_DIR
 readonly DOTFILES_DIR
-readonly SCRIPTS_DIR
 
 #########################################
 # Helper to determine user input for yes/no questions.
@@ -74,7 +72,6 @@ smart_symlink() {
 # Main method to run script and find the bash script it must run
 # Globals:
 #   DOTFILES_DIR
-#   SCRIPTS_DIR
 # Arguments:
 #   None
 #######################################
@@ -98,10 +95,10 @@ main() {
 
   case "$machine" in
     Darwin*)
-      "${SCRIPTS_DIR}/macos.sh"
+      echo 'Bootstrap Mac'
     ;;
     Linux*)
-      "${SCRIPTS_DIR}/linux.sh"
+      echo 'Bootstrap Linux'
     ;;
     *)
       echo "Unknown System: ${machine}"
