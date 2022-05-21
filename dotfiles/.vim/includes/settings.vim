@@ -39,7 +39,6 @@ set incsearch
 
 " Indenting
 set autoindent
-set smartindent
 filetype plugin indent on
 
 " Highlight when searching but not when found
