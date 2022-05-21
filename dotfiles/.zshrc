@@ -8,7 +8,8 @@ export ZSH=$HOME/.oh-my-zsh
 # OMZ Config and Plugins
 #
 DISABLE_AUTO_TITLE='true'
-ENABLE_CORRECTION='true'
+unsetopt correct_all
+ENABLE_CORRECTION='false'
 ZSH_THEME='lukerandall'
 NVM_HOMEBREW="$(brew --prefix nvm)"
 NVM_AUTOLOAD=1
