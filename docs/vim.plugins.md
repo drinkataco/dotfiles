@@ -155,6 +155,7 @@ Use fzf to search through files, commits, filenames
 * `<leader>fc` - search through  commands
 * `<leader>fm` - Search through marks (bookmarks)
 * `<leader>gc` - search through buffer commits
+* `CTRL-T` / `CTRL-X` / `CTRL-V` key bindings to open in a new tab, a new split, or in a new vertical split
 
 #### Commands
 
