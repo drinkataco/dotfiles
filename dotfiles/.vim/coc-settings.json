@@ -6,5 +6,6 @@
     "sh": "shfmt"
   },
   "git.signPriority": 5,
-  "typescript.autoClosingTags": false
+  "typescript.autoClosingTags": false,
+  "typescript.suggest.autoImports": true
 }
