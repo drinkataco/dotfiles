@@ -1,23 +1,26 @@
 cask_args appdir: '/Applications'
 
-tap 'adoptopenjdk/openjdk'
-tap 'homebrew/bundle'
-tap 'homebrew/cask'
-tap 'homebrew/cask-fonts'
-tap 'homebrew/core'
-tap 'homebrew/services'
+tap "adoptopenjdk/openjdk"
+tap "aws/tap"
+tap "fullscreen/tap"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "homebrew/services"
 
 # Tools
 brew 'ansible'
 brew 'awscli'
 brew 'bash'
 brew 'bat'
+brew "brew-cask-completion"
 brew 'cmake'
 brew 'cmatrix'
 brew 'coreutils', link: true
+brew 'curl'
 brew 'deno'
 brew 'docker'
-brew 'docker-machine'
 brew 'fd'
 brew 'ffmpeg'
 brew 'flac'
@@ -53,13 +56,10 @@ brew 'nvm'
 brew 'openconnect'
 brew 'openssl@1.1'
 brew 'openvpn', restart_service: true
-brew 'php@7.4'
-brew 'python'
-brew 'rbenv'
+brew 'php@8.1', link: true
+brew 'python@3.9', link: true
 brew 'readline'
 brew 'reattach-to-user-namespace'
-brew 'ruby'
-brew 'ruby-install'
 brew 'shellcheck'
 brew 'terraform'
 brew 'the_silver_searcher'
@@ -91,7 +91,6 @@ cask 'little-snitch'
 cask 'malwarebytes'
 cask 'mediaelch'
 cask 'nordvpn'
-cask 'notion'
 cask 'paragon-extfs'
 cask 'sequel-ace'
 cask 'slack'
