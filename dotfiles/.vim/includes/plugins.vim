@@ -10,12 +10,16 @@ Plug 'neoclide/coc.nvim', {
       \ } " The greatest language server
 Plug 'puremourning/vimspector'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'tpope/vim-fugitive' " Ultimate Git Plugin
 Plug 'tpope/vim-vinegar'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'wesQ3/vim-windowswap'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'Yggdroot/indentLine'
+
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
 
 " Snippets
 Plug 'honza/vim-snippets' " Lots of language defaults
