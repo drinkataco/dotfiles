@@ -73,6 +73,7 @@ let g:coc_global_extensions=[
       \ 'coc-git',
       \ 'coc-json',
       \ 'coc-snippets',
+      \ 'coc-stylelintplus',
       \ 'coc-tsserver',
       \ 'coc-prettier',
       \ 'coc-yaml',
