@@ -111,6 +111,7 @@ command! -bang -nargs=* Ag
 "
 let g:NERDSpaceDelims=1
 let g:NERDCompactSexyComs=1
+let g:NERDDefaultAlign='left'
 
 "
 " Vim Visual Multi
