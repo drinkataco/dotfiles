@@ -6,7 +6,7 @@
 noremap <leader>kb :call NetrwSidebar()<CR>| " Rough and ready netrw sidebar
 nmap <leader>ko :! subl %<CR><CR>| " Open FILE in sublime text
 nmap <leader>ke :Explore<CR>| " Open netrw in current buffer
-nmap <leader>ks :Sexplore<CR>| " Open netrw in horizontal split
+nmap <leader>kh :Sexplore<CR>| " Open netrw in horizontal split
 nmap <leader>kt :Texplore<CR>| " Open netrw in new tab
 nmap <leader>kv :Vexplore<CR>| " Open netrw in vertical split
 
