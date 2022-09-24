@@ -14,6 +14,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'wesQ3/vim-windowswap'
 Plug 'maxbrunsfeld/vim-yankstack'
+Plug 'junegunn/vim-peekaboo'
 Plug 'Yggdroot/indentLine'
 
 " Git
