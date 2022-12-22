@@ -58,6 +58,13 @@ set foldlevelstart=99
 " Default folding for files should be based off of indent
 set foldmethod=indent
 
+" Remember folds from closed files
+augroup REMEMBER_FOLDS
+  autocmd!
+  au BufWinLeave ?* mkview 1
+  au BufWinEnter ?* silent! loadview 1
+augroup END
+
 " netrw File Browsing
 let g:netrw_banner=0
 

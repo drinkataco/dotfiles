@@ -7,7 +7,7 @@ call plug#begin('~/.vim/bundle')
 " Tools & Utilities
 Plug 'neoclide/coc.nvim', {
       \   'branch': 'release'
-      \ } " The greatest language server
+      \ }
 Plug 'puremourning/vimspector'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-vinegar'
@@ -37,7 +37,7 @@ Plug 'antoinemadec/coc-fzf'
 
 " text manipulation
 Plug 'preservim/nerdcommenter'
-Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+Plug 'kkoomen/vim-doge', { 'do': 'npm i --no-save && npm run build:binary:unix' }
 Plug 'mg979/vim-visual-multi' 
 
 " javascript/typescript:
