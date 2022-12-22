@@ -20,8 +20,6 @@ netrw. Nobody needs nerd tree!
 * `<leader>kt` - Open netrw in new tab
 * `<leader>kv` - Open netrw in verticalsplit
 
-
-
 ## Core Plugins
 
 ### COC.NVIM Language Server
@@ -74,8 +72,6 @@ The ultimate IDE plugin for Vim. No longer do you need several that conflict, ha
 * Use `:CocCommand snippets.editSnippets` to edit user's ultisnips snippets of current document filetype.
 * Use `:CocCommand snippets.openOutput` to open output channel of snippets.
 
-
-
 ### Vim Doge (Document Generator)
 
 **Source:** https://github.com/kkoomen/vim-doge
@@ -92,8 +88,6 @@ Generate documentation based on expressions - such as DocBlocks
 
 * `\d` - generate documentation for method/function
 
-
-
 ### Vim Fugitive (git)
 
 **Source:** https://github.com/tpope/vim-fugitive
@@ -108,8 +102,6 @@ This is really powerful and commands are prepended with `:Git`.
 
 * `<leader>g` - Go to got command
 * `<leader>gd` - open a git diff split vertically
-
-
 
 ### Filebrowsing (with netrw and friends)
 
@@ -133,8 +125,6 @@ This is a collection of netrw commands
 * `<leader>bv` - new buffer in horizontal split
 
 **For netrw usage, see Vim Cheatsheet**
-
-
 
 ### FZF
 
@@ -186,8 +176,6 @@ Use fzf to search through files, commits, filenames
 
 Add `!` to open any in full screen mode
 
-
-
 ### Nerdcommenter
 
 **Source:** https://github.com/preservim/nerdcommenter
@@ -207,8 +195,6 @@ It is worth looking at the core documentation for more advanced usage, but liste
 * `<leader>ci` - Invert Comments
 * `<leader>cu` - Uncomment Line
 * `<leader>ca` - Switches to alternate delimiters. For example, from `//` to `/* .. */` for javascript
-
-
 
 ### Vim Spector
 
@@ -233,8 +219,6 @@ Vim Graphicl Debugger
 * `<leader>vj` - Step into, **j** as in down a context
 * `<leader>vl` - Step over, **l** as in next
 
-
-
 ### Vim Tmux Navigator
 
 **Source:** https://github.com/christoomey/vim-tmux-navigator
@@ -250,8 +234,6 @@ Easy navigation from vim to tmux panes
 * `<C-k>` - Move  Up
 * `<C-l>` - Move  Right
 * `<C-\>` - Go to Previous split
-
-
 
 ### Vim Visual Multi
 
@@ -291,8 +273,6 @@ Multi cursor support. The [tutorial](https://github.com/mg979/vim-visual-multi/b
   * `<vmleader>N` - Add number order
   * `<C-v>` - Paste the vm register in insert mode
 
-  
-
 ### Vim Windowswap
 
 **Source:** https://github.com/wesQ3/vim-windowswap
@@ -306,8 +286,6 @@ Swap vim windows around
 #### Keymaps
 
 * `<leader>ww` - Mark window swaps. Do this on both windows to swap.
-
-
 
 ### Vim Yank Stack
 
@@ -325,4 +303,3 @@ In normal mode/visual mode
 
 * `<C-p>` - Go previous register
 * `<C-P>` - Go forward register
-
