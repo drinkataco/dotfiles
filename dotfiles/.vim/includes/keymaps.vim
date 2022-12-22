@@ -72,8 +72,10 @@ map <leader>xr <Plug>(coc-references)
 
 " Misc: Non namespaced
 nmap <leader>d :DogeGenerate<CR>
-nmap <leader>p :Prettier<CR>| " Run prettier on file using coc
 nmap <C-y> :Yanks<CR>| " Show yanks from yank stack (simialr to :reg)
+
+" Prettier / Formatting
+nmap <leader>p :Prettier<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
