@@ -55,6 +55,9 @@ set mat=2
 " Folding should be very liberal. Appear only when I say
 set foldlevelstart=99
 
+" Default folding for files should be based off of indent
+set foldmethod=indent
+
 " netrw File Browsing
 let g:netrw_banner=0
 

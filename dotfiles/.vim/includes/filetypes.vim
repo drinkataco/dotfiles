@@ -1,3 +1,15 @@
+"
+" Generic
+"
+augroup REMEMBER_FOLDS
+  autocmd!
+  au BufWinLeave ?* mkview 1
+  au BufWinEnter ?* silent! loadview 1
+augroup END
+
+"
+" File types
+"
 augroup JS
   autocmd!
 
@@ -17,8 +29,8 @@ augroup XML
   autocmd!
 
   " Folding
-  autocmd FileType xml,html,xhtml let g:xml_syntax_folding=1
-  autocmd FileType xml,html,xhtml setlocal foldmethod=syntax
+  autocmd FileType xml,xhtml let g:xml_syntax_folding=1
+  autocmd FileType xml,xhtml setlocal foldmethod=syntax
 augroup END
 
 augroup YAML

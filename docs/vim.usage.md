@@ -4,10 +4,6 @@ This document aims to highlight useful standard vim commands.
 
 Useful link: https://devhints.io/vim
 
-[TOC]
-
-
-
 ## Text Manipulation and Navigation
 
 The main usage of vim is EDITING files. This section details ways to navigate around text objects windows and documents and basic manipulation.
@@ -59,8 +55,6 @@ The main usage of vim is EDITING files. This section details ways to navigate ar
 * `mx` - Set mark, where **x* * can be any character
 * ``x` - Go to mark, where **x* * can be any character
 
-
-
 ### Text Objects
 
 Objects can be modified by 3 keys – the first being the operator (such as **c** for change), the second being the method (such as **i** for inner), and the last being the text object (such as **w** for word). So `caw` would be change around word.
@@ -85,8 +79,6 @@ Objects can be modified by 3 keys – the first being the operator (such as **c*
   `[`,` (`, `{`, `<`A -  [], (), or {} block
 * `'`,  `"` - A quoted string
 * `t`A -  XML tag block
-
-
 
 ### Inserting and Editing
 
@@ -114,7 +106,6 @@ Objects can be modified by 3 keys – the first being the operator (such as **c*
   - `c` - Change
 - Then hit `Esc`, wait 1 second and the inserted text will appear on every line.
 
-
 ### Searching and Replacing
 
 #### Searching
@@ -125,8 +116,6 @@ Objects can be modified by 3 keys – the first being the operator (such as **c*
   * `ctrl-p` - previous search (history-1)
   * `ctrl-n` - next search (history+1)
 
-
-
 ### Code Folding
 
 * `zo` - Open fold /`zO` Open fold recursively
@@ -134,8 +123,6 @@ Objects can be modified by 3 keys – the first being the operator (such as **c*
 * `za` - Toggle fold
 * `zM` - Close all folds
 * `zR` - Open all folds
-
-
 
 ## Files, Buffers, and Tabs
 
@@ -163,8 +150,6 @@ And within **netrw**, we'll want to manipulate the files:
 
 See https://gist.github.com/danidiaz/37a69305e2ed3319bfff9631175c5d0f for an exhaustive list
 
-
-
 ### Buffers
 
 * `<C-o` - Go to previous buffer (jump)
@@ -173,15 +158,11 @@ See https://gist.github.com/danidiaz/37a69305e2ed3319bfff9631175c5d0f for an exh
 * `:new` - New buffer in horizontal split 
 * `:Vnew` - New buffer in vertical split
 
-
-
 ### Tabs
 
 * `gt` - Go to next tab
 * `gT` - Go to previous tab
 * `3gt` - Go the third tab
-
-
 
 ## Modes
 
@@ -197,8 +178,6 @@ Mode-specific usage
 - `:&&` - Repeat last substitution with the same flags.
 - `:%&` - Repeat last substitution on entire file, reset flags.
 - `:%&&` - Repeat last substitution on entire file, keep flags.
-
-
 
 ### Visual
 
