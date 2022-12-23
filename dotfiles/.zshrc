@@ -105,9 +105,6 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-# JS
-source "$HOME/.nvm/nvm.sh"
-
 # AWS
 export AWS_PAGER="less -F -X"
 
