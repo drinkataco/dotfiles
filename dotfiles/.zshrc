@@ -20,6 +20,7 @@ plugins=(
   docker
   git
   kubectl
+  npm
   nvm
   macos
   vi-mode
@@ -107,6 +108,9 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # AWS
 export AWS_PAGER="less -F -X"
+
+# JS
+nvm use default
 
 # fzf
 # info: https://medium.com/better-programming/boost-your-command-line-productivity-with-fuzzy-finder-985aa162ba5d
