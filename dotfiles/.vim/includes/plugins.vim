@@ -16,6 +16,7 @@ Plug 'wesQ3/vim-windowswap'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'junegunn/vim-peekaboo'
 Plug 'Yggdroot/indentLine'
+Plug 'tpope/vim-obsession'
 
 " Git
 Plug 'tpope/vim-fugitive'
