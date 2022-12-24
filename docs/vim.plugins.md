@@ -219,6 +219,23 @@ Vim Graphicl Debugger
 * `<leader>vj` - Step into, **j** as in down a context
 * `<leader>vl` - Step over, **l** as in next
 
+### Vim Test
+
+**Source:** https://github.com/vim-test/vim-test
+
+**Keyspace:** `<leader>t`
+
+**Description:**
+
+Run tests, in a tmux panel below vim
+
+### Keymaps and Commands
+
+* `<leader>tt` - Test nearest test
+* `<leader>tf` - Run all of test file
+* `<leader>tl` - Rerun last test
+* `<leader>ts` - Run the whole test suite
+
 ### Vim Tmux Navigator
 
 **Source:** https://github.com/christoomey/vim-tmux-navigator

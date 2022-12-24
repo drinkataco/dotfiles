@@ -25,6 +25,10 @@ Plug 'junegunn/gv.vim'
 " Snippets
 Plug 'honza/vim-snippets' " Lots of language defaults
 
+" Testing and Dispatching
+Plug 'preservim/vimux'
+Plug 'vim-test/vim-test'
+
 " Theming
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
@@ -140,3 +144,8 @@ let g:vimspector_sign_priority = {
       \    'vimspectorBPDisabled': 15,
       \    'vimspectorPC':         999,
       \ }
+
+"
+" Vim Test
+"
+let test#strategy='vimux'
