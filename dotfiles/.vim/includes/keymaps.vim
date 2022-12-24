@@ -43,6 +43,12 @@ nmap <leader>gc :BCommits<CR>| " FZF to search buffer commits
 nmap <C-p> <Plug>yankstack_substitute_older_paste
 nmap <C-P> <Plug>yankstack_substitute_newer_paste
 
+" T: Vim Test
+nmap <leader>tt :TestNearest<CR>
+nmap <leader>tf :TestFile<CR>
+nmap <leader>tl :TestLast<CR>
+nmap <leader>ts :TestSuite<CR>
+
 " V: Vimspector
 nnoremap <leader>vd :call vimspector#Launch()<CR>
 nnoremap <leader>ve :call vimspector#Reset()<CR>
