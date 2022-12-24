@@ -152,8 +152,8 @@ See https://gist.github.com/danidiaz/37a69305e2ed3319bfff9631175c5d0f for an exh
 
 ### Buffers
 
-* `<C-o` - Go to previous buffer (jump)
-* `<C-i` - Go to next buffer (jump) if set
+* `<C-o>` - Go to previous buffer (jump)
+* `<C-i>` - Go to next buffer (jump) if set
 * `:tabnew` - New buffer in tab
 * `:new` - New buffer in horizontal split 
 * `:Vnew` - New buffer in vertical split
@@ -185,3 +185,15 @@ Mode-specific usage
 * `<C-<>` - Indent Left
 * `<C->>` - Indent Right
 * `<C-=>` - Auto Indent
+
+## Windows, Splits and Tabs
+
+### Splits
+
+[Readmore](https://vim.fandom.com/wiki/Resize_splits_more_quickly)
+
+- `<C-w> =` - equal size
+- `<C-w> >` - increase v size
+- `<C-w> <` - decrease v size
+- `<C-w> +` - increase h size
+- `<C-w> -` - decrease h size
