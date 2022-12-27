@@ -49,11 +49,12 @@ Plug 'mg979/vim-visual-multi'
 Plug 'pangloss/vim-javascript'
 Plug 'Quramy/vim-js-pretty-template'
 
-" misc syntax
+" misc lang
 Plug 'jparise/vim-graphql'
 Plug 'nelsyeung/twig.vim'
 Plug 'cespare/vim-toml', { 'branch': 'main' }
 Plug 'pedrohdz/vim-yaml-folds'
+Plug 'dhruvasagar/vim-table-mode'
 
 call plug#end()
 

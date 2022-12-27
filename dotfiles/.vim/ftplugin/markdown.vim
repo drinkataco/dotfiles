@@ -23,3 +23,5 @@ let g:markdown_fenced_languages=[
       \ 'xml'
       \ ]
 
+" Automatically enable markdown 'table mode'
+au BufRead * silent! TableModeEnable

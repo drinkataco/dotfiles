@@ -2,8 +2,6 @@
 
 This document aims to highlight the plugins used by my git installation and any short cuts or workflows that supplement them.
 
-[TOC]
-
 ## Core Features
 
 ### File browsing
@@ -218,6 +216,20 @@ Vim Graphicl Debugger
 * `<leader>vk` - Step out, **k** as in up a context
 * `<leader>vj` - Step into, **j** as in down a context
 * `<leader>vl` - Step over, **l** as in next
+
+### Vim Table Mode
+
+**Source:** [github.com/vim-table-mode](https://github.com/vim-table-mode)
+
+**Description:**
+
+Create/format tables in Markdown
+
+* `:TableModeEnable` - enable
+* `:TableModeDisable` - disable
+* `:Tableize` - format existing table
+* `| a | b | c |` and then `||` on the new line. Each line after will auto adust
+* `[|`, `]|`, `{|` & `}|` to move left | right | up | down cells respectively
 
 ### Vim Test
 
