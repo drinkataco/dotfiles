@@ -229,7 +229,7 @@ Vim Graphicl Debugger
 
 Run tests, in a tmux panel below vim
 
-### Keymaps and Commands
+#### Keymaps and Commands
 
 * `<leader>tt` - Test nearest test
 * `<leader>tf` - Run all of test file
