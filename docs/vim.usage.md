@@ -52,8 +52,15 @@ The main usage of vim is EDITING files. This section details ways to navigate ar
 
 #### Markers / Bookmarks
 
+Reference: [Using Marks](https://vim.fandom.com/wiki/Using_marks)
+
 * `mx` - Set mark, where **x* * can be any character
-* ``x` - Go to mark, where **x* * can be any character
+* `\`x` - Go to mark, where **x* * can be any character
+* `\`]'` - jump to next line with a lowercase mark
+* `['` - jump to previous line with a lowercase mark
+* `]\`` - jump to next lowercase mark
+* `[\`` - jump to previous lowercase mark 
+* `:delmarks x` - Delete Mark
 
 ### Text Objects
 
