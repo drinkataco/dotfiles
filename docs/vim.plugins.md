@@ -29,6 +29,7 @@ netrw. Nobody needs nerd tree!
 * https://github.com/neoclide/coc-git
 * https://github.com/neoclide/coc-json
 * https://github.com/neoclide/coc-snippets
+* https://github.com/neoclide/coc-stylelintplus
 * https://github.com/neoclide/coc-tsserver
 * https://github.com/neoclide/coc-prettier
 * https://github.com/neoclide/coc-yaml
@@ -54,7 +55,7 @@ The ultimate IDE plugin for Vim. No longer do you need several that conflict, ha
 
 **Diagnostics**
 
-* `<leader>xa` / ` :CocDiagnostics` - List all diagnostics
+* `<leader>xa` / `:CocDiagnostics` - List all diagnostics
 * `<leader>x]` - go to next error
 * `<leader>x[` -  go to previous error
 * `<leader>xd` - go to symbol definition
@@ -147,30 +148,32 @@ Use fzf to search through files, commits, filenames
 
 #### Commands
 
-| `:Files [PATH]`   | Files (runs `$FZF_DEFAULT_COMMAND` if defined)               |
-| `:GFiles [OPTS]`  | Git files (`git ls-files`)                                   |
-| `:GFiles?`        | Git files (`git status`)                                     |
-| `:Buffers`        | Open buffers                                                 |
-| `:Colors`         | Color schemes                                                |
+| Command           | Description                                                                                                        |
+|-------------------|--------------------------------------------------------------------------------------------------------------------|
+| `:Files [PATH]`   | Files (runs `$FZF_DEFAULT_COMMAND` if defined)                                                                     |
+| `:GFiles [OPTS]`  | Git files (`git ls-files`)                                                                                         |
+| `:GFiles?`        | Git files (`git status`)                                                                                           |
+| `:Buffers`        | Open buffers                                                                                                       |
+| `:Colors`         | Color schemes                                                                                                      |
 | `:Ag [PATTERN]`   | [ag](https://github.com/ggreer/the_silver_searcher) search result (`ALT-A` to select all, `ALT-D` to deselect all) |
-| `:Rg [PATTERN]`   | [rg](https://github.com/BurntSushi/ripgrep) search result (`ALT-A` to select all, `ALT-D` to deselect all) |
-| `:Lines [QUERY]`  | Lines in loaded buffers                                      |
-| `:BLines [QUERY]` | Lines in the current buffer                                  |
-| `:Tags [QUERY]`   | Tags in the project (`ctags -R`)                             |
-| `:BTags [QUERY]`  | Tags in the current buffer                                   |
-| `:Marks`          | Marks                                                        |
-| `:Windows`        | Windows                                                      |
-| `:Locate PATTERN` | `locate` command output                                      |
-| `:History`        | `v:oldfiles` and open buffers                                |
-| `:History:`       | Command history                                              |
-| `:History/`       | Search history                                               |
-| `:Snippets`       | Snippets ([UltiSnips](https://github.com/SirVer/ultisnips))  |
-| `:Commits`        | Git commits (requires [fugitive.vim](https://github.com/tpope/vim-fugitive)) |
-| `:BCommits`       | Git commits for the current buffer; visual-select lines to track changes in the range |
-| `:Commands`       | Commands                                                     |
-| `:Maps`           | Normal mode mappings                                         |
-| `:Helptags`       | Help tags [1](https://github.com/junegunn/fzf.vim#helptags)  |
-| `:Filetypes`      | File types                                                   |
+| `:Rg [PATTERN]`   | [rg](https://github.com/BurntSushi/ripgrep) search result (`ALT-A` to select all, `ALT-D` to deselect all)         |
+| `:Lines [QUERY]`  | Lines in loaded buffers                                                                                            |
+| `:BLines [QUERY]` | Lines in the current buffer                                                                                        |
+| `:Tags [QUERY]`   | Tags in the project (`ctags -R`)                                                                                   |
+| `:BTags [QUERY]`  | Tags in the current buffer                                                                                         |
+| `:Marks`          | Marks                                                                                                              |
+| `:Windows`        | Windows                                                                                                            |
+| `:Locate PATTERN` | `locate` command output                                                                                            |
+| `:History`        | `v:oldfiles` and open buffers                                                                                      |
+| `:History:`       | Command history                                                                                                    |
+| `:History/`       | Search history                                                                                                     |
+| `:Snippets`       | Snippets ([UltiSnips](https://github.com/SirVer/ultisnips))                                                        |
+| `:Commits`        | Git commits (requires [fugitive.vim](https://github.com/tpope/vim-fugitive))                                       |
+| `:BCommits`       | Git commits for the current buffer; visual-select lines to track changes in the range                              |
+| `:Commands`       | Commands                                                                                                           |
+| `:Maps`           | Normal mode mappings                                                                                               |
+| `:Helptags`       | Help tags [1](https://github.com/junegunn/fzf.vim#helptags)                                                        |
+| `:Filetypes`      | File types                                                                                                         |
 
 Add `!` to open any in full screen mode
 
@@ -207,15 +210,19 @@ Vim Graphicl Debugger
 #### Keymaps
 
 * `<leader>vd` - Launch **d**ebugger
-* `<leader>ve` - Reset, **e**xit debugger
-* `<leader>vc` - **c**ontinue execution (start)
+* `<leader>ve` - **e**xit debugger
+* `F3` - Stop Debugger
+* `F6` - Pause Debugger
+* `<leader>vc` / `F5` - **c**ontinue/start execution
 * `<leader>vt` - **t**oggle breakpoint
 * `<leader>vT` - reset all breakpoints
 * `<leader>vw` - Watch a variable
-* `<leader>vr` - **r**estart debugger
+* `<leader>vr` / `F4` - **r**estart debugger
 * `<leader>vk` - Step out, **k** as in up a context
 * `<leader>vj` - Step into, **j** as in down a context
 * `<leader>vl` - Step over, **l** as in next
+
+See: [Human Mode](https://github.com/puremourning/vimspector#human-mode)
 
 ### Vim Table Mode
 
