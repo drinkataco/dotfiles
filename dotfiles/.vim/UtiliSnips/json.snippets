@@ -1,0 +1,165 @@
+snippet vimspector "Spector" b
+{
+  "$schema": "https://puremourning.github.io/vimspector/schema/vimspector.schema.json",
+  "configurations": {
+    ${0:configuration}
+  }
+}
+endsnippet
+
+#
+# JAVASCRIPT
+#
+snippet vs_js "Javascript - default" b
+"${0:default}": {
+  "adapter": "vscode-node",
+  "breakpoints": {
+    "exception": {
+      "all": "N",
+      "uncaught": "Y"
+    }
+  },
+  "configuration": {
+    "request": "launch",
+    "protocol": "auto",
+    "stopOnEntry": true,
+    "console": "integratedTerminal",
+    "program": "${workspaceRoot}/${1:main.js}",
+    "cwd": "${workspaceRoot}"
+  }
+}
+endsnippet
+
+snippet vs_ts "Javascript - default (Typescript)" b
+"${0:default}": {
+  "adapter": "vscode-node",
+  "breakpoints": {
+    "exception": {
+      "all": "N",
+      "uncaught": "Y"
+    }
+  },
+  "configuration": {
+    "request": "launch",
+    "protocol": "auto",
+    "stopOnEntry": true,
+    "console": "integratedTerminal",
+    "program": "${workspaceRoot}/${1:main.js}",
+    "cwd": "${workspaceRoot}"
+  }
+}
+endsnippet
+
+snippet vs_chrome "Javascript - Web (Chrome)" b
+"chrome": {
+  "adapter": "chrome",
+  "breakpoints": {
+    "exception": {
+      "all": "N",
+      "uncaught": "Y"
+    }
+  },
+  "configuration": {
+    "request": "launch",
+    "url": "http://localhost:1234/",
+    "webRoot": "${workspaceRoot}/${0:www}"
+  }
+},
+endsnippet
+
+snippet vs_firefox "Javascript - Web (Firefox)" b
+"firefox": {
+  "adapter": "firefox",
+  "breakpoints": {
+    "exception": {
+      "all": "N",
+      "uncaught": "Y"
+    }
+  },
+  "configuration": {
+    "request": "launch",
+    "url": "http://localhost:1234/",
+    "webRoot": "${workspaceRoot}/${0:www}"
+    "reAttach": true
+  }
+}
+endsnippet
+
+snippet vs_jest "Javascript - Jest Configuration" b
+"jest": {
+  "adapter": "vscode-node",
+  "breakpoints": {
+    "exception": {
+      "all": "N",
+      "uncaught": "Y"
+    }
+  },
+  "configuration": {
+    "request": "launch",
+    "name": "Jest debugger",
+    "type": "node",
+    "console": "integratedTerminal",
+    "program": "${workspaceRoot}/node_modules/.bin/jest",
+    "skipFiles": ["*/<node_internals>/**/*.js", "node_modules/**/*.js"],
+    "cwd": "${workspaceRoot}"
+  }
+}
+endsnippet
+
+snippet vs_serverless "Javascript - Serverless Configuration" b
+"serverless": {
+  "adapter": "vscode-node",
+  "breakpoints": {
+    "exception": {
+      "all": "N",
+      "uncaught": "Y"
+    }
+  },
+  "configuration": {
+    "type": "node",
+    "request": "launch",
+    "program": "${workspaceRoot}/node_modules/.bin/serverless",
+    "args": ["offline"],
+    "runtimeArgs": ["--nolazy"],
+    "console": "integratedTerminal",
+    "skipFiles": ["<node_internals>/**"],
+    "sourceMaps": true,
+    "cwd": "${workspaceRoot}"
+  }
+}
+endsnippet
+
+#
+# Python
+#
+snippet vs_python "Python" b
+"${0:default}": {
+  "adapter": "debugpy",
+  "breakpoints": {
+    "exception": {
+      "raised": "N",
+      "uncaught": "",
+      "userUnhandled": ""
+    }
+  },
+  "configuration": {
+    "request": "launch",
+    "program": "${workspaceRoot}/${1:main}.py",
+    "cwd": "${workspaceRoot}",
+    "stopOnEntry": true
+  }
+}
+endsnippet
+
+#
+# RUST
+#
+snippet vs_rust "Rust" b
+"${0:codellb}": {
+  "adapter": "CodeLLDB",
+  "configuration": {
+    "request": "launch",
+    "program": "${workspaceRoot}/target/debug/vimspector_test"
+  }
+}
+endsnippet
