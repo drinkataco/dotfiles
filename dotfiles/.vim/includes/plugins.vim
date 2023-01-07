@@ -11,7 +11,6 @@ Plug 'neoclide/coc.nvim', {
 Plug 'puremourning/vimspector'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-vinegar'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'wesQ3/vim-windowswap'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'junegunn/vim-peekaboo'
@@ -55,6 +54,9 @@ Plug 'nelsyeung/twig.vim'
 Plug 'cespare/vim-toml', { 'branch': 'main' }
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'dhruvasagar/vim-table-mode'
+
+" misc re order
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
