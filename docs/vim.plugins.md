@@ -292,15 +292,15 @@ Multi cursor support. The [tutorial](https://github.com/mg979/vim-visual-multi/b
   * Use `R` to enter replace mode
 * `<S-Right>` and `<S-Left>` - start a selection and capture characters left or right
 * `<vmleader>c` - go to cursor mode from visual mode
+* `<vmleader>\` - add cursor by regex search
+
+See: [permanent mappings](https://github.com/mg979/vim-visual-multi/wiki/Mappings#permanent-mappings)
 
 **Using Cursors and Selections**
 
 * You can move them (press `wwbb` to get the idea)
-
 * You can run normal mode commands (`dw`, `cW`)
-
 * You can go into insert mode (`i`, `a`)
-
 * You can use VM specific commands
 
   * `<TAB>` - enter extend mode. You are not using cursors any more by selections in visual mode. Use motions such as `c` or `d`.
