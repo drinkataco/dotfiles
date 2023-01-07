@@ -7,5 +7,9 @@
   },
   "git.signPriority": 5,
   "typescript.autoClosingTags": false,
-  "typescript.suggest.autoImports": true
+  "typescript.suggest.autoImports": true,
+  "snippets.ultisnips.directories": [
+    "UltiSnips",
+    "$HOME/.vim/UtiliSnips"
+  ]
 }
