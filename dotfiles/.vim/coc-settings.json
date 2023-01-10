@@ -1,9 +1,11 @@
 {
   "diagnostic-languageserver.filetypes": {
-    "sh": "shellcheck"
+    "sh": "shellcheck",
+    "vim": "vint"
   },
   "diagnostic-languageserver.formatFiletypes": {
-    "sh": "shfmt"
+    "sh": "shfmt",
+    "vim": "vint"
   },
   "git.signPriority": 5,
   "typescript.autoClosingTags": false,
