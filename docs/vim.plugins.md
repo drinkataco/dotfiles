@@ -2,6 +2,39 @@
 
 This document aims to highlight the plugins used by my git installation and any short cuts or workflows that supplement them.
 
+## Contents
+
+* [Core Features](#core-features)
+  * [File browsing](#file-browsing)
+    * [Keymaps](#keymaps)
+* [Core Plugins](#core-plugins)
+  * [COC.NVIM Language Server](#coc.nvim-language-server)
+    * [Keymaps](#keymaps)
+  * [Vim Doge (Document Generator)](#vim-doge-(document-generator))
+    * [Keymaps](#keymaps)
+  * [Vim Fugitive (git)](#vim-fugitive-(git))
+    * [Keymaps](#keymaps)
+  * [Filebrowsing (with netrw and friends)](#filebrowsing-(with-netrw-and-friends))
+    * [Keymaps](#keymaps)
+  * [FZF](#fzf)
+    * [Keymaps](#keymaps)
+    * [Commands](#commands)
+  * [Nerdcommenter](#nerdcommenter)
+    * [Keymaps](#keymaps)
+  * [Vim Spector](#vim-spector)
+    * [Keymaps](#keymaps)
+  * [Vim Table Mode](#vim-table-mode)
+  * [Vim Test](#vim-test)
+    * [Keymaps and Commands](#keymaps-and-commands)
+  * [Vim Tmux Navigator](#vim-tmux-navigator)
+    * [Keymaps](#keymaps)
+  * [Vim Visual Multi](#vim-visual-multi)
+    * [Keymaps](#keymaps)
+  * [Vim Windowswap](#vim-windowswap)
+    * [Keymaps](#keymaps)
+  * [Vim Yank Stack](#vim-yank-stack)
+    * [Keymaps](#keymaps)
+
 ## Core Features
 
 ### File browsing
