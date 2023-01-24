@@ -7,7 +7,10 @@ filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
-au FocusGained,BufEnter * checktime
+augroup autoread
+  au!
+  au FocusGained,BufEnter * checktime
+augroup END
 
 " Disable Swap File. I don't care if I have the same file open multiple
 " instances with autoread!
@@ -77,10 +80,10 @@ let g:netrw_list_hide =
 let g:NetrwIsOpen=0
 function! NetrwSidebar()
   if g:NetrwIsOpen
-    let i = bufnr("$")
+    let i = bufnr('$')
     while (i >= 1)
-      if (getbufvar(i, "&filetype") == "netrw")
-        silent exe "bwipeout " . i 
+      if (getbufvar(i, '&filetype') ==# 'netrw')
+        silent exe 'bwipeout ' . i 
       endif
       let i-=1
     endwhile
