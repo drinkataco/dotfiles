@@ -38,6 +38,7 @@ nmap <leader>g :Git
 nmap <leader>gb :Git blame<CR>
 nmap <leader>gd :Gvdiffsplit<CR>
 nmap <leader>gc :BCommits<CR>| " FZF to search buffer commits
+nmap <leader>gx :tab term lazygit<CR>| " open up lazy git in new tab
 
 " P: Vim Yank Stack
 nmap <C-p> <Plug>yankstack_substitute_older_paste
