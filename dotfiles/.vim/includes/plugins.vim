@@ -126,8 +126,8 @@ let g:NERDDefaultAlign='left'
 "
 let g:VM_theme='iceblue'
 let g:VM_maps={}
-let g:VM_maps["Add Cursor Down"]='<S-j>'
-let g:VM_maps["Add Cursor Up"]='<S-k>'
+let g:VM_maps['Add Cursor Down']='<S-j>'
+let g:VM_maps['Add Cursor Up']='<S-k>'
 
 "
 " Vim Spector
