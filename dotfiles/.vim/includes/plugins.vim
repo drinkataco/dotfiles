@@ -126,8 +126,8 @@ let g:NERDDefaultAlign='left'
 "
 let g:VM_theme='iceblue'
 let g:VM_maps={}
-let g:VM_maps['Add Cursor Down']='<S-j>'
-let g:VM_maps['Add Cursor Up']='<S-k>'
+let g:VM_maps['Add Cursor Down']='∆' " Option-j for Mac
+let g:VM_maps['Add Cursor Up']='˚' " Option-k for Mac
 
 "
 " Vim Spector
@@ -145,7 +145,7 @@ let g:vimspector_sign_priority = {
       \    'vimspectorBPCond': 20,
       \    'vimspectorBPLog': 20,
       \    'vimspectorBPDisabled': 15,
-      \    'vimspectorPC':         999,
+      \    'vimspectorPC': 999,
       \ }
 
 "

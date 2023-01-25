@@ -302,8 +302,8 @@ Multi cursor support. The [tutorial](https://github.com/mg979/vim-visual-multi/b
 
 #### Keymaps
 
-* `<S-j>` - Set a cursor and go down. Precede with a number to determine lines if needed
-* `<S-k>` - Set a cursor and go down. Precede with a number to determine lines if needed
+* `<Option-j>` - Set a cursor and go down. Precede with a number to determine lines if needed
+* `<Option-k>` - Set a cursor and go down. Precede with a number to determine lines if needed
 * `<C-n>` - Select words under a cursor. Press again to select matches.
   * Use `<vmleader>c` to cycle smartcasing.
   * Use `q` to skip the current match and go to the next. `Q` to skip current and go back.
