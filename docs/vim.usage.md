@@ -205,8 +205,10 @@ Mode-specific usage
 
 [Readmore](https://vim.fandom.com/wiki/Resize_splits_more_quickly)
 
-- `<C-w> =` - equal size
-- `<C-w> >` - increase v size
-- `<C-w> <` - decrease v size
-- `<C-w> +` - increase h size
-- `<C-w> -` - decrease h size
+- `<C-w>=` - equal size
+- `<C-w>>` - increase v size
+- `<C-w><` - decrease v size
+- `<C-w>+` - increase h size
+- `<C-w>-` - decrease h size
+- `<C-w>K` or `<C-w> J` - move splits left/right
+- `<C-w><Bar>` - enlarge current pane
