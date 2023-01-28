@@ -4,6 +4,38 @@ This document aims to highlight useful standard vim commands.
 
 Useful link: https://devhints.io/vim
 
+<!-- vim-md-toc format=bullets ignore=^TODO$ -->
+* [Text Manipulation and Navigation](#text-manipulation-and-navigation)
+  * [Navigation](#navigation)
+    * [Words, Lines, and Characters](#words-lines-and-characters)
+    * [Window and Document](#window-and-document)
+    * [Code](#code)
+    * [Searching](#searching)
+    * [Jumps and Movements](#jumps-and-movements)
+    * [Markers / Bookmarks](#markers--bookmarks)
+  * [Text Objects](#text-objects)
+    * [Operators](#operators)
+    * [Method](#method)
+    * [Text Objects](#text-objects)
+  * [Inserting and Editing](#inserting-and-editing)
+    * [Standard](#standard)
+    * [Visual Block](#visual-block)
+  * [Searching and Replacing](#searching-and-replacing)
+    * [Searching](#searching)
+  * [Code Folding](#code-folding)
+* [Files, Buffers, and Tabs](#files-buffers-and-tabs)
+  * [Netrw](#netrw)
+    * [Copying Files](#copying-files)
+  * [Buffers](#buffers)
+  * [Tabs](#tabs)
+* [Modes](#modes)
+  * [Normal](#normal)
+    * [Substitutions](#substitutions)
+  * [Visual](#visual)
+* [Windows, Splits and Tabs](#windows-splits-and-tabs)
+  * [Splits](#splits)
+<!-- vim-md-toc END -->
+
 ## Text Manipulation and Navigation
 
 The main usage of vim is EDITING files. This section details ways to navigate around text objects windows and documents and basic manipulation.
@@ -44,11 +76,13 @@ The main usage of vim is EDITING files. This section details ways to navigate ar
 
 #### Searching
 
-#### Jumps
+#### Jumps and Movements
 
 - `<C-O>` - Go to previous jump
 - `<C-I>` Go to next jump
 - `gf` - Go to file in cursor
+- `;` - repeat movement forward
+- `,`-  repeqte movement backwards
 
 #### Markers / Bookmarks
 
