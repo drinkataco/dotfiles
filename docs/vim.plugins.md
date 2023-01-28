@@ -4,13 +4,15 @@ This document aims to highlight the plugins used by my git installation and any 
 
 ## Contents
 
+<!-- vim-md-toc format=bullets max_level=3 ignore=^TODO$ -->
+* [Contents](#contents)
 * [Core Features](#core-features)
   * [File browsing](#file-browsing)
 * [Core Plugins](#core-plugins)
-  * [COC.NVIM Language Server](#coc.nvim-language-server)
-  * [Vim Doge (Document Generator)](#vim-doge-(document-generator))
-  * [Vim Fugitive (git)](#vim-fugitive-(git))
-  * [Filebrowsing (with netrw and friends)](#filebrowsing-(with-netrw-and-friends))
+  * [COC.NVIM Language Server](#cocnvim-language-server)
+  * [Vim Doge (Document Generator)](#vim-doge-document-generator)
+  * [Vim Fugitive (git)](#vim-fugitive-git)
+  * [Filebrowsing (with netrw and friends)](#filebrowsing-with-netrw-and-friends)
   * [FZF](#fzf)
   * [Nerdcommenter](#nerdcommenter)
   * [Vim Spector](#vim-spector)
@@ -20,6 +22,7 @@ This document aims to highlight the plugins used by my git installation and any 
   * [Vim Visual Multi](#vim-visual-multi)
   * [Vim Windowswap](#vim-windowswap)
   * [Vim Yank Stack](#vim-yank-stack)
+<!-- vim-md-toc END -->
 
 ## Core Features
 
