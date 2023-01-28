@@ -16,6 +16,7 @@ Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'junegunn/vim-peekaboo'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-scriptease'
 
 " Git
 Plug 'tpope/vim-fugitive'
