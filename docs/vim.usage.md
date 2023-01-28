@@ -34,6 +34,7 @@ Useful link: https://devhints.io/vim
   * [Visual](#visual)
 * [Windows, Splits and Tabs](#windows-splits-and-tabs)
   * [Splits](#splits)
+* [Misc](#misc)
 <!-- vim-md-toc END -->
 
 ## Text Manipulation and Navigation
@@ -246,3 +247,7 @@ Mode-specific usage
 - `<C-w>-` - decrease h size
 - `<C-w>K` or `<C-w> J` - move splits left/right
 - `<C-w><Bar>` - enlarge current pane
+
+## Misc
+
+* `<S-k>` - Jump to help for vim symbol
