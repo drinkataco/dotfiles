@@ -1,12 +1,14 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Core:
-"   Generic keys that will be mapped in multiple modes
+"   Generic keys and that will be mapped in multiple modes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " remap left/right arrows to switch tabs
 nnoremap <Left> gt
 nnoremap <Right> gT
 inoremap <Left> <Esc> gt
 inoremap <Right> <Esc> gT
+
+command! W w " Shift kills me
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Normal Mode:                                                "
