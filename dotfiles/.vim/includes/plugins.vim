@@ -55,6 +55,7 @@ Plug 'nelsyeung/twig.vim'
 Plug 'cespare/vim-toml', { 'branch': 'main' }
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'drinkataco/vim-md-toc'
 
 " misc re order
 Plug 'christoomey/vim-tmux-navigator'
@@ -114,6 +115,12 @@ command! -bang -nargs=* Ag
       \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}),
       \   <bang>0
       \ )
+
+"
+" MD-TOC Markdown Table of Contents
+"
+let g:mdtoc_autoupdate=1
+let g:mdtoc_ignore_regex='^TODO$'
 
 "
 " NERDCommenter
