@@ -646,7 +646,7 @@
 			<key>Mouse Reporting allow mouse wheel</key>
 			<false/>
 			<key>Name</key>
-			<string>Default</string>
+			<string>Main-</string>
 			<key>Non Ascii Font</key>
 			<string>InconsolataForPowerline-g 17</string>
 			<key>Non-ASCII Anti Aliased</key>
