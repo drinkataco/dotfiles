@@ -16,7 +16,6 @@ Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'junegunn/vim-peekaboo'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-obsession'
-Plug 'tpope/vim-scriptease'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -48,6 +47,10 @@ Plug 'mg979/vim-visual-multi'
 " javascript/typescript:
 Plug 'pangloss/vim-javascript'
 Plug 'Quramy/vim-js-pretty-template'
+
+" Vim Plugsin
+Plug 'tpope/vim-scriptease'
+Plug 'junegunn/vader.vim'
 
 " misc lang
 Plug 'jparise/vim-graphql'
