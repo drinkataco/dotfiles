@@ -5,8 +5,11 @@
 #
 BASE_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
 DOTFILES_DIR="${BASE_DIR}/dotfiles"
+IGNORE_PATTERN="^$(echo "${DOTFILES_DIR}" | sed 's/\//\\\//')\/(abbbbc)"
+
 readonly BASE_DIR
 readonly DOTFILES_DIR
+readonly IGNORE_PATTERN
 
 #########################################
 # Helper to determine user input for yes/no questions.
@@ -37,7 +40,8 @@ yes_no() {
 #   None
 # Arguments:
 #   1 - Directory to search for files from
-#   2 - Destination 
+#   2 - Destination
+#   3 - Regex of pattwrns to ignore in symlink
 # Returns:
 #   None
 #######################################
@@ -48,6 +52,13 @@ smart_symlink() {
 
   # We're going to go through each file/dir now and try to symlink
   for file in "${1}"/*; do
+    # Check if an ignore pattern exist
+    if [ -n "$3" ]; then
+      if echo "$file" | grep -oEi "${3}" > /dev/null; then
+        continue
+      fi
+    fi
+
     # Globbing gives us annoying patterns. Skip if we get a glob pattern
     if [ "$(basename "$file")" = '*' ]; then
       continue
@@ -61,7 +72,7 @@ smart_symlink() {
         mkdir "$next_dest"
       fi
 
-      smart_symlink "$file" "$next_dest"
+      smart_symlink "$file" "$next_dest" "$3"
     else
       ln -v -s "$file" "$2"
     fi
@@ -72,6 +83,8 @@ smart_symlink() {
 # Main method to run script and find the bash script it must run
 # Globals:
 #   DOTFILES_DIR
+#   HOME
+#   IGNORE_PATTERN
 # Arguments:
 #   None
 #######################################
@@ -80,7 +93,7 @@ main() {
   printf 'Do you want to symlink all dotfiles? [Y/n] '
   read -r symlink_dotfiles
   if yes_no "$symlink_dotfiles" 'Y'; then
-    smart_symlink "$DOTFILES_DIR" "$HOME"
+    smart_symlink "$DOTFILES_DIR" "$HOME" "${IGNORE_PATTERN}"
   fi
 
   printf 'Do you want to boostrap your machine? [y/N] '
