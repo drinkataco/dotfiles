@@ -11,6 +11,12 @@ readonly BASE_DIR
 readonly DOTFILES_DIR
 readonly IGNORE_PATTERN
 
+#
+# These are script arguments that can be enabled with flags
+#
+ARG_DRY_RUN=0 # --dry-run
+ARG_FORCE=0 # --force
+
 #########################################
 # Helper to determine user input for yes/no questions.
 #   Anything beginning with the letter n is a no, 
@@ -74,7 +80,18 @@ smart_symlink() {
 
       smart_symlink "$file" "$next_dest" "$3"
     else
-      ln -fnvs "$file" "$2"
+      cmd='ln'
+
+      # Set symlinking arguments
+      if [ "$ARG_FORCE" = 1 ]; then
+        cmd='ln -fn'
+      fi
+
+      if [ "$ARG_DRY_RUN" = 1 ]; then
+        cmd="echo $cmd"
+      fi
+
+      eval "$cmd" -vs "$file" "$2"
     fi
   done
 }
@@ -89,36 +106,16 @@ smart_symlink() {
 #   None
 #######################################
 main() {
-  # Check parameters for operations
-  printf 'Do you want to symlink all dotfiles? [Y/n] '
-  read -r symlink_dotfiles
-  if yes_no "$symlink_dotfiles" 'Y'; then
-    smart_symlink "$DOTFILES_DIR" "$HOME" "${IGNORE_PATTERN}"
+  # Set Script Arguments
+  if echo "$*" | grep -Eq '.*--dry-run.*'; then
+    ARG_DRY_RUN=1
   fi
 
-  printf 'Do you want to boostrap your machine? [y/N] '
-  read -r bootstrap_machine
-  if ! yes_no "$bootstrap_machine" 'N'; then
-    echo 'Machine Boostrapping Skipped'
-    exit 0
+  if echo "$*" | grep -Eq '.*--force.*'; then
+    ARG_FORCE=1
   fi
 
-  # Machine boostrapping
-  machine=$(uname -s)
-
-  case "$machine" in
-    Darwin*)
-      echo 'Bootstrap Mac'
-    ;;
-    Linux*)
-      echo 'Bootstrap Linux'
-    ;;
-    *)
-      echo "Unknown System: ${machine}"
-      echo 'Your system might not be properly supported'
-      exit 1
-    ;;
-  esac
+  smart_symlink "$DOTFILES_DIR" "$HOME" "${IGNORE_PATTERN}"
 }
 
 main "${@}"
