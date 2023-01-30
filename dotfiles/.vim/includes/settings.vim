@@ -110,8 +110,9 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 " Set colourscheme
-let base16colorspace=256
-colorscheme base16-materia
+if exists('$BASE16_THEME')
+  colorscheme base16-$BASE16_THEME
+endif
 set termguicolors
 
 " show line numbers
