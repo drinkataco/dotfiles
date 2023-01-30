@@ -111,7 +111,13 @@ set ffs=unix,dos,mac
 
 " Set colourscheme
 if exists('$BASE16_THEME')
-  colorscheme base16-$BASE16_THEME
+  " There an issue where sometimes this variable begines with base16-,
+  " sometimes it doesn't...
+  if $BASE16_THEME =~# '^base16-'
+    colorscheme $BASE16_THEME
+  else
+    colorscheme base16-$BASE16_THEME
+  endif
 endif
 set termguicolors
 
