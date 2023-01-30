@@ -54,7 +54,7 @@ smart_symlink() {
   for file in "${1}"/*; do
     # Check if an ignore pattern exist
     if [ -n "$3" ]; then
-      if echo "$file" | grep -oEi "${3}" > /dev/null; then
+      if echo "$file" | grep -oEiq "${3}"; then
         continue
       fi
     fi
@@ -62,9 +62,9 @@ smart_symlink() {
     # Globbing gives us annoying patterns. Skip if we get a glob pattern
     if [ "$(basename "$file")" = '*' ]; then
       continue
-    elif [ -d "$file" ]; then
-      # This file is actuall a directory.
-      # Let's make sure it exists in the destination and recursively apply subfields
+    elif [ -d "$file" ] && [ ! -f "${file}/sync_dir" ]; then
+      # This is a directory, and we should sync each of its files separately and recrusively,
+      # UNLESS we have a sync_dir flag, where we'll synchronise every file
       sub_dir=$(echo "$file" | sed "s~$1~~g")
       next_dest="${2}${sub_dir}"
 
