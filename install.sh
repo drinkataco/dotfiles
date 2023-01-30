@@ -4,8 +4,8 @@
 # I made it extra hard for myself by enforcing POSIX Compliancy
 #
 BASE_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
-DOTFILES_DIR="${BASE_DIR}/dotfiles"
-IGNORE_PATTERN="^$(echo "${DOTFILES_DIR}" | sed 's/\//\\\//')\/(abbbbc)"
+DOTFILES_DIR="${BASE_DIR}"
+IGNORE_PATTERN="^$(echo "${DOTFILES_DIR}" | sed 's/\//\\\//')\/(README|docs|macos|install\.sh|\.git\/|.*\.DS_STORE|Session\.vim)"
 
 readonly BASE_DIR
 readonly DOTFILES_DIR
@@ -74,7 +74,7 @@ smart_symlink() {
 
       smart_symlink "$file" "$next_dest" "$3"
     else
-      ln -v -s "$file" "$2"
+      ln -fnvs "$file" "$2"
     fi
   done
 }
