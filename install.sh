@@ -91,7 +91,7 @@ smart_symlink() {
         cmd="echo $cmd"
       fi
 
-      eval "$cmd" -vs "$file" "$2"
+      eval "$cmd" -vs \""$file"\" \""$2\""
     fi
   done
 }
