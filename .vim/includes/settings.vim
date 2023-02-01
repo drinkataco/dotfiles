@@ -7,7 +7,7 @@ filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
-augroup autoread
+augroup settings_autoread
   au!
   au FocusGained,BufEnter * checktime
 augroup END
@@ -45,7 +45,7 @@ set autoindent
 filetype plugin indent on
 
 " Highlight when searching but not when found
-augroup vimrc-incsearch-highlight
+augroup settings_incsearch_highlight
   autocmd!
   autocmd CmdlineEnter /,\? :set hlsearch
   autocmd CmdlineLeave /,\? :set nohlsearch
@@ -62,7 +62,7 @@ set foldlevelstart=99
 set foldmethod=indent
 
 " Remember folds from closed files
-augroup REMEMBER_FOLDS
+augroup settings_remember_folds
   autocmd!
   au BufWinLeave ?* mkview 1
   au BufWinEnter ?* silent! loadview 1
