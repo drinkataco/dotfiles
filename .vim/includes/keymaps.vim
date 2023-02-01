@@ -3,10 +3,10 @@
 "   Generic keys and that will be mapped in multiple modes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " remap left/right arrows to switch tabs
-nnoremap <Left> gt
-nnoremap <Right> gT
-inoremap <Left> <Esc> gt
-inoremap <Right> <Esc> gT
+nnoremap <Left> gT
+nnoremap <Right> gt
+inoremap <Left> <Esc> gT
+inoremap <Right> <Esc> gt
 
 command! W w " Shift kills me
 
