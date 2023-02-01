@@ -66,6 +66,10 @@ The main usage of vim is EDITING files. This section details ways to navigate ar
 * `H` - Move to top opf screen
 * `M` - Move to middle of screen
 * `L` - Move to bottom of screen
+* `<C-b>` - Move back one full screen
+* `<C-f>` - Move forward one full screen
+* `<C-d>` - Move forward 1/2 screen
+* `<C-u>` - Move back (up) 1/2 screen
 
 #### Code
 
