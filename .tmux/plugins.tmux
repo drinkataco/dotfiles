@@ -19,6 +19,7 @@ set -g @plugin 'jaclu/tmux-menus'
 # Status bar
 set -g @plugin 'tmux-plugins/tmux-battery'
 
+
 # ==============================================
 # === PLUGIN SETTINGS                        ===
 # ==============================================

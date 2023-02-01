@@ -16,9 +16,11 @@ bind-key -n C-S-Right swap-window -t +1
 
 source-file ~/.tmux/theme.tmux
 
+
 # ==============================================
 # === SSH NESTING                            ===
 # ==============================================
+# Source: https://raw.githubusercontent.com/samoshkin/tmux-config/master/tmux/tmux.conf
 # We want to have single prefix key usable both for local and remote session
 # Idea is to turn off all key bindings and prefix handling on local session,
 # so that all keystrokes are passed to inner/remote session
@@ -26,7 +28,7 @@ source-file ~/.tmux/theme.tmux
 bind -T root F12 \
   set prefix None \;\
   set key-table off \;\
-  set status-left 'Bound to Remote' \;\
+  set status-left '☞  Bound to Remote' \;\
   if -F '#{pane_in_mode}' 'send-keys -X cancel' \;\
   refresh-client -S \;\
 
