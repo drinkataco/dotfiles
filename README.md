@@ -4,9 +4,9 @@ This is my swiss army knife. It contains my dotfiles for my day-to-day, as well 
 
 My main workspace is vim inside tmux with zsh shell.
 
-<!-- vim-md-toc format=bullets -->
+<!-- vim-md-toc format=bullets ignore=^TODO$ -->
 * [Installation](#installation)
-* [Information](#information)
+* [Tools](#tools)
   * [vim](#vim)
   * [tmux](#tmux)
   * [zsh](#zsh)
@@ -17,7 +17,7 @@ My main workspace is vim inside tmux with zsh shell.
 
 All files can be symlinked (with subdirectories taking a merge strategy) with the POSIX compliant `./install.sh` script.
 
-## Information
+## Tools
 
 ### vim
 
@@ -29,7 +29,10 @@ With thanks to [coc.nvim](https://github.com/neoclide/coc.nvim) as the language 
 
 ### tmux
 
-Reorganising...
+Tmux is used with the key of being easily operable with vim, minimal customisations, and easy command discovery. It uses plugins such as [continuum](https://github.com/tmux-plugins/tmux-continuum) to easily save/restore sessions, [copycat](https://github.com/tmux-plugins/tmux-copycat) and [thumbs](https://github.com/fcsonline/tmux-thumbs) for nice copy/paste support, and [tmux-menu](https://github.com/jaclu/tmux-menus) for easy command discovery.
+
+* docs/
+  * [tmux.md](./docs/tmux.md)
 
 ### zsh
 

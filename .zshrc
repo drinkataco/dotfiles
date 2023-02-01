@@ -61,7 +61,7 @@ zstyle ':fzf-tab:complete:cat:*' fzf-preview '[ -f $realpath ] && cat $realpath 
 export EDITOR='vim'
 
 # colours
-export TERM=xterm-256color
+export TERM='xterm-256color'
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
