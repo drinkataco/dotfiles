@@ -14,7 +14,8 @@ bind c new-window -c "#{pane_current_path}"
 bind-key -n C-S-Left swap-window -t -1
 bind-key -n C-S-Right swap-window -t +1
 
-source-file ~/.tmux/theme.tmux
+# New Session
+bind-key £ new-session
 
 
 # ==============================================

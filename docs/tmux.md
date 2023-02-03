@@ -12,6 +12,8 @@ Useful Links:
 * [General Usage](#general-usage)
   * [Key Bindings](#key-bindings)
     * [Panes](#panes)
+    * [Windows](#windows)
+    * [Sessions](#sessions)
     * [Searching](#searching)
     * [Misc](#misc)
 * [Plugins](#plugins)
@@ -39,16 +41,16 @@ _Some key bindings are mappings provided by plugins. These will be highlighted_
 - `<prefix> {` - move pane right
 - `<prefix> }` - move pane left
 
-# Windows
+#### Windows
 
 - `<prefix> .` - move window
 - `<prefix> ,` - rename window
 - `<prefix> c` - create window
 
-# Sessions
+#### Sessions
 
 - `<prefix> $` - rename session
-- `<prefix> n` - new session
+- `<prefix> £` - new session
 
 #### Searching
 
