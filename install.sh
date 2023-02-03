@@ -5,7 +5,7 @@
 #
 BASE_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
 DOTFILES_DIR="${BASE_DIR}"
-IGNORE_PATTERN="^$(echo "${DOTFILES_DIR}" | sed 's/\//\\\//')\/(README|docs|macos|install\.sh|\.git\/|.*\.DS_STORE|Session\.vim)"
+IGNORE_PATTERN="^${DOTFILES_DIR}/(README|docs|macos|install\.sh|\.git/|.*\.DS_STORE|Session\.vim)"
 
 readonly BASE_DIR
 readonly DOTFILES_DIR
@@ -51,7 +51,6 @@ yes_no() {
 # Returns:
 #   None
 #######################################
-# a=1
 smart_symlink() {
   # ignore . and .. markers
   GLOBIGNORE="$1/.:$1/.."
@@ -60,7 +59,7 @@ smart_symlink() {
   for file in "${1}"/*; do
     # Check if an ignore pattern exist
     if [ -n "$3" ]; then
-      if echo "$file" | grep -oPiq "${3}"; then
+      if echo "$file" | grep -oEiq "${3}"; then
         continue
       fi
     fi
