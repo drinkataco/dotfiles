@@ -60,7 +60,7 @@ smart_symlink() {
   for file in "${1}"/*; do
     # Check if an ignore pattern exist
     if [ -n "$3" ]; then
-      if echo "$file" | grep -oEiq "${3}"; then
+      if echo "$file" | grep -oPiq "${3}"; then
         continue
       fi
     fi
