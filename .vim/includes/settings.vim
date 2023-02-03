@@ -109,8 +109,11 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-" Set colourscheme
-if exists('$BASE16_THEME')
+" Set colourscheme -
+"  based off of a theme set for vim, or the shell theme
+if exists('$BASE16_VIM')
+  colorscheme base16-$BASE16_VIM
+elseif exists('$BASE16_THEME')
   " There an issue where sometimes this variable begines with base16-,
   " sometimes it doesn't...
   if $BASE16_THEME =~# '^base16-'

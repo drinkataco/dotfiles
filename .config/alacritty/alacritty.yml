@@ -15,7 +15,7 @@ font:
   bold:
     family: 'InconsolataGo Nerd Font Mono'
     style: 'Bold'
-  size: 18
+  size: 19
 
 key_bindings:
   - { key: 'Key3', mods: 'Alt', chars: "#" }
