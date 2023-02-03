@@ -127,6 +127,7 @@ cask "mkvtoolnix"
 cask "vlc"
 
 # Tech
+cask "alacritty"
 cask "adoptopenjdk8"
 cask "docker"
 cask "iterm2"

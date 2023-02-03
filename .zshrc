@@ -135,20 +135,6 @@ kctx() {
   )
 }
 
-# tmux
-tmux_start() {
-  tmux_sessions=$(tmux ls)
-  if [[ -n "${tmux_sessions}" ]]; then
-    lines=$(echo "$tmux_sessions" | wc -l)
-    tmux_session=$(echo "$tmux_sessions" | fzf --height="$(expr $lines + 2)" --reverse)
-    [[ -z "${tmux_session}" ]] && return
-    tmux_session="${tmux_session%%:*}"
-    tmux attach -t "${tmux_session:-default}"
-  else
-    tmux new -s ${tmux_session:-default}
-  fi
-}
-
 # Brew GNU BIN Package Utils
 BREW_PREFIX=$(brew --prefix)
 PATH="${BREW_PREFIX}/Cellar/libtool/2.4.7/libexec/gnubin:$PATH"

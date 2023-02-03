@@ -1,0 +1,19 @@
+# shell:
+  # program: '/usr/local/bin/zsh'
+  # args:
+    # - '-l'
+    # - '-c'
+    # - 'source ~/.zshrc && tmux attach || tmux'
+
+env:
+  TERM: 'xterm-256color'
+
+font:
+  normal:
+    family: 'InconsolataGo Nerd Font Mono'
+    style: 'Regular'
+  bold:
+    family: 'InconsolataGo Nerd Font Mono'
+    style: 'Bold'
+  size: 18
+
