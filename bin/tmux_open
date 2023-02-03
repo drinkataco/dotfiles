@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# If the server isn't already running, run it
+if ! tmux ls >/dev/null 2>/dev/null; then
+  echo 'Warming up TMUX...'
+  tmux new-session -d -s default >/dev/null 2>/dev/null
+fi
+
+# If there's only one, attach to that
+tmux_count=$(tmux ls | wc -l)
+if [[ "${tmux_count}" == '1' ]]; then
+  tmux a -t default
+fi
+
+# Get user to select session
+tmux_session=$(tmux ls | fzf --height ~25% --reverse --print-query | cut -f1 -d':' | tail -1)
+
+# Attach to selected session (or create if new)
+tmux new-session -A -s ${tmux_session}
+
