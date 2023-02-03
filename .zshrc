@@ -149,8 +149,16 @@ tmux_start() {
   fi
 }
 
-# GNU Utils
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+# Brew GNU BIN Package Utils
+BREW_PREFIX=$(brew --prefix)
+PATH="${BREW_PREFIX}/Cellar/libtool/2.4.7/libexec/gnubin:$PATH"
+PATH="${BREW_PREFIX}/Cellar/coreutils/9.1/libexec/gnubin:$PATH"
+PATH="${BREW_PREFIX}/Cellar/gnu-indent/2.2.12_1/libexec/gnubin:$PATH"
+PATH="${BREW_PREFIX}/Cellar/gnu-tar/1.34_1/libexec/gnubin:$PATH"
+PATH="${BREW_PREFIX}/Cellar/grep/3.8_1/libexec/gnubin:$PATH"
+PATH="${BREW_PREFIX}/Cellar/gnu-sed/4.9/libexec/gnubin:$PATH"
+PATH="${BREW_PREFIX}/Cellar/gawk/5.2.1/libexec/gnubin:$PATH"
+PATH="${BREW_PREFIX}/Cellar/findutils/4.9.0/libexec/gnubin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
