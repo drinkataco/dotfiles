@@ -36,7 +36,10 @@ Tmux is used with the key of being easily operable with vim, minimal customisati
 
 ### zsh
 
-Reorganising...
+ZSH is the shell of choice, with a focus on fuzzy searched completions, vi mode for input, and speed of shell starting.  [zgenom](https://github.com/jandamm/zgenom) is used as the plugin manager - and [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh/) as the configuration manager.
+
+* docs/
+  * [zsh.md](./docs/zsh.md)
 
 ### git
 
