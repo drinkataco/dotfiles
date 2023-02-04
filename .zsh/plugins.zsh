@@ -10,6 +10,7 @@ fi
 
 # Plugin Settings
 zstyle ':omz:plugins:nvm' lazy yes
+zstyle ':omz:plugins:nvm' lazy-cmd vim serverless sls typescript
 
 # Source Plugins
 source "${HOME}/.zgenom/zgenom.zsh"
