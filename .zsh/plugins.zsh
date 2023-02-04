@@ -9,7 +9,7 @@ if [[ ! -f "${HOME}/.zgenom/zgenom.zsh" ]]; then
 fi
 
 # Plugin Settings
-zstyle ':omz:plugins:nvm' autoload yes
+zstyle ':omz:plugins:nvm' lazy yes
 
 # Source Plugins
 source "${HOME}/.zgenom/zgenom.zsh"
