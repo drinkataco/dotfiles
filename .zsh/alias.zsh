@@ -4,8 +4,9 @@
 # ALIAS                  #
 ##########################
 # Most used packages
-alias g='git'
+alias b='brew'
 alias d='docker'
+alias g='git'
 alias k='kubectl'
 alias s='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias t='tmux'
