@@ -18,4 +18,15 @@ font:
   size: 19
 
 key_bindings:
+  # macOS keybindings
+  - { key: 'Comma', mods: 'Command', command:
+      {program: 'sh', args: ['-c', 'open ~/.config/alacritty/alacritty.yml']}     }
+  - { key: 'N',     mods: 'Command', action: 'SpawnNewInstance' }
+  - { key: 'Space', mods: 'Alt',     chars: ' ' }
+  - { key: 'Back',  mods: 'Super',   chars: "\x15" } # delete word/line
+  - { key: 'Left',  mods: 'Alt',     chars: "\x1bb" } # one word left
+  - { key: 'Right', mods: 'Alt',     chars: "\x1bf" } # one word right
+  - { key: 'Left',  mods: 'Command', chars: "\x1bOH", mode: 'AppCursor' } # Home
+  - { key: 'Right', mods: 'Command', chars: "\x1bOF", mode: 'AppCursor' } # End
+  # en_gb keybindings
   - { key: 'Key3', mods: 'Alt', chars: "#" }
