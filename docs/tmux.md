@@ -6,7 +6,7 @@ Useful Links:
 
 - [awesome-tmux](https://github.com/rothgar/awesome-tmux)
 - [Docs](https://tmuxguide.readthedocs.io/en/latest/tmux/tmux.html)
-- [Cheat sheet](https://gist.github.com/MohamedAlaa/2961058)
+- [Cheatsheet](https://gist.github.com/andreyvit/2921703)
 
 ## Contents
 
@@ -52,7 +52,14 @@ _Some key bindings are mappings provided by plugins. These will be highlighted_
 #### Sessions
 
 - `<prefix> $` - rename session
-- `<prefix> £` - new session
+
+Some extended functionality provided by [tmux-sessionist](https://github.com/tmux-plugins/tmux-sessionist)
+
+- `prefix + C `- prompt for creating a new session by name
+- `prefix + X` - kill current session without detaching tmux
+- `prefix + S` - switches to the last session
+- `prefix + @` - promote current pane into a new session
+
 
 #### Searching
 
@@ -63,7 +70,6 @@ _Some key bindings are mappings provided by plugins. These will be highlighted_
 
 - `<previx> t` - show time
 - `<prefix> d` - detach session
-
 
 ## Plugins
 
@@ -85,6 +91,9 @@ Search with regex and copy to clipboard by using `<prefix> /`
 [github.com/jaclu/tmux-menus](https://github.com/jaclu/tmux-menus)
 
 Helpful tmux menu. Triggeed with `<prefix> \`
+
+- `<prefix> <` displays some windows handling options
+- `<prefix> >` displays some pane handling options
 
 ### tmux-thumbs
 

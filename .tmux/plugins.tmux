@@ -15,6 +15,7 @@ set -g @plugin 'tmux-plugins/tmux-copycat'
 set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'jaclu/tmux-menus'
+set -g @plugin 'tmux-plugins/tmux-sessionist'
 
 # Status bar
 set -g @plugin 'tmux-plugins/tmux-battery'
@@ -30,3 +31,6 @@ set -g @session-wizard 's'
 # Copy cat - remap to similar to vim
 set -g @copycat_next 't'
 set -g @copycat_prev 'g'
+
+# tmux-sessionist - unbind some keys
+unbind g
