@@ -8,7 +8,9 @@ Useful Links:
 - [Docs](https://tmuxguide.readthedocs.io/en/latest/tmux/tmux.html)
 - [Cheat sheet](https://gist.github.com/MohamedAlaa/2961058)
 
-<!-- vim-md-toc format=bullets max_level=4 ignore=^TODO$ -->
+## Contents
+
+<!-- vim-md-toc format=bullets max_level=4 ignore=^Contents$ -->
 * [General Usage](#general-usage)
   * [Key Bindings](#key-bindings)
     * [Panes](#panes)
