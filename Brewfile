@@ -25,6 +25,7 @@ brew "lazygit"
 brew "lynx"
 brew "nmap"
 brew "nnn"
+brew "node@18", link: true
 brew "nvm"
 brew "openvpn"
 brew "perl"
