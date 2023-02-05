@@ -60,7 +60,6 @@ Some extended functionality provided by [tmux-sessionist](https://github.com/tmu
 - `prefix + S` - switches to the last session
 - `prefix + @` - promote current pane into a new session
 
-
 #### Searching
 
 - `<prefix> <space>` - Search with *tmux-thumbs*

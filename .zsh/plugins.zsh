@@ -8,7 +8,10 @@ if [[ ! -f "${HOME}/.zgenom/zgenom.zsh" ]]; then
   git clone https://github.com/jandamm/zgenom.git "${HOME}/.zgenom"
 fi
 
+#
 # Plugin Settings
+#
+# omz/nvm
 zstyle ':omz:plugins:nvm' lazy yes
 zstyle ':omz:plugins:nvm' lazy-cmd vim serverless sls typescript
 
@@ -16,7 +19,9 @@ zstyle ':omz:plugins:nvm' lazy-cmd vim serverless sls typescript
 source "${HOME}/.zgenom/zgenom.zsh"
 zgenom autoupdate
 
-# Plugin list for compilation
+#
+# Define Plugin List
+#
 if ! zgenom saved; then
   # ohmyzsh
   zgenom ohmyzsh

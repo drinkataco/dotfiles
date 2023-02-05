@@ -9,8 +9,9 @@ This document is to highlight some personalised shell features.
 <!-- vim-md-toc format=bullets ignore=^Contents$ -->
 * [Overview](#overview)
   * [ohmyzsh](#ohmyzsh)
-  * [Command Input](#command-input)
   * [Searching](#searching)
+* [Commands](#commands)
+  * [gpg](#gpg)
 <!-- vim-md-toc END -->
 
 ## Overview
@@ -27,12 +28,6 @@ View the [official cheatsheet](https://github.com/ohmyzsh/ohmyzsh/wiki/Cheatshee
 - `1`...`9` - `cd -n`
 - `..` * n - `cd ../[...]`
 
-### Command Input
-
-[vi-mode](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vi-mode) is enabled to allow you to perform vi commands inline in the shell.
-
-Use `vv` in normal mode (`<Esc>`) to edit in a vim window.
-
 ### Searching
 
 FZF is used for searching and completions
@@ -41,3 +36,16 @@ FZF is used for searching and completions
 - `<C-R>` - Paste the selected command from history onto the command-line
 - `<M-C>` - cd into the selected directory
 
+## Commands
+
+[vi-mode](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vi-mode) is enabled to allow you to perform vi commands inline in the shell.
+
+Use `vv` in normal mode (`<Esc>`) to edit in a vim window.
+### gpg
+
+Encrypt and sign data communications. [This tutorial](https://www.devdungeon.com/content/gpg-tutorial) is pretty helpful.
+
+
+- `gpg --encrypt -r recipient@example.org file.txt` - encrypt a file for recipient
+- `gpg --decrypt file.txt.gpg > decrypted.txt` - decrypt file
+- `gpg --sign file.txt` - sign a file, but don't encrypt
