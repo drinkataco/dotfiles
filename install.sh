@@ -18,28 +18,6 @@ ARG_DRY_RUN=0 # --dry-run
 ARG_FORCE=0 # --force
 
 #########################################
-# Helper to determine user input for yes/no questions.
-#   Anything beginning with the letter n is a no, 
-#   everything else is yes
-# Arguments:
-#   1 - The user set value to determine whether yes or no
-#   2 - The default value if the user didn't set one
-# Returns:
-#   0 for yes, 1 for no. Inverted values so that the
-#     function can be used inline if statments - as the
-#     return value is treated as an exit code
-#######################################
-yes_no() {
-  value=$1
-  [ -z "$value" ] && value=$2 # Set as default if unset
-
-  case "$value" in
-    n*|N*) return 1 ;;
-    *) return 0 ;;
-  esac
-}
-
-#########################################
 # Symlinks dotfiles recrusively whilst preserving underling file structures
 # This function is a result of trying to keep POSIX compatability
 # Globals:
