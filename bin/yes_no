@@ -1,0 +1,26 @@
+#!/bin/sh
+#########################################
+# Helper to determine user input for yes/no questions.
+#   Anything beginning with the letter n is a no, 
+#   everything else is yes
+# Arguments:
+#   1 - The user set value to determine whether yes or no
+#   2 - Default value to use if none set (default is actually no)
+# Returns:
+#   0 for yes, 1 for no. Inverted values so that the
+#     function can be used inline if statments - as the
+#     return value is treated as an exit code
+#######################################
+yes_no() {
+  question=$1
+  read -p "${question}" value
+
+  [ -z "$value" ] && value=$2 # Set as default if unset
+
+  case "$value" in
+    y*|Y*|1*|Yes*|YES*) return 0 ;;
+    *) return 1 ;;
+  esac
+}
+
+yes_no "$1" "$2"
