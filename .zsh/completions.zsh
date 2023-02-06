@@ -17,7 +17,7 @@ export FZF_CTRL_R_OPTS="
   --color header:italic
   --header 'Press CTRL-Y to copy command into clipboard'"
 # Print tree structure in the preview window
-export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
+export FZF_ALT_C_OPTS="--preview 'exa -T -L 4 --group-directories-first {}'"
 
 # Completion Styles
 zstyle ':completion:*:git-checkout:*' sort false

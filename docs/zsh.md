@@ -12,6 +12,7 @@ This document is to highlight some personalised shell features.
   * [Searching](#searching)
 * [Commands](#commands)
   * [bat](#bat)
+  * [exa](#exa)
   * [fd](#fd)
 * [gpg](#gpg)
 <!-- vim-md-toc END -->
@@ -40,6 +41,8 @@ FZF is used for searching and completions
 
 ## Commands
 
+Some non-standard packages are included to improve standard tasks within the CLI when using the terminal
+
 [vi-mode](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vi-mode) is enabled to allow you to perform vi commands inline in the shell.
 
 Use `vv` in normal mode (`<Esc>`) to edit in a vim window.
@@ -48,11 +51,21 @@ Use `vv` in normal mode (`<Esc>`) to edit in a vim window.
 
 [Bat](https://github.com/sharkdp/bat) - cat with wings. Syntax highlight, line numbers, git status.
 
-Flags:
+Arguments:
 
 - `--plain` / `-p` - don't show line numbers
 - `--show-all` / `-A` - show non-printable characters
 - `--line-range N:M` / `-r N:M` - show lines between N and M
+
+### exa
+
+[exa](https://github.com/ogham/exa) is a modern replacement for ls
+
+Arguments:
+
+- `--git` - list files git status (with `-l`)
+- `--git-ignore` - ignore files in .gitignore
+- `--tree` / `-T` - display tree. Use `-L` to limit recursion.
 
 ### fd
 
