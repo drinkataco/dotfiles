@@ -12,7 +12,8 @@ This document is to highlight some personalised shell features.
   * [Searching](#searching)
 * [Commands](#commands)
   * [bat](#bat)
-  * [gpg](#gpg)
+  * [fd](#fd)
+* [gpg](#gpg)
 <!-- vim-md-toc END -->
 
 ## Overview
@@ -53,7 +54,25 @@ Flags:
 - `--show-all` / `-A` - show non-printable characters
 - `--line-range N:M` / `-r N:M` - show lines between N and M
 
-### gpg
+### fd
+
+[fd](https://github.com/sharkdp/fd) is a fast replacement of find.
+
+Arguments:
+
+- `'^v.*md$'` - search by regular expression, this would be any filename that starts with `v` and ends with `md`
+- `--exclude` / `-E` - exclude glob pattern
+- `--hidden` / `-H` - search hidden files/dirs
+- `--min-depth` / `--max-depth` / `--exact-depth` - depth options
+- `--exclude '.git*'` / `-E '.git*'` - exclude files/directory by glob pattern
+- `--exec` / `-x` - execute command for each search result
+- `--exec-batch` / `-X` - execute command for all search results
+
+Example Commands:
+
+- `fd *md -X bat --style=header,grid -r 4:10` - execute bat on each result and show a sample of the file
+
+## gpg
 
 [GnuPG](https://gnupg.org/) - Encrypt and sign data communications. [This tutorial](https://www.devdungeon.com/content/gpg-tutorial) is pretty helpful.
 
