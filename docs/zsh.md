@@ -11,6 +11,7 @@ This document is to highlight some personalised shell features.
   * [ohmyzsh](#ohmyzsh)
   * [Searching](#searching)
 * [Commands](#commands)
+  * [bat](#bat)
   * [gpg](#gpg)
 <!-- vim-md-toc END -->
 
@@ -41,9 +42,20 @@ FZF is used for searching and completions
 [vi-mode](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vi-mode) is enabled to allow you to perform vi commands inline in the shell.
 
 Use `vv` in normal mode (`<Esc>`) to edit in a vim window.
+
+### bat
+
+[Bat](https://github.com/sharkdp/bat) - cat with wings. Syntax highlight, line numbers, git status.
+
+Flags:
+
+- `--plain` / `-p` - don't show line numbers
+- `--show-all` / `-A` - show non-printable characters
+- `--line-range N:M` / `-r N:M` - show lines between N and M
+
 ### gpg
 
-Encrypt and sign data communications. [This tutorial](https://www.devdungeon.com/content/gpg-tutorial) is pretty helpful.
+[GnuPG](https://gnupg.org/) - Encrypt and sign data communications. [This tutorial](https://www.devdungeon.com/content/gpg-tutorial) is pretty helpful.
 
 
 - `gpg --encrypt -r recipient@example.org file.txt` - encrypt a file for recipient
