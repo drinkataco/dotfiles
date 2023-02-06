@@ -14,7 +14,8 @@ This document is to highlight some personalised shell features.
   * [bat](#bat)
   * [exa](#exa)
   * [fd](#fd)
-* [gpg](#gpg)
+  * [gpg](#gpg)
+  * [zioxide](#zioxide)
 <!-- vim-md-toc END -->
 
 ## Overview
@@ -59,7 +60,7 @@ Arguments:
 
 ### exa
 
-[exa](https://github.com/ogham/exa) is a modern replacement for ls
+[exa](https://github.com/ogham/exa) is a modern replacement for `ls`
 
 Arguments:
 
@@ -69,23 +70,22 @@ Arguments:
 
 ### fd
 
-[fd](https://github.com/sharkdp/fd) is a fast replacement of find.
+[fd](https://github.com/sharkdp/fd) is a fast replacement of `find`
 
 Arguments:
 
 - `'^v.*md$'` - search by regular expression, this would be any filename that starts with `v` and ends with `md`
-- `--exclude` / `-E` - exclude glob pattern
+- `--exclude '.git*'` / `-E '.git*'` - exclude files/directory by glob pattern
+- `--exec-batch` / `-X` - execute command for all search results
+- `--exec` / `-x` - execute command for each search result
 - `--hidden` / `-H` - search hidden files/dirs
 - `--min-depth` / `--max-depth` / `--exact-depth` - depth options
-- `--exclude '.git*'` / `-E '.git*'` - exclude files/directory by glob pattern
-- `--exec` / `-x` - execute command for each search result
-- `--exec-batch` / `-X` - execute command for all search results
 
 Example Commands:
 
 - `fd *md -X bat --style=header,grid -r 4:10` - execute bat on each result and show a sample of the file
 
-## gpg
+### gpg
 
 [GnuPG](https://gnupg.org/) - Encrypt and sign data communications. [This tutorial](https://www.devdungeon.com/content/gpg-tutorial) is pretty helpful.
 
@@ -93,3 +93,19 @@ Example Commands:
 - `gpg --encrypt -r recipient@example.org file.txt` - encrypt a file for recipient
 - `gpg --decrypt file.txt.gpg > decrypted.txt` - decrypt file
 - `gpg --sign file.txt` - sign a file, but don't encrypt
+
+### zioxide
+
+[zoxide](https://github.com/ajeetdsouza/zoxide) is a smarter `cd` command
+
+Just use `z` to jump around as you would with `cd`. Common directories are learnt and clashes interacted with
+
+`z foo` - cd into highest ranked directory matching foo
+`z foo bar` - cd into highest ranked directory matching foo and bar
+`z foo /` - cd into a subdirectory starting with foo
+`z ~/foo` - z also works like a regular cd command
+`z foo/` - cd into relative path
+`z ..` - cd one level up
+`z -` - cd into previous directory
+`zi foo` - cd with interactive selection (using fzf)
+`z foo<SPACE><TAB>` - show interactive completions

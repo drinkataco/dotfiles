@@ -20,7 +20,7 @@ source "${HOME}/.zgenom/zgenom.zsh"
 zgenom autoupdate
 
 #
-# Define Plugin List
+# Define Plugin List for Shell
 #
 if ! zgenom saved; then
   # ohmyzsh
@@ -44,3 +44,8 @@ if ! zgenom saved; then
   # generate the init script from plugins above
   zgenom save
 fi
+
+#
+# Scripts and such
+#
+eval "$(zoxide init zsh)"
