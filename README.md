@@ -2,7 +2,7 @@
 
 This is my swiss army knife. It contains my dotfiles for my day-to-day, as well as some application configuration and general scripts used here and there often.
 
-My main workspace is vim inside tmux with zsh shell.
+My main workspace is vim inside tmux with zsh shell, using [alacritty](https://github.com/alacritty/alacritty) as the terminal emulator.
 
 <!-- vim-md-toc format=bullets ignore=^TODO$ -->
 * [Installation](#installation)
