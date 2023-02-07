@@ -1,0 +1,19 @@
+#!/bin/zsh
+#
+# I put all of my nnn config here. It is sourced in .zshrc
+#
+# Set cd on Quit
+if [[ -f '/usr/local/Cellar/nnn/4.7/share/nnn/quitcd/quitcd.bash_zsh' ]]; then
+  source '/usr/local/Cellar/nnn/4.7/share/nnn/quitcd/quitcd.bash_zsh'
+fi
+
+# Plugin install/update info: https://github.com/jarun/nnn/tree/master/plugins#installation
+NNN_VISUAL='p:preview-tui'
+NNN_TOOLS='o:nuke;n:bulknew;r:gitroot;d:diffs'
+NNN_PROJ='v:! project'
+NNN_SEARCH='s:fzcd;z:autojump'
+
+export NNN_FIFO=/tmp/nnn.fifo
+export NNN_PLUG="$NNN_VISUAL;$NNN_TOOLS;$NNN_SEARCH;$NNN_PROJ"
+
+# export NNN_OPTS='.'

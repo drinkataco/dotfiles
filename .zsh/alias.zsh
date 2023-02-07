@@ -15,3 +15,6 @@ alias v='vim'
 # Nice helpers
 alias please='eval "sudo $(fc -ln -1):'
 alias weather="curl wttr.in/birmingham"
+
+# Remaps
+alias nnn='n' # file manager nnn remapped to cd_on_quit alias

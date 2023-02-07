@@ -48,4 +48,8 @@ fi
 #
 # Scripts and such
 #
+# nnn
+source "${HOME}/.config/nnn/config"
+
+# zoxide
 eval "$(zoxide init zsh)"

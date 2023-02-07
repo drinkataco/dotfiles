@@ -94,11 +94,38 @@ Example Commands:
 - `gpg --decrypt file.txt.gpg > decrypted.txt` - decrypt file
 - `gpg --sign file.txt` - sign a file, but don't encrypt
 
+# nnn
+
+[nnn](https://github.com/jarun/nnn) is a terminal file manager. Use `nnn` to start the application.
+
+Commands:
+
+- `?` - help is always near
+- `.` - toggle hidden
+- `<CR>` - open file in GUI
+- `<SPACE>` - select file(s)
+- `e` - edit file
+- `h` and `l` - step out and in to directory
+- `w` - move or copy selected files
+
+Plugins:
+
+- `;d` - open vimdiff with selected files
+- `;p` - open tmux preview window
+- `;r` - go to git root of directory
+- `;n` - bulk new files/dirs via vim mode (new line per entry)
+- `;o` - sample file opener
+- `;s` - search internals with fzf
+- `;v` - open/create vim project with [project](../bin/project) command
+- `;z` - jump with zoxide
+
 ### zioxide
 
 [zoxide](https://github.com/ajeetdsouza/zoxide) is a smarter `cd` command
 
 Just use `z` to jump around as you would with `cd`. Common directories are learnt and clashes interacted with
+
+Usage:
 
 `z foo` - cd into highest ranked directory matching foo
 `z foo bar` - cd into highest ranked directory matching foo and bar
