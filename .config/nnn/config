@@ -15,5 +15,4 @@ NNN_SEARCH='s:fzcd;z:autojump'
 
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_PLUG="$NNN_VISUAL;$NNN_TOOLS;$NNN_SEARCH;$NNN_PROJ"
-
-# export NNN_OPTS='.'
+export NNN_OPTS='C'
