@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+# First we need to check if we have a git root to go to
+if git status >/dev/null 2>/dev/null; then
+  echo 'Changing directory to git root'
+  cd "$(git rev-parse --show-toplevel)" || exit 1
+fi
+
 CURRENT_DIR=$(pwd)
 
 if [[ -f "${CURRENT_DIR}/Session.vim" ]]; then
