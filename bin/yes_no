@@ -1,7 +1,7 @@
 #!/bin/sh
 #########################################
 # Helper to determine user input for yes/no questions.
-#   Anything beginning with the letter n is a no, 
+#   Anything beginning with the letter n is a no,
 #   everything else is yes
 # Arguments:
 #   1 - The user set value to determine whether yes or no
@@ -13,12 +13,14 @@
 #######################################
 yes_no() {
   question=$1
-  read -p "${question}" value
+
+  printf "%s" "${question}"
+  read -r value
 
   [ -z "$value" ] && value=$2 # Set as default if unset
 
   case "$value" in
-    y*|Y*|1*|Yes*|YES*) return 0 ;;
+    y*|Y*|1*) return 0 ;;
     *) return 1 ;;
   esac
 }
