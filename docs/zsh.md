@@ -11,6 +11,7 @@ This document is to highlight some personalised shell features.
   * [ohmyzsh](#ohmyzsh)
   * [Searching](#searching)
 * [Commands](#commands)
+  * [ag](#ag)
   * [bat](#bat)
   * [exa](#exa)
   * [fd](#fd)
@@ -47,6 +48,24 @@ Some non-standard packages are included to improve standard tasks within the CLI
 [vi-mode](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vi-mode) is enabled to allow you to perform vi commands inline in the shell.
 
 Use `vv` in normal mode (`<Esc>`) to edit in a vim window.
+
+### ag
+
+[The Silver Searcher](https://github.com/ggreer/the_silver_searcher) is a searching tool similar to `grep`. Simple usage is with the command `ag foo ./bar`
+
+Arguments:
+
+- `--after` / `-A` - print lines after match
+- `--before` / `-B` - print lines before match
+- `--context` / `-C` - print lines before and after matches
+- `--count` / `-c` - print counts of matches from files
+- `--file-search-regex` / `-G` - search file names with PATTERN
+- `--hidden` - show hiddent files
+- `--ignore-case` / `-i` - ignore case of search
+- `--ignore` - ignore PATTERN
+- `--files-with-matches` / `-l` - only print file names
+- `--path-to-ignore` / `-p` - provide path to .ignore file
+- file type arguments to limit to certain file types, such as `--shell` and `--ts`
 
 ### bat
 
