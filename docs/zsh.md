@@ -16,6 +16,7 @@ This document is to highlight some personalised shell features.
   * [exa](#exa)
   * [fd](#fd)
   * [gpg](#gpg)
+  * [htop](#htop)
   * [zioxide](#zioxide)
 <!-- vim-md-toc END -->
 
@@ -112,6 +113,22 @@ Example Commands:
 - `gpg --encrypt -r recipient@example.org file.txt` - encrypt a file for recipient
 - `gpg --decrypt file.txt.gpg > decrypted.txt` - decrypt file
 - `gpg --sign file.txt` - sign a file, but don't encrypt
+
+### htop
+
+[htop](https://github.com/htop-dev/htop) is an interactive process viewer
+
+Arguments:
+
+- `--filter` / `-F` - filter process by fixed strings
+- `-t` - process tree
+
+Commands:
+
+- `?` - help is always near
+- `k` - kill process, select what signal
+- `l` - display open files (lsof)
+- `<` or `>` - sort by
 
 # nnn
 
