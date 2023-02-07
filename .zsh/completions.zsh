@@ -26,6 +26,6 @@ zstyle ':fzf-tab:complete:cat:*' fzf-preview '[ -f $realpath ] && cat $realpath 
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'stat $realpath'
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
-zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+# zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 
 bindkey "ç" fzf-cd-widget
