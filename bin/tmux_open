@@ -15,5 +15,5 @@ fi
 tmux_session=$(tmux ls | fzf --height ~25% --reverse --print-query | cut -f1 -d':' | tail -1)
 
 # Attach to selected session (or create if new)
-tmux new-session -A -s ${tmux_session}
+tmux new-session -A -s "${tmux_session}"
 
