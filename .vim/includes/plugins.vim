@@ -80,7 +80,7 @@ let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#left_sep=' '
 let g:airline_section_z = airline#section#create(['windowswap', 'obsession', 'linenr', 'maxlinenr', 'colnr'])
 
-# web devicons supplement
+" web devicons supplement
 let g:webdevicons_enable_airline_statusline=1
 let g:webdevicons_enable_airline_tabline=0
 
