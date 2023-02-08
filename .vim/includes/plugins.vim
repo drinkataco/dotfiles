@@ -33,6 +33,7 @@ Plug 'vim-test/vim-test'
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'ryanoasis/vim-devicons'
 
 " Searching and Autocomplete
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -42,7 +43,7 @@ Plug 'antoinemadec/coc-fzf'
 " text manipulation
 Plug 'preservim/nerdcommenter'
 Plug 'kkoomen/vim-doge', { 'do': 'npm i --no-save && npm run build:binary:unix' }
-Plug 'mg979/vim-visual-multi' 
+Plug 'mg979/vim-visual-multi'
 
 " javascript/typescript:
 Plug 'pangloss/vim-javascript'
@@ -73,9 +74,15 @@ call plug#end()
 "
 " vim-airline - Powerline Bar
 "
-let g:airline#extensions#tabline#formatter='default'
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#formatter='unique_tail_improved'
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#left_sep=' '
+let g:airline_section_z = airline#section#create(['windowswap', 'obsession', 'linenr', 'maxlinenr', 'colnr'])
+
+# web devicons supplement
+let g:webdevicons_enable_airline_statusline=1
+let g:webdevicons_enable_airline_tabline=0
 
 "
 " coc.nvim
