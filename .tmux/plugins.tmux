@@ -17,9 +17,8 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'jaclu/tmux-menus'
 set -g @plugin 'tmux-plugins/tmux-sessionist'
 
-# Status bar
+# Themes and status bar
 set -g @plugin 'tmux-plugins/tmux-battery'
-
 
 # ==============================================
 # === PLUGIN SETTINGS                        ===
