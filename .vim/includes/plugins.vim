@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins:                                                    "
 "   Plugins using vim-plug for installation                   "

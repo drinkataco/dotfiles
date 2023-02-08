@@ -2,7 +2,10 @@
 " Code Folding
 "
 let g:markdown_folding=1
-au BufRead * normal zR
+
+augroup ftplugin_md_openfold
+  au BufRead * normal zR
+augroup END
 
 " Fenced syntax highlighting
 let g:markdown_fenced_languages=[
@@ -24,4 +27,6 @@ let g:markdown_fenced_languages=[
       \ ]
 
 " Automatically enable markdown 'table mode'
-au BufRead * silent! TableModeEnable
+augroup ftplugin_md_tablemodeenable
+  au BufRead * silent! TableModeEnable
+augroup END
