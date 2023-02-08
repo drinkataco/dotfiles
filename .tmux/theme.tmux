@@ -47,7 +47,7 @@ set -g window-status-format " #I:#W#F "
 set -g window-status-current-format "#[fg=black,bg=#3a3a3a]#[fg=green] #I:#W#F #[fg=#3a3a3a,bg=black]"
 set -g window-status-separator ""
 set -g status-justify centre
-
+set-window-option -g window-status-current-style bg=black
 #
 # RIGHT
 #
