@@ -78,6 +78,7 @@ let g:airline_powerline_fonts=1
 
 " Status Bar
 let g:airline_section_z=airline#section#create(['windowswap', 'obsession', 'linenr', 'maxlinenr', 'colnr'])
+let g:webdevicons_enable_airline_statusline=0
 
 " Tabline
 let g:airline#extensions#tabline#enabled=1
