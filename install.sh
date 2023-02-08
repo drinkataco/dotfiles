@@ -5,7 +5,7 @@
 #
 BASE_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
 DOTFILES_DIR="${BASE_DIR}"
-IGNORE_PATTERN="^${DOTFILES_DIR}/(README|docs|macos|install\.sh|\.git/|.*\.DS_STORE|Session\.vim)"
+IGNORE_PATTERN="^${DOTFILES_DIR}/(README|docs|macos|install\.sh|\.git(hub)?/|.*\.DS_STORE|Session\.vim)"
 
 readonly BASE_DIR
 readonly DOTFILES_DIR
