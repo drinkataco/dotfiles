@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General:                                                    "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -104,6 +106,7 @@ endfunction
 syntax on
 
 " Set utf8 as standard encoding and en_US as the standard language
+" vint: -ProhibitEncodingOptionAfterScriptEncoding
 set encoding=utf8
 
 " Use Unix as the standard file type

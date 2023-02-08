@@ -1,32 +1,6 @@
 # ==============================================
 # === THEME                                  ===
 # ==============================================
-# Basic status bar colors
-set -g status-bg black
-set -g status-fg cyan
-
-# Left side of status bar
-set -g status-left-style bg=black,fg=green
-
-# Right side of status bar
-set -g status-right-style bg=black,fg=cyan
-
-# Window status
-set -g window-status-format " #I:#W#F "
-set -g window-status-current-format " #I:#W#F "
-
-# Current window status
-set -g window-status-current-style bg=red,fg=black
-
-# Window with activity status
-set -g window-status-activity-style bg=yellow,fg=black
-
-# Window separator
-set -g window-status-separator ""
-
-# Window status alignment
-set -g status-justify centre
-
 # Pane border
 set -g pane-border-style bg=default,fg=default
 
@@ -54,8 +28,29 @@ set -g mode-style bg=red,fg=default
 # ==============================================
 # === STATUS BAR                             ===
 # ==============================================
-set -g status-left-length 40
-set -g status-left "#S #[fg=white]» #[fg=yellow]#I #[fg=cyan]#P"
-set -g status-right-length 80
-set -g status-right "⚡︎#{battery_percentage} #[fg=white]« #[fg=default]#H #[fg=white]« #[fg=yellow]%H:%M:%S #[fg=green]%d-%b-%y"
+set-option -g status-position top
 
+set -g status-bg black
+set -g status-fg cyan
+
+#
+# LEFT
+#
+set -g status-left-style bg=black,fg=green
+set -g status-left-length 40
+set -g status-left "#[fg=black,bg=green]  #S #[fg=green,bg=#3a3a3a]#[fg=yellow,bg=#3a3a3a] #I #[fg=cyan]#P #[fg=#3a3a3a,bg=black]"
+
+#
+# WINDOWS
+#
+set -g window-status-format " #I:#W#F "
+set -g window-status-current-format "#[fg=black,bg=#3a3a3a]#[fg=green] #I:#W#F #[fg=#3a3a3a,bg=black]"
+set -g window-status-separator ""
+set -g status-justify centre
+set-window-option -g window-status-current-style bg=black
+#
+# RIGHT
+#
+set -g status-right-style bg=black,fg=cyan
+set -g status-right-length 80
+set -g status-right "#[fg=#3a3a3a,bg=black]#[fg=cyan,bg=#3a3a3a] ⚡︎#{battery_percentage} #[fg=green,bg=#3a3a3a]#[fg=black,bg=green] %H:%M:%S #[fg=#3a3a3a]%d-%b-%y "

@@ -12,7 +12,6 @@ fi
 # Plugin Settings
 #
 # omz/nvm
-zstyle ':omz:plugins:nvm' lazy yes
 zstyle ':omz:plugins:nvm' lazy-cmd vim serverless sls typescript
 
 # Source Plugins
