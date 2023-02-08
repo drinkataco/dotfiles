@@ -42,6 +42,7 @@ _Some key bindings are mappings provided by plugins. These will be highlighted_
 - `<prefix> q` - show pane numbers. Add the number to also switch.
 - `<prefix> {` - move pane right
 - `<prefix> }` - move pane left
+- `<prefix> <M-LEFT>` - increase pane size with arrow keys
 
 #### Windows
 
