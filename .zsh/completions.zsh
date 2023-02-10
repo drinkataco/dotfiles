@@ -4,7 +4,12 @@
 # AUTOCOMPLETE           #
 ##########################
 autoload -U compinit && compinit # zsh-completions reload
+
+# Kubernetes Completions
 [[ $commands[kubectl] || $commands[k] ]] && source <(kubectl completion zsh)
+
+# AWS Completions
+complete -C '/usr/local/bin/aws_completer' aws
 
 # FZF
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --no-ignore'
