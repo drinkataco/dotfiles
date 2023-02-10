@@ -100,3 +100,5 @@ Helpful tmux menu. Triggeed with `<prefix> \`
 [https://github.com/fcsonline/tmux-thumbs](https://github.com/fcsonline/tmux-thumbs)
 
 Easily copy common patterns (such as hashes, emails) with `<prefix> <space>`
+
+Use `<prefix> ]` to paste from tmux buffer
