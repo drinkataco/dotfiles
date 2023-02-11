@@ -43,12 +43,3 @@ if ! zgenom saved; then
   # generate the init script from plugins above
   zgenom save
 fi
-
-#
-# Scripts and such
-#
-# nnn
-source "${HOME}/.config/nnn/config"
-
-# zoxide
-eval "$(zoxide init zsh)"
