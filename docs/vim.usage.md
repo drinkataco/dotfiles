@@ -35,6 +35,7 @@ Useful link: https://devhints.io/vim
   * [Splits](#splits)
   * [Tabs](#tabs)
 * [Misc](#misc)
+* [vimdiff](#vimdiff)
 <!-- vim-md-toc END -->
 
 ## Text Manipulation and Navigation
@@ -252,7 +253,18 @@ Mode-specific usage
 * `gT` - Go to previous tab
 * `3gt` - Go the third tab
 
-
 ## Misc
 
 * `<S-k>` - Jump to help for vim symbol
+
+## vimdiff
+
+Diff two files with vim
+
+- `]c :` - next difference
+- `[c :` - previous difference
+- `do` - diff obtain
+- `dp` - diff put
+- `zo` - open folded text
+- `zc` - close folded text
+- `:diffupdate` - re-scan the files for differences
