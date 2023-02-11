@@ -94,7 +94,9 @@ Arguments:
 
 ### lazygit
 
-TBD
+[lazygit](https://github.com/jesseduffield/lazygit) is a terminal ui for git.
+
+It can be launched in a git repo with `lazygit`, or the alias `lg`. From within vim, you can use the key binding `<leader>gx` to open in a vim tab (remember to use `<C-w>` in this tab before any git command).
 
 ### vimdiff
 
