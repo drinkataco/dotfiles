@@ -1,3 +1,6 @@
+#################################
+# CONFIG                        #
+#################################
 [core]
   fileMode     = true
   eol          = lf
@@ -15,16 +18,15 @@
 [diff]
   tool = vimdiff
 
-
-# Include git config that may include sensitive data I don't want to commit
-[include]
-  path = ~/.git/.gitconfig
-
-
+[gpg]
+  program = gpg
 
 [init]
   defaultBranch = main
-  ; templateDir = ~/.git/templates/default
+  templateDir = ~/.git/templates/default
+
+[log]
+  decorate = auto
 
 [merge]
   tool = vimdiff
@@ -33,17 +35,38 @@
   rebase = true
 
 [push]
-  default = current
+  default    = current
   followTags = true
+
+[rebase]
+  abbreviateCommands = true
 
 [remote "origin"]
   fetch = +refs/pr/*/head:refs/remotes/origin/pr/*
 
+[status]
+  short = true
+
 [web]
   browser = firefox
 
+[user]
+  useConfigOnly = true
 
-# Alias: deprecated; use omz git plugin bash aliases now
+
+###########################################
+# INCLUDE                                 #
+# sensitive configi for gpg and identity  #
+# with includeIfs rules for work/personal #
+###########################################
+[include]
+  path = ~/.git/.gitconfig
+
+
+#################################
+# ALIAS                         #
+# @deprecated - use omz aliases #
+#################################
 [alias]
   a = add
   b = branch
