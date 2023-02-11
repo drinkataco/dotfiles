@@ -59,9 +59,10 @@
   useConfigOnly = true
 
 [delta]
-  navigate = true
-  light    = false
+  navigate     = true
+  light        = false
   line-numbers = true
+  syntax-theme = base16
 
 
 ###########################################
