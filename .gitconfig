@@ -1,51 +1,33 @@
-[alias]
-  a = add
-  b = branch
-  ba = branch -a
-  branch-name = "!git rev-parse --abbrev-ref HEAD"
-  c = commit
-  cm = commit -m
-  cam = commit -am
-  ch = checkout
-  d = diff
-  dt = difftool
-  dtv = difftool -t meld
-  f = fetch
-  l = log
-  m = merge
-  p = push
-  po = "!git push -u origin \"$(git branch-name)\""
-  r = reset
-  rb = rebase
-  rbc = rebase --continue
-  rbs = rebase --skip
-  rba = rebase --abort
-  s = status
-  xcl = clean -df
-  xres = reset --hard
-  xreso = "!git reset --hard origin/\"$(git branch-name)\""
-  oldest-ancestor = !zsh -c 'diff --old-line-format='' --new-line-format='' <(git rev-list --first-parent "${1:-master}") <(git rev-list --first-parent "${2:-HEAD}") | head -1' -
-
 [core]
-  autocrlf = input
-  editor = vim
+  fileMode     = true
+  eol          = lf
   excludesfile = ~/.gitignore
-  pager = less -F -X
+  editor       = vim
+  pager        = less -F -X
+  whitespace   = trailing-space
 
-# [commit]
-#  gpgsign = true
+[blame]
+  date = human
+
+[branch]
+  autoSetupRebase = always
 
 [diff]
   tool = vimdiff
 
-[difftool "s"] # visual difftool
-  cmd = smerge mergetool "$BASE" "$REMOTE" "$LOCAL" -o "$MERGED"
+
+# Include git config that may include sensitive data I don't want to commit
+[include]
+  path = ~/.git/.gitconfig
+
+
+
+[init]
+  defaultBranch = main
+  ; templateDir = ~/.git/templates/default
 
 [merge]
   tool = vimdiff
-
-[mergetool "s"] # visual mergetool
-  cmd = smerge mergetool "$BASE" "$REMOTE" "$LOCAL" -o "$MERGED"
 
 [pull]
   rebase = true
@@ -57,10 +39,22 @@
 [remote "origin"]
   fetch = +refs/pr/*/head:refs/remotes/origin/pr/*
 
-[user]
-  name = 'J J Walwyn'
-  email = 'me@joshwalwyn.com'
-# signingKey = $DF_GIT_USER_SIGNING_KEY
-
 [web]
   browser = firefox
+
+
+# Alias: deprecated; use omz git plugin bash aliases now
+[alias]
+  a = add
+  b = branch
+  c = commit
+  cm = commit -m
+  cam = commit -am
+  ch = checkout
+  d = diff
+  f = fetch
+  l = log
+  m = merge
+  p = push
+  r = rebase
+  s = status

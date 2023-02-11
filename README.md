@@ -48,4 +48,8 @@ The documents highlight some useful commands and cli tools used throughout my wo
 
 ### git
 
-Reorganising...
+Git is wonderful version control. Using [lazygit](https://github.com/jesseduffield/lazygit) as a terminal ui, [delta](https://github.com/dandavison/delta) for diffs, and [vim-fugitive](https://github.com/tpope/vim-fugitive) with vim - but focusing on the power of the command line interface throughout my workflow.
+
+* docs/
+    * [git.md](./docs/git.md)
+
