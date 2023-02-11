@@ -9,7 +9,9 @@ My main workspace is vim inside tmux with zsh shell, using [alacritty](https://g
 
 ![Terminal](./docs/screenshot.png)
 
-<!-- vim-md-toc format=bullets ignore=^TODO$ -->
+## Contents
+
+<!-- vim-md-toc format=bullets ignore=^Contents$ -->
 * [Installation](#installation)
 * [Tools](#tools)
   * [vim](#vim)
