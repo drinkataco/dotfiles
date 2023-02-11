@@ -15,7 +15,9 @@ Useful links:
   * [rebase](#rebase)
   * [bisect](#bisect)
 * [Workflow](#workflow)
-  * [Lazygit](#lazygit)
+  * [delta](#delta)
+  * [lazygit](#lazygit)
+  * [vimdiff](#vimdiff)
 <!-- vim-md-toc END -->
 
 ## General Usage
@@ -69,7 +71,16 @@ Find the commit that caused a bug using a binary search between two commits. [Re
 
 ## Workflow
 
-### Lazygit
+### delta
+
+[git-delta](https://github.com/dandavison/delta) is used for displaying diffs using a Levenshtein edit inference algorithm
+
+### lazygit
 
 TBD
 
+### vimdiff
+
+Vimdiff can be used for resolving conflicts
+
+[Personal document found here.](./vim.usage.md#vimdiff)
