@@ -6,7 +6,7 @@
   eol          = lf
   excludesfile = ~/.gitignore
   editor       = vim
-  pager        = less -F -X
+  pager        = delta
   whitespace   = trailing-space
 
 [blame]
@@ -16,6 +16,7 @@
   autoSetupRebase = always
 
 [diff]
+  colorMoved = default
   tool = vimdiff
 
 [gpg]
@@ -25,11 +26,15 @@
   defaultBranch = main
   templateDir = ~/.git/templates/default
 
+[interactive]
+  diffFilter = delta --color-only
+
 [log]
   decorate = auto
 
 [merge]
   tool = vimdiff
+  conflictstyle = diff3
 
 [pull]
   rebase = true
@@ -52,6 +57,11 @@
 
 [user]
   useConfigOnly = true
+
+[delta]
+  navigate = true
+  light    = false
+  line-numbers = true
 
 
 ###########################################
