@@ -113,6 +113,7 @@ Example Commands:
 - `gpg --encrypt -r recipient@example.org file.txt` - encrypt a file for recipient
 - `gpg --decrypt file.txt.gpg > decrypted.txt` - decrypt file
 - `gpg --sign file.txt` - sign a file, but don't encrypt
+- `gpg --list-secret-keys --keyid-format=long` - list keys with keyid
 
 ### htop
 
