@@ -19,3 +19,4 @@ alias weather="curl wttr.in/birmingham"
 
 # Remaps
 alias nnn='n' # file manager nnn remapped to cd_on_quit alias
+alias gs='gst' # ghostscript pisses me off. Should be git statush
