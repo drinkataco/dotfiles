@@ -23,17 +23,17 @@ Useful link: https://devhints.io/vim
   * [Searching and Replacing](#searching-and-replacing)
     * [Searching](#searching)
   * [Code Folding](#code-folding)
-* [Files, Buffers, and Tabs](#files-buffers-and-tabs)
+* [Files and Buffers](#files-and-buffers)
   * [Netrw](#netrw)
     * [Copying Files](#copying-files)
   * [Buffers](#buffers)
-  * [Tabs](#tabs)
 * [Modes](#modes)
   * [Normal](#normal)
     * [Substitutions](#substitutions)
   * [Visual](#visual)
 * [Windows, Splits and Tabs](#windows-splits-and-tabs)
   * [Splits](#splits)
+  * [Tabs](#tabs)
 * [Misc](#misc)
 <!-- vim-md-toc END -->
 
@@ -170,7 +170,7 @@ Objects can be modified by 3 keys – the first being the operator (such as **c*
 * `zM` - Close all folds
 * `zR` - Open all folds
 
-## Files, Buffers, and Tabs
+## Files and Buffers
 
 On top of editing singular files we can use Vim to organise files in tabs. We can create new files (via buffers) and
 
@@ -210,12 +210,6 @@ See https://gist.github.com/danidiaz/37a69305e2ed3319bfff9631175c5d0f for an exh
 * `:new` - New buffer in horizontal split 
 * `:Vnew` - New buffer in vertical split
 
-### Tabs
-
-* `gt` - Go to next tab
-* `gT` - Go to previous tab
-* `3gt` - Go the third tab
-
 ## Modes
 
 Mode-specific usage
@@ -251,6 +245,13 @@ Mode-specific usage
 - `<C-w>-` - decrease h size
 - `<C-w>K` or `<C-w> J` - move splits left/right
 - `<C-w><Bar>` - enlarge current pane
+
+### Tabs
+
+* `gt` - Go to next tab
+* `gT` - Go to previous tab
+* `3gt` - Go the third tab
+
 
 ## Misc
 
