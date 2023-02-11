@@ -16,6 +16,7 @@ Useful links:
   * [bisect](#bisect)
 * [Workflow](#workflow)
   * [delta](#delta)
+  * [github cli](#github-cli)
   * [lazygit](#lazygit)
   * [vimdiff](#vimdiff)
 <!-- vim-md-toc END -->
@@ -74,6 +75,12 @@ Find the commit that caused a bug using a binary search between two commits. [Re
 ### delta
 
 [git-delta](https://github.com/dandavison/delta) is used for displaying diffs using a Levenshtein edit inference algorithm
+
+### github cli
+
+I use [github](https://github.com) far more than any other host for my git repos. So might as well use the [cli](https://github.com/cli/cli) where necessary.
+
+The main command is `gh`. Here's an overview of some commands.
 
 ### lazygit
 

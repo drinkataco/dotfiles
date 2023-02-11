@@ -1,8 +1,11 @@
 #!/bin/zsh
 
 ##########################
-# CLI Config             #
+# CLI Tools Config       #
 ##########################
+# github cli
+export GH_PAGER='less -X -S'
+
 # gpg
 export GPG_TTY=$(tty)
 
