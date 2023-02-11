@@ -82,6 +82,16 @@ I use [github](https://github.com) far more than any other host for my git repos
 
 The main command is `gh`. Here's an overview of some commands.
 
+Commands:
+
+- `gh repo view` - view repo in the web
+- `gh pr view` - view pr in web
+- `gh workflow view` view workflow
+
+Arguments:
+
+- `-w` - open view command in web
+
 ### lazygit
 
 TBD
