@@ -41,6 +41,8 @@ Tmux is used with the key of being easily operable with vim, minimal customisati
 
 ZSH is the shell of choice, with a focus on fuzzy searched completions, vi mode for input, and speed of shell starting.  [zgenom](https://github.com/jandamm/zgenom) is used as the plugin manager - and [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh/) as the configuration manager.
 
+The documents highlight some useful commands and cli tools used throughout my workflow; such as [zoxide](https://github.com/ajeetdsouza/zoxide), [nnn](https://github.com/jarun/nnn), [fd](https://github.com/sharkdp/fd), and [ag](https://github.com/ggreer/the_silver_searcher).
+
 * docs/
   * [zsh.md](./docs/zsh.md)
 
