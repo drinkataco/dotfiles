@@ -136,6 +136,11 @@ command! -bang -nargs=* Ag
       \   fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}),
       \   <bang>0
       \ )
+let g:fzf_action = {
+      \ 'ctrl-t': 'tab split',
+      \ 'ctrl-h': 'split',
+      \ 'ctrl-v': 'vsplit'
+  \ }
 
 "
 " MD-TOC Markdown Table of Contents
