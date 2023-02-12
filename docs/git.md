@@ -98,6 +98,33 @@ Arguments:
 
 It can be launched in a git repo with `lazygit`, or the alias `lg`. From within vim, you can use the key binding `<leader>gx` to open in a vim tab (remember to use `<C-w>` in this tab before any git command).
 
+Usage:
+
+- `?` - help is never too far. Lazygit is powerful, this sample is too small.
+- `<C-c>` or `<C-q>` - quit. Remapped from `q`
+- `h`, `l` - navigate panels
+- `1`..`5` - navigate panels by number
+- `[` / `]` - navigate panel tabs
+- `p` - pull
+- `P` - push
+- `R` - refresh
+- `m` - current rebase options
+- File Panel (Panel 2):
+  - `<CR>` - enter file to patch, `<space>` to add lines, `<tab>` to go between staged/unstaged panels
+  - `<space>` - stage/unstage file
+  - `e` - edit file in vim
+  - `C` / `c` - commit with editor / commit one line
+  - `A` - amend last commit
+- Branches Panel (Panel 3):
+  - `<space>` - checkout
+  - `n` - new branch
+  - `o` - create pull request
+  - `r` - rebase
+- Log Panel (Panel 4)
+  - `<C-o>` - copy commit SHA
+  - `s` - squash down
+  - `f` - fixup commit
+
 ### vimdiff
 
 Vimdiff can be used for resolving conflicts
