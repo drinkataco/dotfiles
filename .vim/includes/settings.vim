@@ -24,6 +24,12 @@ let mapleader='\'
 " Use unamed register for clipboard
 set clipboard=unnamed
 
+" make a new directory for a file created at a non-existant path
+augroup mkdir
+  autocmd!
+  autocmd BufWritePre * call mkdir(expand("<afile>:p:h"), "p")
+augroup END
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface:                                             "
