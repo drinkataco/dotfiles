@@ -112,6 +112,7 @@ brew "unbound"
 # CASKS             #
 #####################
 # Applications
+cask "amethyst"
 cask "firefox"
 cask "flux"
 cask "google-chrome"

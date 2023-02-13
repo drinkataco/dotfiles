@@ -1,0 +1,22 @@
+# Use tall and fullscreen layouts
+layouts:
+  - 'tall'
+  - 'fullscreen'
+
+# Allow windows to float
+floating:
+  - 'com.apple.systempreferences'
+  - 'com.toggl.daneel'
+
+# Mouse, for now
+mouse-resizes-windows: true
+mouse-swaps-windows: true
+mouse-follows-focus: false
+focus-follows-mouse: false
+
+# Layout
+enables-layout-hud: true
+
+# Windows
+float-small-windows: true
+restore-layouts-on-launch: false
