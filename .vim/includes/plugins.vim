@@ -62,6 +62,7 @@ Plug 'cespare/vim-toml', { 'branch': 'main' }
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'drinkataco/vim-md-toc'
+Plug 'hashivim/vim-terraform'
 
 " misc re order
 Plug 'christoomey/vim-tmux-navigator'
