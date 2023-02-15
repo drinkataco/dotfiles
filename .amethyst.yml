@@ -2,6 +2,11 @@
 layouts:
   - 'tall'
   - 'fullscreen'
+  - 'two-pane'
+  - '3column-left'
+  - 'middle-wide'
+  - 'column'
+  - 'bsp'
 
 # Allow windows to float
 floating:
@@ -11,7 +16,7 @@ floating:
 # Mouse, for now
 mouse-resizes-windows: true
 mouse-swaps-windows: true
-mouse-follows-focus: false
+mouse-follows-focus: true
 focus-follows-mouse: false
 
 # Layout

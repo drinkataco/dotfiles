@@ -16,7 +16,7 @@ Some apps have magic powers
 Modifier Keys:
 
 - `<mod1>` = `⌥+⇧` / `<M+S>`
-- `<mod2>` = `⌥+⇧+⌘` / `<M+S+W>`
+- `<mod2>` = `⌥+⇧+^` / `<M+S+C>`
 
 Usage:
 
@@ -36,3 +36,5 @@ Usage:
 - `mod2 + w` - Throw focused window to screen 1
 - `mod1 + e` - Focus Screen 2
 - `mod2 + e` - Throw focused window to screen 2
+- `mod1 + r` - Focus Screen 3
+- `mod2 + r` - Throw focused window to screen 3
