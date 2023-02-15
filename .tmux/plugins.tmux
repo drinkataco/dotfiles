@@ -23,13 +23,18 @@ set -g @plugin 'tmux-plugins/tmux-battery'
 # ==============================================
 # === PLUGIN SETTINGS                        ===
 # ==============================================
+# continuum
 set -g @continuum-restore 'on'
-set -g @thumbs-regexp-1 '[a-zA-Z0-9]+[\.a-zA-Z0-9]*@[a-z]+[\.a-zA-Z0-9]*' # Match emails
-set -g @session-wizard 's'
 
 # Copy cat - remap to similar to vim
 set -g @copycat_next 't'
 set -g @copycat_prev 'g'
 
+# session-wizard
+set -g @session-wizard 's'
+
 # tmux-sessionist - unbind some keys
 unbind g
+
+# tmux-thumbs
+set -g @thumbs-regexp-1 '[a-zA-Z0-9]+[\.a-zA-Z0-9]*@[a-z]+[\.a-zA-Z0-9]*' # Match emails
