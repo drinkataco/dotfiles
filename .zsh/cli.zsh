@@ -3,8 +3,11 @@
 ##########################
 # CLI Tools Config       #
 ##########################
+# AWS cli
+export AWS_PAGER="$PAGER"
+
 # github cli
-export GH_PAGER='less -X -S'
+export GH_PAGER="$PAGER"
 
 # gpg
 export GPG_TTY=$(tty)
