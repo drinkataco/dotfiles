@@ -15,7 +15,7 @@ font:
   bold:
     family: 'InconsolataGo Nerd Font Mono'
     style: 'Bold'
-  size: 19
+  size: 20
 
 key_bindings:
   # macOS keybindings
