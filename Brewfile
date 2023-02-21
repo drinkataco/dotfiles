@@ -32,6 +32,7 @@ brew "node@18", link: true
 brew "nvm"
 brew "openvpn"
 brew "perl"
+brew "postgresql"
 brew "terraform"
 brew "tmux"
 brew "vim"
