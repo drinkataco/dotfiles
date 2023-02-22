@@ -8,6 +8,9 @@ shell:
     - '-c'
     - 'source ~/.zshrc && tmux_open'
 
+scrolling:
+  multiplier: 0
+
 font:
   normal:
     family: 'InconsolataGo Nerd Font Mono'
