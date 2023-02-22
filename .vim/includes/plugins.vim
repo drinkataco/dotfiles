@@ -51,7 +51,11 @@ Plug 'mg979/vim-visual-multi'
 Plug 'pangloss/vim-javascript'
 Plug 'Quramy/vim-js-pretty-template'
 
-" Vim Plugsin
+" Markdown
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'drinkataco/vim-md-toc'
+
+" Vim Plugins
 Plug 'tpope/vim-scriptease'
 Plug 'junegunn/vader.vim'
 
@@ -60,8 +64,6 @@ Plug 'jparise/vim-graphql'
 Plug 'nelsyeung/twig.vim'
 Plug 'cespare/vim-toml', { 'branch': 'main' }
 Plug 'pedrohdz/vim-yaml-folds'
-Plug 'dhruvasagar/vim-table-mode'
-Plug 'drinkataco/vim-md-toc'
 Plug 'hashivim/vim-terraform'
 
 " misc re order
