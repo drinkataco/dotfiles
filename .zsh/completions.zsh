@@ -11,6 +11,9 @@ autoload -U compinit && compinit # zsh-completions reload
 # AWS Completions
 complete -C '/usr/local/bin/aws_completer' aws
 
+# Python PIP completions
+eval "`pip completion --zsh`"
+
 # FZF
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --no-ignore'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
