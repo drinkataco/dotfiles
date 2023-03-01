@@ -4,8 +4,7 @@ scriptencoding utf-8
 " General:                                                    "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable filetype plugins
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -50,7 +49,7 @@ set incsearch
 
 " Indenting
 set autoindent
-filetype plugin indent on
+set smartindent
 
 " Highlight when searching but not when found
 augroup settings_incsearch_highlight

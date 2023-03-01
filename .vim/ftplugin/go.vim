@@ -1,3 +1,7 @@
-" indent
-setlocal noet ci pi sts=0 sw=4 ts=4
-
+" Default Indenting
+setlocal shiftwidth=4
+setlocal tabstop=4
+setlocal softtabstop=0
+setlocal noexpandtab
+setlocal copyindent
+setlocal preserveindent

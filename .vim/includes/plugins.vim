@@ -106,10 +106,11 @@ let g:coc_global_extensions=[
       \ 'coc-eslint',
       \ 'coc-git',
       \ 'coc-json',
+      \ 'coc-prettier',
+      \ 'coc-pyright',
       \ 'coc-snippets',
       \ 'coc-stylelintplus',
       \ 'coc-tsserver',
-      \ 'coc-prettier',
       \ 'coc-yaml',
       \ ]
 

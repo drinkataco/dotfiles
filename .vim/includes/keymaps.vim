@@ -33,10 +33,10 @@ nmap <leader>bv :vnew<CR>
 " F: Searching
 " This function allows us to fall back to FZF if not a git repo
 function! SearchFiles()
-   let s = execute('GitFiles') 
-   if strtrans(s) ==? '^@Not in git repo'
+  let s = execute('GitFiles')
+  if strtrans(s) ==? '^@Not in git repo'
     execute 'FZF'
-   endif
+  endif
 endfunction
 nmap <leader>ff :call SearchFiles()<CR>| " Only search through git file names (don't search .gitignore for example)
 nmap <leader>fa :FZF<CR>| " Search through all file names
