@@ -50,10 +50,11 @@ netrw. Nobody needs nerd tree!
 * https://github.com/neoclide/coc-eslint
 * https://github.com/neoclide/coc-git
 * https://github.com/neoclide/coc-json
+* https://github.com/neoclide/coc-prettier
+* https://github.com/fannheyward/coc-pyright
 * https://github.com/neoclide/coc-snippets
 * https://github.com/neoclide/coc-stylelintplus
 * https://github.com/neoclide/coc-tsserver
-* https://github.com/neoclide/coc-prettier
 * https://github.com/neoclide/coc-yaml
 
 **Keyspace:** `<leader>x`
@@ -102,6 +103,8 @@ The ultimate IDE plugin for Vim. No longer do you need several that conflict, ha
 **Description:**
 
 Generate documentation based on expressions - such as DocBlocks
+
+Use `<Tab>` to cycle through text.
 
 #### Keymaps
 

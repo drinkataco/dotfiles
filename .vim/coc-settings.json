@@ -8,10 +8,11 @@
     "vim": "vint"
   },
   "git.signPriority": 5,
-  "typescript.autoClosingTags": false,
-  "typescript.suggest.autoImports": true,
+  "python.linting.pycodestyleEnabled": true,
   "snippets.ultisnips.directories": [
     "UltiSnips",
     "$HOME/.vim/UtiliSnips"
-  ]
+  ],
+  "typescript.autoClosingTags": false,
+  "typescript.suggest.autoImports": true
 }

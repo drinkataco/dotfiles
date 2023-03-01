@@ -118,7 +118,7 @@ let g:coc_global_extensions=[
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
 
 " indentLine
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_char_list = ['|', '¦', '┆', '┊', '']
 let g:vim_json_conceal=0
 let g:markdown_syntax_conceal=0
 
