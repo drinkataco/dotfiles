@@ -119,6 +119,7 @@ cask "amethyst"
 cask "firefox"
 cask "flux"
 cask "google-chrome"
+cask "google-drive"
 cask "slack"
 cask "spotify"
 cask "transmit"
@@ -139,7 +140,6 @@ cask "paragon-extfs"
 cask "sequel-ace"
 cask "spectacle"
 cask "sublime-text"
-# cask "vagrant" # requires rosetta
 cask "homebrew/cask-versions/virtualbox"
 
 # Fonts
