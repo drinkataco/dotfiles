@@ -46,8 +46,6 @@
 [rebase]
   abbreviateCommands = true
 
-[remote "origin"]
-  fetch = +refs/pr/*/head:refs/remotes/origin/pr/*
 
 [status]
   short = true
@@ -63,6 +61,16 @@
   light        = false
   line-numbers = true
   syntax-theme = base16
+
+
+###########################################
+# REMOTES and URLs                        #
+###########################################
+[remote "origin"]
+  fetch = +refs/pr/*/head:refs/remotes/origin/pr/*
+
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
 
 
 ###########################################
