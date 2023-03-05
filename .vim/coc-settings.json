@@ -14,5 +14,6 @@
     "$HOME/.vim/UtiliSnips"
   ],
   "typescript.autoClosingTags": false,
-  "typescript.suggest.autoImports": true
+  "typescript.suggest.autoImports": true,
+  "snippets.ultisnips.pythonPrompt": false
 }
