@@ -3,13 +3,12 @@
 ##########################
 # PATH                   #
 ##########################
-PATH="$HOME/bin:/usr/local/bin:/opt/homebrew/bin:$PATH"
+PATH="$HOME/bin:/usr/local/bin:$PATH"
 
 #
 # Brew Binaries
 #
-BREW_PREFIX=$(brew --prefix)
-PATH="${BREW_PREFIX}/bin:$PATH"
+PATH="/opt/homebrew/bin:$PATH"
 
 # GNU Packages
 PATH="${BREW_PREFIX}/Cellar/libtool/2.4.7/libexec/gnubin:$PATH"
