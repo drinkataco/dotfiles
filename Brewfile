@@ -133,6 +133,7 @@ cask "vlc"
 
 # Tech
 cask "alacritty"
+cask "android-studio"
 cask "docker"
 cask "iterm2"
 cask "keepassxc"
@@ -141,7 +142,11 @@ cask "paragon-extfs"
 cask "sequel-ace"
 cask "spectacle"
 cask "sublime-text"
+cask "utm"
+
+# Pre releases
 cask "homebrew/cask-versions/virtualbox"
+cask "homebrew/cask-versions/zulu11"
 
 # Fonts
 cask "font-3270-nerd-font"

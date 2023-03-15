@@ -6,6 +6,12 @@
 PATH="$HOME/bin:/usr/local/bin:$PATH"
 
 #
+# Android Studio
+#
+PATH="$PATH:${ANDROID_SDK_ROOT}/emulator"
+PATH="$PATH:${ANDROID_SDK_ROOT}/platform-tools"
+
+#
 # Brew Binaries
 #
 PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
