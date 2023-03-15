@@ -60,6 +60,7 @@ brew "gnupg"
 brew "grep"
 brew "jq"
 brew "mariadb"
+brew 'mas'
 brew "nvm"
 brew "openjdk"
 brew "pipenv"
@@ -183,3 +184,9 @@ cask "font-symbols-only-nerd-font"
 cask "font-ubuntu-mono-nerd-font"
 cask "font-ubuntu-nerd-font"
 cask "font-victor-mono-nerd-font"
+
+
+#####################
+# Mac App Store     #
+#####################
+mas "Xcode", id: 497799835
