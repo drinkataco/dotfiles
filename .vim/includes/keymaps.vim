@@ -24,7 +24,7 @@ nmap <leader>kv :Vexplore<CR>| " Open netrw in vertical split
 
 " B: Buffers
 nmap <leader>bt :tabnew<CR>
-nmap <leader>bs :new<CR>
+nmap <leader>bh :new<CR>
 nmap <leader>bv :vnew<CR>
 
 " C: Commenting
