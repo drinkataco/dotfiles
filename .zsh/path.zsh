@@ -8,7 +8,7 @@ PATH="$HOME/bin:/usr/local/bin:$PATH"
 #
 # Brew Binaries
 #
-PATH="/opt/homebrew/bin:$PATH"
+PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
 # GNU Packages
 PATH="${BREW_PREFIX}/Cellar/libtool/2.4.7/libexec/gnubin:$PATH"
