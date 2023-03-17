@@ -11,5 +11,5 @@ if [[ -f "${CURRENT_DIR}/Session.vim" ]]; then
   echo 'Opening Vim Project'
   vim -S
 elif yes_no 'No Vim Project Found. Create One? [Y/n] ' 'y'; then
-  vim -c 'Obsession'
+  vim -c 'Obsession | Explore'
 fi
