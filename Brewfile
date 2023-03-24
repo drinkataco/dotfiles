@@ -1,7 +1,6 @@
 #####################
 # TAPS              #
 #####################
-tap "adoptopenjdk/openjdk"
 tap "aws/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
