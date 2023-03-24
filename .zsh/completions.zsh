@@ -3,7 +3,9 @@
 ##########################
 # AUTOCOMPLETE           #
 ##########################
-autoload -U compinit && compinit # zsh-completions reload
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+autoload -Uz compinit && compinit # zsh-completions reload
 
 # Kubernetes Completions
 [[ $commands[kubectl] || $commands[k] ]] && source <(kubectl completion zsh)
