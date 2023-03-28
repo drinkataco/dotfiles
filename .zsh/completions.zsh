@@ -11,7 +11,7 @@ autoload -Uz compinit && compinit # zsh-completions reload
 [[ $commands[kubectl] || $commands[k] ]] && source <(kubectl completion zsh)
 
 # AWS Completions
-complete -C '/usr/local/bin/aws_completer' aws
+complete -C "$(brew --prefix)/bin/aws_completer" aws
 
 # Python PIP completions
 eval "`pip3 completion --zsh`"
