@@ -7,14 +7,17 @@ FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 autoload -Uz compinit && compinit # zsh-completions reload
 
-# Kubernetes Completions
+# Kubernetes
 [[ $commands[kubectl] || $commands[k] ]] && source <(kubectl completion zsh)
 
-# AWS Completions
+# AWS
 complete -C "$(brew --prefix)/bin/aws_completer" aws
 
-# Python PIP completions
+# Python / PIP
 eval "`pip3 completion --zsh`"
+
+# Terraform
+complete -o nospace -C "$(brew --prefix)/bin/terraform" terraform
 
 # FZF
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --no-ignore'
@@ -36,6 +39,5 @@ zstyle ':fzf-tab:complete:cat:*' fzf-preview '[ -f $realpath ] && cat $realpath 
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'stat $realpath'
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
-# zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 
 bindkey "ç" fzf-cd-widget
