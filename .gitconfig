@@ -40,8 +40,9 @@
   rebase = true
 
 [push]
-  default    = current
-  followTags = true
+  autoSetupRemote = true
+  default         = upstream
+  followTags      = true
 
 [rebase]
   abbreviateCommands = true
