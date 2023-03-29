@@ -17,14 +17,14 @@
 
 [diff]
   colorMoved = default
-  tool = vimdiff
+  tool       = vimdiff
 
 [gpg]
   program = gpg
 
 [init]
   defaultBranch = main
-  templateDir = ~/.git/templates/default
+  templateDir   = ~/.git/templates/default
 
 [interactive]
   diffFilter = delta --color-only
@@ -33,7 +33,7 @@
   decorate = auto
 
 [merge]
-  tool = vimdiff
+  tool          = vimdiff
   conflictstyle = diff3
 
 [pull]
@@ -84,16 +84,16 @@
 # @deprecated - use omz aliases #
 #################################
 [alias]
-  a = add
-  b = branch
-  c = commit
-  cm = commit -m
+  a   = add
+  b   = branch
+  c   = commit
+  cm  = commit -m
   cam = commit -am
-  ch = checkout
-  d = diff
-  f = fetch
-  l = log
-  m = merge
-  p = push
-  r = rebase
-  s = status
+  ch  = checkout
+  d   = diff
+  f   = fetch
+  l   = log
+  m   = merge
+  p   = push
+  r   = rebase
+  s   = status
