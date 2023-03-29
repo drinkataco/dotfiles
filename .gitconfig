@@ -47,10 +47,6 @@
 [rebase]
   abbreviateCommands = true
 
-
-[status]
-  short = true
-
 [web]
   browser = firefox
 
