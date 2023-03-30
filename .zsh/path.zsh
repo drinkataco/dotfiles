@@ -3,6 +3,9 @@
 ##########################
 # PATH                   #
 ##########################
+BREW_PREFIX=$(brew --prefix)
+
+# Default
 PATH="$HOME/bin:/usr/local/bin:$PATH"
 
 #
