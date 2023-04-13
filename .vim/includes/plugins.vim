@@ -66,6 +66,7 @@ Plug 'nelsyeung/twig.vim'
 Plug 'cespare/vim-toml', { 'branch': 'main' }
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'hashivim/vim-terraform'
+Plug 'entrez/roku.vim'
 
 " misc re order
 Plug 'christoomey/vim-tmux-navigator'
