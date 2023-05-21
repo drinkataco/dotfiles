@@ -3,15 +3,12 @@ layouts:
   - 'tall'
   - 'fullscreen'
   - 'two-pane'
-  - '3column-left'
-  - 'middle-wide'
-  - 'column'
-  - 'bsp'
 
 # Allow windows to float
 floating:
   - 'com.apple.systempreferences'
   - 'com.toggl.daneel'
+  - 'at.obdev.littlesnitch'
 
 # Mouse, for now
 mouse-resizes-windows: true
