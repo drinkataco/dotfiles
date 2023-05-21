@@ -3,8 +3,9 @@
 # I put all of my nnn config here. It is sourced in .zshrc
 #
 # Set cd on Quit
-if [[ -f '/usr/local/Cellar/nnn/4.7/share/nnn/quitcd/quitcd.bash_zsh' ]]; then
-  source '/usr/local/Cellar/nnn/4.7/share/nnn/quitcd/quitcd.bash_zsh'
+QUIT_ON_CD_SCRIPT="/opt/homebrew/Cellar/nnn/4.8/share/nnn/quitcd/quitcd.bash_zsh"
+if [[ -f "$QUIT_ON_CD_SCRIPT" ]]; then
+  source "$QUIT_ON_CD_SCRIPT"
 fi
 
 # Plugin install/update info: https://github.com/jarun/nnn/tree/master/plugins#installation
