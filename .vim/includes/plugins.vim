@@ -44,7 +44,7 @@ Plug 'antoinemadec/coc-fzf'
 
 " text manipulation
 Plug 'preservim/nerdcommenter'
-Plug 'kkoomen/vim-doge', { 'do': 'npm i --no-save && npm run build:binary:unix' }
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'mg979/vim-visual-multi'
 
 " javascript/typescript:
