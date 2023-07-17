@@ -91,8 +91,10 @@ brew "kubeconform"
 # Media
 brew "ffmpeg"
 brew "flac"
+brew "imagemagick"
 brew "jpeg-xl"
 brew "lame"
+brew "optipng"
 
 # Package Dependencies
 brew "aom"
@@ -151,6 +153,7 @@ cask "little-snitch"
 cask "paragon-extfs"
 cask "sequel-ace"
 cask "spectacle"
+cask "raspberry-pi-imager"
 cask "sublime-text"
 cask "utm"
 cask "wireshark"
