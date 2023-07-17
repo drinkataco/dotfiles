@@ -1,6 +1,7 @@
 {
   "diagnostic-languageserver.filetypes": {
     "sh": "shellcheck",
+    "bash": "shellcheck",
     "vim": "vint"
   },
   "diagnostic-languageserver.formatFiletypes": {
@@ -8,6 +9,8 @@
     "vim": "vint"
   },
   "git.signPriority": 5,
+  "javascript.suggestionActions.enabled": false,
+  "javascript.validate.enable": false,
   "python.linting.pycodestyleEnabled": true,
   "snippets.ultisnips.directories": [
     "UltiSnips",
