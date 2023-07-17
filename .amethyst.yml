@@ -4,6 +4,16 @@ layouts:
   - 'fullscreen'
   - 'two-pane'
 
+# Modifer Key
+mod1:
+  - option
+  - shift
+
+mod2:
+  - option
+  - shift
+  - control
+
 # Allow windows to float
 floating:
   - 'com.apple.systempreferences'
@@ -21,4 +31,4 @@ enables-layout-hud: true
 
 # Windows
 float-small-windows: true
-restore-layouts-on-launch: false
+restore-layouts-on-launch: true
