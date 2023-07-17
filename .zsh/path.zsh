@@ -3,7 +3,7 @@
 ##########################
 # PATH                   #
 ##########################
-BREW_PREFIX=$(brew --prefix)
+BREW_PREFIX='/opt/homebrew'
 
 # Default
 PATH="$HOME/scripts:/usr/local/bin:$PATH"
