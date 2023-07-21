@@ -8,6 +8,9 @@ export TERM='xterm-256color'
 # Android Studio
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 
+# node
+export NVM_DIR='/opt/homebrew/opt/nvm'
+
 # webOS CLI
 # See: https://webostv.developer.lge.com/develop/tools/cli-installation
 export LG_WEBOS_TV_SDK_HOME="$HOME/bin/webOS_TV_SDK"
