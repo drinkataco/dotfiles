@@ -164,7 +164,7 @@ let g:NERDDefaultAlign='left'
 "
 " Vim Visual Multi
 "
-let g:VM_theme='iceblue'
+let g:VM_theme='ocean'
 let g:VM_maps={}
 let g:VM_maps['Add Cursor Down']='∆' " Option-j for Mac
 let g:VM_maps['Add Cursor Up']='˚' " Option-k for Mac

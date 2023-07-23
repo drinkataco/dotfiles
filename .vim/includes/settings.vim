@@ -144,3 +144,12 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+
+" Cursor Line
+set cursorline
+highlight cursorline guibg=#1b2b34
+highlight cursorlinenr term=bold cterm=NONE ctermbg=NONE
+set concealcursor-=n
+
+" Highlights
+highlight Error term=bold,underline cterm=bold,underline ctermfg=1 gui=bold,underline guifg=#EC5f67 guibg=NONE
