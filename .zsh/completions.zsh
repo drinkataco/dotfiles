@@ -3,7 +3,7 @@
 ##########################
 # AUTOCOMPLETE           #
 ##########################
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+FPATH="$(brew --prefix)/share/zsh-completions:$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 autoload -Uz compinit && compinit # zsh-completions reload
 
