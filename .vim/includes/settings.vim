@@ -29,10 +29,33 @@ augroup mkdir
   autocmd BufWritePre * call mkdir(expand("<afile>:p:h"), "p")
 augroup END
 
+" Set utf8 as standard encoding and en_US as the standard language
+" vint: -ProhibitEncodingOptionAfterScriptEncoding
+set encoding=utf8
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+" Extend tab by default
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Interface:                                             "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable Syntax Highlighting
+syntax on
+
+" show line numbers
+set number
+
+" Show whitespace characters
+set list
+set listchars=tab:\|·,trail:~,extends:>,precedes:<,
+
 " Turn on wild menu for autocomplete
 set wildmenu
 
@@ -102,54 +125,3 @@ function! NetrwSidebar()
     let g:netrw_winsize = 50 " Make 50% again
   endif
 endfunction
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Themes:                                                     "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable Syntax Highlighting
-syntax on
-
-" Set utf8 as standard encoding and en_US as the standard language
-" vint: -ProhibitEncodingOptionAfterScriptEncoding
-set encoding=utf8
-
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
-
-" Set colourscheme -
-"  based off of a theme set for vim, or the shell theme
-if exists('$BASE16_VIM')
-  colorscheme base16-$BASE16_VIM
-elseif exists('$BASE16_THEME')
-  " There an issue where sometimes this variable begines with base16-,
-  " sometimes it doesn't...
-  if $BASE16_THEME =~# '^base16-'
-    colorscheme $BASE16_THEME
-  else
-    colorscheme base16-$BASE16_THEME
-  endif
-endif
-set termguicolors
-
-" show line numbers
-set number
-
-" Show whitespace characters
-set list
-set listchars=tab:\|·,trail:~,extends:>,precedes:<,
-
-" Extend tab by default
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set expandtab
-
-" Cursor Line
-set cursorline
-highlight cursorline guibg=#1b2b34
-highlight cursorlinenr term=bold cterm=NONE ctermbg=NONE
-set concealcursor-=n
-
-" Highlights
-highlight Error term=bold,underline cterm=bold,underline ctermfg=1 gui=bold,underline guifg=#EC5f67 guibg=NONE

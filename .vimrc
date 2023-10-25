@@ -20,3 +20,4 @@ endfunction
 call Include('plugins.vim')
 call Include('settings.vim')
 call Include('keymaps.vim')
+call Include('themes.vim')
