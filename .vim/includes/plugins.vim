@@ -18,6 +18,7 @@ Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'junegunn/vim-peekaboo'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-obsession'
+Plug 'MattesGroeger/vim-bookmarks'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -99,6 +100,12 @@ let g:airline#extensions#tabline#tab_min_count=2
 let g:airline#extensions#tabline#show_splits=0
 let g:airline#extensions#tabline#show_tab_nr=0
 let g:airline#extensions#tabline#show_tab_type=0
+
+"
+" Vim Bookmarks
+"
+let g:bookmark_highlight_lines=0
+let g:bookmark_auto_save=0
 
 "
 " coc.nvim
