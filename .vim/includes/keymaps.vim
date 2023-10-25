@@ -40,10 +40,11 @@ function! SearchFiles()
 endfunction
 nmap <leader>ff :call SearchFiles()<CR>| " Only search through git file names (don't search .gitignore for example)
 nmap <leader>fa :FZF<CR>| " Search through all file names
-nmap <leader>fb :BLines<CR>| " Search through current buffer lines
+nmap <leader>fb :Buffers<CR>| " Search through current buffers
 nmap <leader>fi :Ag<CR>| " Search through file contents
 nmap <leader>fc :Commands<CR>| " Search through available commands
 nmap <leader>fm :Marks<CR>| " Search through marks (bookmarks)
+nmap <leader>fl :BLines<CR>| " Search through current buffer lines
 
 " G: Git and version control
 nmap <leader>g :Git
