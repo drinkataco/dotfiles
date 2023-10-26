@@ -13,9 +13,6 @@ autoload -Uz compinit && compinit # zsh-completions reload
 # AWS
 complete -C "$(brew --prefix)/bin/aws_completer" aws
 
-# Python / PIP
-eval "`pip3 completion --zsh`"
-
 # Terraform
 complete -o nospace -C "$(brew --prefix)/bin/terraform" terraform
 
@@ -38,6 +35,5 @@ zstyle ':fzf-tab:complete:bat:*' fzf-preview '[ -f $realpath ] && cat $realpath 
 zstyle ':fzf-tab:complete:cat:*' fzf-preview '[ -f $realpath ] && cat $realpath || stat $realpath'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'stat $realpath'
 zstyle ':completion:*:*:docker:*' option-stacking yes
-zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 bindkey "ç" fzf-cd-widget

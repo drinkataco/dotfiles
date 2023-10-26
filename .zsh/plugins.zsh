@@ -28,7 +28,8 @@ if ! zgenom saved; then
   zgenom ohmyzsh plugins/vi-mode
   zgenom ohmyzsh plugins/colored-man-pages
   zgenom ohmyzsh plugins/docker
-  zgenom ohmyzsh plugins/git
+  zgenom ohmyzsh plugins/pip
+  zgenom ohmyzsh plugins/gitfast
   zgenom ohmyzsh plugins/npm
   zgenom ohmyzsh plugins/nvm
   zgenom ohmyzsh plugins/fzf
