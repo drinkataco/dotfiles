@@ -34,17 +34,6 @@ highlight Error term=bold,underline cterm=bold,underline ctermfg=1 gui=bold,unde
 
 " MattesGroeger/vim-bookmark
 highlight BookmarkSign guibg=#343D46
-" highlight BookmarkLine ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
-" highlight BookmarkAnnotationLine ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
-" highlight BookmarkSign
-      " \ term=underline
-      " \ ctermfg=8
-      " \ ctermbg=10
-      " \ guifg=ReturnHighlightTerm('linenr', 'guifg')
-      " \ guibg=#343D46
-" highlight BookmarkAnnotationSign ctermbg=whatever ctermfg=whatever
-" highlight BookmarkLine ctermbg=whatever ctermfg=whatever
-" highlight BookmarkAnnotationLine ctermbg=whatever ctermfg=whatever
 
 " Cursor Line
 set cursorline
