@@ -17,7 +17,7 @@ PATH="$PATH:${ANDROID_SDK_ROOT}/platform-tools"
 #
 # Brew Binaries
 #
-PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+PATH="${BREW_PREFIX}/bin:${BREW_PREFIX}/sbin:$PATH"
 
 # GNU Packages
 PATH="${BREW_PREFIX}/Cellar/libtool/2.4.7/libexec/gnubin:$PATH"
