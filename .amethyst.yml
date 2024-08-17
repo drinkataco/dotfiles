@@ -3,7 +3,6 @@ layouts:
   - 'tall'
   - 'fullscreen'
   - 'two-pane'
-  - '3column-right'
 
 # Modifer Key
 mod1:
