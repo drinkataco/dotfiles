@@ -11,6 +11,7 @@ PATH="$HOME/scripts:/usr/local/bin:$PATH"
 #
 # Android Studio
 #
+# PATH="$PATH:$JAVA_HOME/bin"
 PATH="$PATH:${ANDROID_SDK_ROOT}/emulator"
 PATH="$PATH:${ANDROID_SDK_ROOT}/platform-tools"
 
@@ -29,5 +30,5 @@ PATH="${BREW_PREFIX}/Cellar/gnu-sed/4.9/libexec/gnubin:$PATH"
 PATH="${BREW_PREFIX}/Cellar/gawk/5.2.1/libexec/gnubin:$PATH"
 PATH="${BREW_PREFIX}/Cellar/findutils/4.9.0/libexec/gnubin:$PATH"
 
-# Open JDK
-PATH="${BREW_PREFIX}/openjdk/bin:$PATH"
+# Rbenv
+PATH="${HOME}/.rbenv/bin:$PATH"

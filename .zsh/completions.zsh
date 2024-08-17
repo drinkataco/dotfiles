@@ -34,6 +34,10 @@ zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':fzf-tab:complete:bat:*' fzf-preview '[ -f $realpath ] && cat $realpath || stat $realpath'
 zstyle ':fzf-tab:complete:cat:*' fzf-preview '[ -f $realpath ] && cat $realpath || stat $realpath'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'stat $realpath'
+# zstyle ':fzf-tab:complete:ag:*' fzf-preview 'stat $realpath'
+# zstyle ':fzf-tab:complete:fd:*' fzf-preview 'stat $realpath'
 zstyle ':completion:*:*:docker:*' option-stacking yes
+zstyle ':completion:*:*:docker-*:*' option-stacking yes
+zstyle ':omz:plugins:docker' legacy-completion yes
 
 bindkey "ç" fzf-cd-widget
