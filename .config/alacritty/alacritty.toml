@@ -1,0 +1,60 @@
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 20
+
+[font.bold]
+family = "InconsolataGo Nerd Font Mono"
+style = "Bold"
+
+[font.normal]
+family = "InconsolataGo Nerd Font Mono"
+style = "Regular"
+
+[[keyboard.bindings]]
+key = "Comma"
+mods = "Command"
+
+[keyboard.bindings.command]
+args = ["-c", "open ~/.config/alacritty/alacritty.yml"]
+program = "sh"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "N"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = " "
+key = "Space"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0015"
+key = "Back"
+mods = "Super"
+
+[[keyboard.bindings]]
+chars = "\u001BOH"
+key = "Left"
+mode = "AppCursor"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001BOF"
+key = "Right"
+mode = "AppCursor"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "#"
+key = "Key3"
+mods = "Alt"
+
+[scrolling]
+multiplier = 0
+
+# [shell]
+# args = ["-l", "-c", "source ~/.zshrc && tmux_open"]
+# program = "/bin/zsh"
