@@ -38,13 +38,32 @@ function! SearchFiles()
     execute 'FZF'
   endif
 endfunction
-nmap <leader>ff :call SearchFiles()<CR>| " Only search through git file names (don't search .gitignore for example)
-nmap <leader>fa :FZF<CR>| " Search through all file names
-nmap <leader>fb :Buffers<CR>| " Search through current buffers
+" nmap <leader>ff :call SearchFiles()<CR>| " Only search through git file names (don't search .gitignore for example)
+" nmap <leader>ffa :FZF<CR>| " Search through all file names
+nmap <leader>ff :FZF -i <CR>| " Search through all file names
+nmap <leader>fg :call SearchFiles()<CR>| " Only search through git file names (don't search .gitignore for example)
+nmap <leader>fb :Buffers -i <CR>| " Search through current buffers
 nmap <leader>fi :Ag<CR>| " Search through file contents
 nmap <leader>fc :Commands<CR>| " Search through available commands
 nmap <leader>fm :Marks<CR>| " Search through marks (bookmarks)
 nmap <leader>fl :BLines<CR>| " Search through current buffer lines
+
+nmap <Leader>f [fzf-p]
+xmap <Leader>f [fzf-p]
+nnoremap <silent> [fzf-p]p     :<C-u>FzfPreviewFromResourcesRpc project_mru git<CR>
+nnoremap <silent> [fzf-p]gs    :<C-u>FzfPreviewGitStatusRpc<CR>
+nnoremap <silent> [fzf-p]ga    :<C-u>FzfPreviewGitActionsRpc<CR>
+nnoremap <silent> [fzf-p]b     :<C-u>FzfPreviewBuffersRpc<CR>
+nnoremap <silent> [fzf-p]B     :<C-u>FzfPreviewAllBuffersRpc<CR>
+nnoremap <silent> [fzf-p]o     :<C-u>FzfPreviewFromResourcesRpc buffer project_mru<CR>
+nnoremap <silent> [fzf-p]<C-o> :<C-u>FzfPreviewJumpsRpc<CR>
+nnoremap <silent> [fzf-p]g;    :<C-u>FzfPreviewChangesRpc<CR>
+nnoremap <silent> [fzf-p]/     :<C-u>FzfPreviewLinesRpc --add-fzf-arg=--no-sort --add-fzf-arg=--query="'"<CR>
+nnoremap <silent> [fzf-p]*     :<C-u>FzfPreviewLinesRpc --add-fzf-arg=--no-sort --add-fzf-arg=--query="'<C-r>=expand('<cword>')<CR>"<CR>
+nnoremap          [fzf-p]gr    :<C-u>FzfPreviewProjectGrepRpc<Space>
+xnoremap          [fzf-p]gr    "sy:FzfPreviewProjectGrepRpc<Space>-F<Space>"<C-r>=substitute(substitute(@s, '\n', '', 'g'), '/', '\\/', 'g')<CR>"
+nnoremap <silent> [fzf-p]t     :<C-u>FzfPreviewBufferTagsRpc<CR>
+nnoremap <silent> [fzf-p]q     :<C-u>FzfPreviewQuickFixRpc<CR>
 
 " G: Git and version control
 nmap <leader>g :Git
@@ -80,13 +99,17 @@ nnoremap <leader>vl <Plug>VimspectorStepOver
 " This is used by vim-windowswap
 
 " X: COC.VIM settings
-nmap <leader>x :CocFzfList<CR>| " Project lists 
-nmap <leader>xc :CocCommand | " Enter coc command mode
-nmap <leader>xa :CocDiagnostics<CR>| " Show diagnostics
-map <leader>x] <Plug>(coc-diagnostic-next)| " Go to next diagnostic
-map <leader>x[ <Plug>(coc-diagnostic-prev)| " Go to previous diagnostic
+nmap <leader>c :CocFzfList<CR>| " Project lists 
+nmap <leader>cc :CocCommand | " Enter coc command mode
+nmap <leader>ca :CocDiagnostics<CR>| " Show diagnostics
+map <leader>c] <Plug>(coc-diagnostic-next)| " Go to next diagnostic
+map <leader>c[ <Plug>(coc-diagnostic-prev)| " Go to previous diagnostic
 " GoTo code navigation.
-map <leader>xd <Plug>(coc-definition)
+map <leader>cd <Plug>(coc-definition)
+map <leader>cds :call CocAction('jumpDefinition', 'split')<CR>
+map <leader>cdv :call CocAction('jumpDefinition', 'vsplit')<CR>
+map <leader>cdt :call CocAction('jumpDefinition', 'tabe')<CR>
+
 map <leader>xy <Plug>(coc-type-definition)
 map <leader>xi <Plug>(coc-implementation)
 map <leader>xr <Plug>(coc-references)
