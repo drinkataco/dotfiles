@@ -41,6 +41,7 @@ Plug 'ryanoasis/vim-devicons'
 " Searching and Autocomplete
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 Plug 'antoinemadec/coc-fzf'
 
 " text manipulation
@@ -54,7 +55,6 @@ Plug 'Quramy/vim-js-pretty-template'
 Plug 'prisma/vim-prisma'
 
 " Markdown
-Plug 'dhruvasagar/vim-table-mode'
 Plug 'drinkataco/vim-md-toc'
 
 " Vim Plugins
@@ -68,6 +68,9 @@ Plug 'cespare/vim-toml', { 'branch': 'main' }
 Plug 'pedrohdz/vim-yaml-folds'
 Plug 'hashivim/vim-terraform'
 Plug 'entrez/roku.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'andrewstuart/vim-kubernetes'
+Plug 'towolf/vim-helm'
 
 " misc re order
 Plug 'christoomey/vim-tmux-navigator'
@@ -121,6 +124,7 @@ let g:coc_global_extensions=[
       \ 'coc-stylelintplus',
       \ 'coc-tsserver',
       \ 'coc-yaml',
+      \ '@yaegassy/coc-tailwindcss3',
       \ ]
 
 " Create Prettier command
