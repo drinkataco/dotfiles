@@ -18,5 +18,6 @@
   ],
   "typescript.autoClosingTags": false,
   "typescript.suggest.autoImports": true,
-  "snippets.ultisnips.pythonPrompt": false
+  "snippets.ultisnips.pythonPrompt": false,
+  "yaml.enable": false
 }
