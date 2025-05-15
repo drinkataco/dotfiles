@@ -5,7 +5,8 @@
 ##########################
 FPATH="$(brew --prefix)/share/zsh-completions:$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
-autoload -Uz compinit && compinit # zsh-completions reload
+autoload -U +X bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
 
 # Kubernetes
 [[ $commands[kubectl] || $commands[k] ]] && source <(kubectl completion zsh)
@@ -17,7 +18,7 @@ complete -C "$(brew --prefix)/bin/aws_completer" aws
 complete -o nospace -C "$(brew --prefix)/bin/terraform" terraform
 
 # FZF
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --no-ignore'
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git --no-ignore'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="
   --preview 'bat {}'
@@ -34,10 +35,9 @@ zstyle ':completion:*:git-checkout:*' sort false
 zstyle ':fzf-tab:complete:bat:*' fzf-preview '[ -f $realpath ] && cat $realpath || stat $realpath'
 zstyle ':fzf-tab:complete:cat:*' fzf-preview '[ -f $realpath ] && cat $realpath || stat $realpath'
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'stat $realpath'
-# zstyle ':fzf-tab:complete:ag:*' fzf-preview 'stat $realpath'
-# zstyle ':fzf-tab:complete:fd:*' fzf-preview 'stat $realpath'
-zstyle ':completion:*:*:docker:*' option-stacking yes
-zstyle ':completion:*:*:docker-*:*' option-stacking yes
+zstyle ':fzf-tab:complete:ag:*' fzf-preview 'stat $realpath'
+zstyle ':fzf-tab:complete:fd:*' fzf-preview 'stat $realpath'
+# zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':omz:plugins:docker' legacy-completion yes
 
 bindkey "ç" fzf-cd-widget

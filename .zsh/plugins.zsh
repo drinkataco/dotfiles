@@ -3,44 +3,11 @@
 ##########################
 # PLUGINS                #
 ##########################
-if [[ ! -f "${HOME}/.zgenom/zgenom.zsh" ]]; then
-  echo -e "\033[0;32mInstalling Zgenom\033[0m"
-  git clone https://github.com/jandamm/zgenom.git "${HOME}/.zgenom"
+# ZIMFW
+ZIM_HOME=~/.zim
+# Install missing modules and update ${ZIM_HOME}/init.zsh if missing or outdated.
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZIM_CONFIG_FILE:-${ZDOTDIR:-${HOME}}/.zimrc} ]]; then
+  source /opt/homebrew/opt/zimfw/share/zimfw.zsh init
 fi
-
-#
-# Plugin Settings
-#
-# omz/nvm
-zstyle ':omz:plugins:nvm' lazy-cmd vim serverless sls typescript
-
-# Source Plugins
-source "${HOME}/.zgenom/zgenom.zsh"
-zgenom autoupdate
-
-#
-# Define Plugin List for Shell
-#
-if ! zgenom saved; then
-  # ohmyzsh
-  zgenom ohmyzsh
-  zgenom ohmyzsh themes/lukerandall
-  zgenom ohmyzsh plugins/vi-mode
-  zgenom ohmyzsh plugins/colored-man-pages
-  zgenom ohmyzsh plugins/docker
-  zgenom ohmyzsh plugins/pip
-  zgenom ohmyzsh plugins/gitfast
-  zgenom ohmyzsh plugins/npm
-  zgenom ohmyzsh plugins/nvm
-  zgenom ohmyzsh plugins/fzf
-  zgenom ohmyzsh plugins/macos
-
-  # plugins
-  zgenom load Aloxaf/fzf-tab
-  zgenom load chriskempson/base16-shell
-  zgenom load zsh-users/zsh-completions
-  zgenom load zsh-users/zsh-syntax-highlighting
-
-  # generate the init script from plugins above
-  zgenom save
-fi
+# Initialize modules.
+source ${ZIM_HOME}/init.zsh

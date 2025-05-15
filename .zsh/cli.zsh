@@ -15,8 +15,8 @@ export GPG_TTY=$(tty)
 # nnn
 source "${HOME}/.config/nnn/config"
 
-# rbenv
-eval "$(rbenv init - zsh)"
-
 # zoxide
 eval "$(zoxide init zsh)"
+
+# bindkey -v
+# bindkey '^R' history-incremental-search-backward
