@@ -1,0 +1,28 @@
+# theme
+zmodule git-info
+zmodule prompt-pwd
+zmodule gitster
+
+# Environment
+zmodule environment
+zmodule input
+zmodule utility
+
+# ohmyzsh
+zmodule ohmyzsh/ohmyzsh
+# zmodule ohmyzsh/ohmyzsh --source themes/lukerandall.zsh-theme
+zmodule ohmyzsh/ohmyzsh --root plugins/vim-interaction
+zmodule ohmyzsh/ohmyzsh --root plugins/colored-man-pages
+# zmodule ohmyzsh/ohmyzsh --root plugins/pip
+# zmodule ohmyzsh/ohmyzsh --root plugins/gitfast
+# zmodule ohmyzsh/ohmyzsh --root plugins/npm
+# zmodule ohmyzsh/ohmyzsh --root plugins/nvm
+zmodule ohmyzsh/ohmyzsh --root plugins/fzf
+zmodule ohmyzsh/ohmyzsh --root plugins/macos
+zmodule ohmyzsh/ohmyzsh --root plugins/git
+
+# plugins
+zmodule Aloxaf/fzf-tab
+zmodule chriskempson/base16-shell
+zmodule zsh-users/zsh-completions
+zmodule zsh-users/zsh-syntax-highlighting
