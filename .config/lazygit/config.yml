@@ -1,11 +1,10 @@
 gui:
-  mouseEvents: false
-  showIcons: true
+  mouseEvents: true
+  nerdFontsVersion: "3"
 git:
   paging:
     colorArg: 'always'
-    # Delta keeps causing crashes
-    # pager: 'delta --dark --paging=never'
+    pager: 'delta --dark --paging=never'
   # branchLogCmd: 'glol {{branchName}} --'
 keybinding:
   universal:
