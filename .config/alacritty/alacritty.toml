@@ -2,15 +2,15 @@
 TERM = "xterm-256color"
 
 [font]
-size = 20
-
-[font.bold]
-family = "InconsolataGo Nerd Font Mono"
-style = "Bold"
+size = 19
 
 [font.normal]
 family = "InconsolataGo Nerd Font Mono"
 style = "Regular"
+
+[font.bold]
+family = "InconsolataGo Nerd Font Mono"
+style = "Bold"
 
 [[keyboard.bindings]]
 key = "Comma"
@@ -55,6 +55,6 @@ mods = "Alt"
 [scrolling]
 multiplier = 0
 
-# [shell]
-# args = ["-l", "-c", "source ~/.zshrc && tmux_open"]
-# program = "/bin/zsh"
+[shell]
+args = ["-l", "-c", "source ~/.zshrc && tmux_open"]
+program = "/bin/zsh"
