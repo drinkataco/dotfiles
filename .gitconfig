@@ -18,13 +18,13 @@
 [diff]
   colorMoved = default
   tool       = vimdiff
+  keepBackup = false
 
 [gpg]
   program = gpg
 
 [init]
   defaultBranch = main
-  templateDir   = ~/.git/templates/default
 
 [interactive]
   diffFilter = delta --color-only
@@ -35,6 +35,7 @@
 [merge]
   tool          = vimdiff
   conflictstyle = diff3
+  keepBackup    = false
 
 [pull]
   rebase = true
@@ -97,4 +98,5 @@
   p   = push
   r   = rebase
   s   = status
-	oldest-ancestor = !zsh -c 'diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"${1:-master}\") <(git rev-list --first-parent \"${2:-HEAD}\") | head -1' -
+  oldest-ancestor = !zsh -c 'diff --old-line-format= --new-line-format= <(git rev-list --first-parent \"${1:-master}\") <(git rev-list --first-parent \"${2:-HEAD}\") | head -1' -
+  dt = "!f() { vim -p $(git diff --name-only) +\"tabdo Gdiff $@\" +tabfirst; }; f"
