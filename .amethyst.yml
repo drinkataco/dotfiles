@@ -3,6 +3,7 @@ layouts:
   - 'tall'
   - 'fullscreen'
   - 'two-pane'
+  - 'column'
 
 # Modifer Key
 mod1:
@@ -15,10 +16,12 @@ mod2:
   - control
 
 # Allow windows to float
-floating:
-  - 'com.apple.systempreferences'
-  - 'com.toggl.daneel'
-  - 'at.obdev.littlesnitch'
+floating: []
+  # - 'com.apple.systempreferences'
+  # - 'com.toggl.daneel'
+  # - 'at.obdev.littlesnitch'
+
+floating-is-blacklist: false
 
 # Mouse, for now
 mouse-resizes-windows: true
@@ -31,4 +34,4 @@ enables-layout-hud: true
 
 # Windows
 float-small-windows: true
-restore-layouts-on-launch: true
+restore-layouts-on-launch: false
