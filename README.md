@@ -1,5 +1,9 @@
 # dotfiles
 
+> [!WARNING]
+> This repository is deprecated and archived
+> It has been replaced with this charming repo [nix-mac](https://github.com/drinkataco/nix-mac)
+
 [![Vint](https://github.com/drinkataco/dotfiles/workflows/Vint/badge.svg)](https://github.com/drinkataco/dotfiles/actions?workflow=Vint)
 [![Shellcheck](https://github.com/drinkataco/dotfiles/workflows/Shellcheck/badge.svg)](https://github.com/drinkataco/dotfiles/actions?workflow=Shellcheck)
 
@@ -56,4 +60,3 @@ Git is wonderful version control. Using [lazygit](https://github.com/jesseduffie
 
 * docs/
     * [git.md](./docs/git.md)
-
